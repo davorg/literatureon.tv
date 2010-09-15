@@ -1,0 +1,30 @@
+[% META title = 'Character' %]
+
+<h2>[% character.name %]</h2>
+<h3>Appearances</h3>
+[% IF character.fictional_character_appearances.size %]
+<ul>
+[% FOR a IN character.fictional_character_appearances %]
+<li><a href="/works/[% a.work.id %]">[% a.work.title %]</a>
+by
+[% FOR au IN a.work.authors %]
+<a href="/authors/[% au.id %]">[% au.name %]</a>
+[% END %]
+</li>
+[% END %]
+</ul>
+[% ELSE %]
+<p>No appearances found.</p>
+[% END %]
+
+<h3>Played By</h3>
+[% IF character.actor_roles.size %]
+<ul>
+[% FOR r IN character.actor_roles %]
+<li><a href="/actors/[% r.actor.id %]">[% r.actor.name %]</a> in
+<a href="/productions/[% r.production.id %]">[% r.production.made_by %]
+([% r.production.year %])</a></li>
+[% END %]
+[% ELSE %]
+<p>No-one</p>
+[% END %]

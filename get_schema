@@ -1,0 +1,12 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+use DBIx::Class::Schema::Loader qw/ make_schema_at /;
+
+make_schema_at(
+  'Literature::Schema',
+   { debug => 1, dump_directory => './lib' },
+   [ 'dbi:mysql:literature','literature','l173r47ur3' ],
+);

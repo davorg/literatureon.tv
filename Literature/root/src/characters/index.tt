@@ -1,0 +1,8 @@
+[% # Provide a title -%]
+[% META title = 'List of Characters' -%]
+    
+<ul>
+[% FOREACH ch IN characters.sort('name')-%]
+<li><a href="/characters/[% ch.id %]">[% ch.name %]</a></li>
+[% END -%]
+</ul>

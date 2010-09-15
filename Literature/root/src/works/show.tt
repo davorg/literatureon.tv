@@ -1,0 +1,23 @@
+[% META title = 'Work' %]
+
+<h2>[% work.title %]</h2>
+<p>By [% FOR a IN work.authors; '<a href="/authors/'; a.id; '">'; a.name; '</a> '; END %]</p>
+<h3>Characters</h3>
+[% IF work.fictional_character_appearances.size %]
+<ul>
+[% FOR ch IN work.fictional_character_appearances %]
+<li><a href="/characters/[% ch.fictional_character.id %]">[% ch.fictional_character.name %]</a></li>
+[% END %]
+</ul>
+[% ELSE %]
+<p>No characters found.</p>
+[% END %]
+<h3>Productions</h3>
+[% IF work.productions.size %]
+<ul>
+[% FOR p IN work.productions %]
+<li><a href="/productions/[% p.id %]">[% p.made_by %] ([% p.year %])</a></li>
+[% END %]
+[% ELSE %]
+<p>No productions found</p>
+[% END %]

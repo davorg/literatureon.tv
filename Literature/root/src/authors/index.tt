@@ -1,0 +1,8 @@
+[% # Provide a title -%]
+[% META title = 'List of Authors' -%]
+    
+<ul>
+[% FOREACH a IN authors.sort('name')-%]
+<li><a href="/authors/[% a.id %]">[% a.name %]</a></li>
+[% END -%]
+</ul>

@@ -1,0 +1,21 @@
+[% META title = 'Production' %]
+
+<h2>[% production.title %]</h2>
+<p>[% production.made_by %] [% production.year %]<p>
+<p>Based on
+<a href="/works/[% production.work.id %]">[% production.work.title %]</a> by
+[% FOR a IN production.work.authors %]
+<a href="/authors/[% a.id %]">[% a.name %]</a> 
+[% END %]</p>
+
+<h3>Cast</h3>
+[% IF production.actor_roles.size %]
+<ul>
+[% FOR a IN production.actor_roles %]
+<li><a href="/actors/[% a.actor.id %]">[% a.actor.name %]</a>
+as <a href="/characters/[% a.fictional_character.id %]">[% a.fictional_character.name %]</a></li>
+[% END %]
+</ul>
+[% ELSE %]
+<p>No cast found.</p>
+[% END %]

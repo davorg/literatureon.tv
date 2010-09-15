@@ -1,0 +1,92 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+use lib 'lib';
+use Literature::Schema;
+
+my $sch = Literature::Schema->connect('dbi:mysql:literature',
+                                      'literature', 'l173r47ur3')
+  or die;
+
+my $rs = $sch->resultset('Work');
+
+my @cols = qw(author title published);
+
+while (<DATA>) {
+  chomp;
+
+  my %rec;
+  @rec{@cols} = split /,/;
+
+  my $author = delete $rec{author};
+
+  my $wk = $rs->create(\%rec);
+
+  $wk->add_to_author_works({ author => $author});
+}
+
+__END__
+1,The Pickwick Papers,1836-03-31
+1,The Adventures of Oliver Twist,1837-02-28
+1,The Life and Adventures of Nicholas Nickleby,1838-04-30
+1,The Old Curiosity Shop,1840-04-25
+1,Barnaby Rudge,1841-02-13
+1,A Christmas Carol,1843-12-19
+1,The Chimes,1844-12-01
+1,The Cricket on the Hearth,1845-12-20
+1,The Battle of Life,1846-12-01
+1,The Haunted Man and the Ghost's Bargain,1848-12-19
+1,The Life and Adventures of Martin Chuzzlewit,1843-01-01
+1,Dombey and Son,1846-10-01
+1,David Copperfield,1849-05-01
+1,Bleak House,1852-03-01
+1,Hard Times,1854-04-01
+1,Little Dorrit,1855-12-01
+1,A Tale of Two Cities,1859-04-30
+1,Great Expectations,1860-12-01
+1,Our Mutual Friend,1864-05-01
+1,The Mystery of Edwin Drood,1870-04-01
+2,Sense and Sensibility,1811-01-01
+2,Pride and Prejudice,1813-01-28
+2,Mansfield Park,1814-07-01
+2,Emma,1815-12-01
+2,Northanger Abbey,1817-12-01
+2,Persuasion,1818-01-01
+3,Henry VI Part I,
+3,Henry VI Part II,
+3,Henry VI Part III
+3,Richard III,
+3,The Comedy of Errors,
+3,Titus Andronicus,
+3,The Taming of the Shrew,
+3,The Two Gentlemen of Verona,
+3,Love's Labour's Lost,
+3,Romeo and Juliet,
+3,Richard II,
+3,A Midsummers Night's Dream,
+3,King John,
+3,The Merchant of Venice,
+3,Henry IV Part I,
+3,Henry IV Part II,
+3,Henry V,
+3,Julius Caesar,
+3,Much Ado About Nothing,
+3,As You Like It,
+3,The  Merry Wives of Windsor,
+3,Hamlet,
+3,Twelfth Night,
+3,Troilus and Cressida,
+3,All's Well That Ends Well,
+3,Othello,
+3,King Lear,
+3,Macbeth,
+3,Measure for Measure,
+3,Antony and Cleopatra,
+3,Coriolanus,
+3,Timon of Athens,
+3,Pericles Prince of Tyre,
+3,Cymberline,
+3,The Winter's Tales,
+3,The Tempest,

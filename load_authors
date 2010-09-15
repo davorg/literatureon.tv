@@ -1,0 +1,29 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+use lib 'lib';
+use Literature::Schema;
+
+my $sch = Literature::Schema->connect('dbi:mysql:literature',
+                                      'literature', 'l173r47ur3')
+  or die;
+
+my $rs = $sch->resultset('Author');
+
+my @cols = qw(name born died imdb);
+
+while (<DATA>) {
+  chomp;
+
+  my %rec;
+  @rec{@cols} = split /,/;
+
+  $rs->create(\%rec);
+}
+
+__END__
+Charles Dickens,1812-02-07,1870-06-09,nm0002042
+Jane Austen,1775-12-16,1817-07-18,nm0000807
+William Shakespeare,1564-04-26,1616-04-23,nm0000636
