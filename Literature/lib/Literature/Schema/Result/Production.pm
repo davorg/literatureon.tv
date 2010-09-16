@@ -48,6 +48,12 @@ __PACKAGE__->table("production");
   is_nullable: 1
   size: 255
 
+=head2 imdb
+
+  data_type: 'char'
+  is_nullable: 1
+  size: 15
+
 =cut
 
 __PACKAGE__->add_columns(
@@ -61,6 +67,8 @@ __PACKAGE__->add_columns(
   { data_type => "year", is_nullable => 1 },
   "made_by",
   { data_type => "varchar", is_nullable => 1, size => 255 },
+  "imdb",
+  { data_type => "char", is_nullable => 1, size => 15 },
 );
 __PACKAGE__->set_primary_key("id");
 
@@ -112,8 +120,8 @@ __PACKAGE__->has_many(
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07001 @ 2010-09-16 19:22:29
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:vIOjPetbsBy6UegwoMtgYg
+# Created by DBIx::Class::Schema::Loader v0.07001 @ 2010-09-16 22:19:02
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:Hl6OWBSUNf5ohu9lemYkqQ
 
 
 
