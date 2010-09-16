@@ -8,7 +8,6 @@ use warnings;
 
 use base 'DBIx::Class::Core';
 
-__PACKAGE__->load_components("InflateColumn::DateTime");
 
 =head1 NAME
 
@@ -97,9 +96,24 @@ __PACKAGE__->belongs_to(
   { is_deferrable => 1, on_delete => "CASCADE", on_update => "CASCADE" },
 );
 
+=head2 production_products
 
-# Created by DBIx::Class::Schema::Loader v0.07001 @ 2010-09-12 14:05:58
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:58Oi2Qe1rrVSDgh9aCi4pA
+Type: has_many
+
+Related object: L<Literature::Schema::Result::ProductionProduct>
+
+=cut
+
+__PACKAGE__->has_many(
+  "production_products",
+  "Literature::Schema::Result::ProductionProduct",
+  { "foreign.production" => "self.id" },
+  { cascade_copy => 0, cascade_delete => 0 },
+);
+
+
+# Created by DBIx::Class::Schema::Loader v0.07001 @ 2010-09-16 19:22:29
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:vIOjPetbsBy6UegwoMtgYg
 
 
 
