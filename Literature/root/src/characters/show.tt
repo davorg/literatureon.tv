@@ -1,6 +1,7 @@
 [% META title = 'Character' %]
 
 <h2>[% character.name %]</h2>
+<p><a href="http://imdb.com/character/[% character.imdb %]">[% character.name %] on IMDB</a></p>
 <h3>Appearances</h3>
 [% IF character.fictional_character_appearances.size %]
 <ul>

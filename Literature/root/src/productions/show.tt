@@ -8,6 +8,8 @@
 <a href="/authors/[% a.id %]">[% a.name %]</a> 
 [% END %]</p>
 
+<p><a href="http://imdb.com/title/[% production.imdb %]">[% production.title %] on IMDB</a></p>
+
 <h3>Cast</h3>
 [% IF production.actor_roles.size %]
 <ul>
