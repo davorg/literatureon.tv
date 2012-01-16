@@ -8,6 +8,7 @@ use warnings;
 
 use base 'DBIx::Class::Core';
 
+__PACKAGE__->load_components("InflateColumn::DateTime");
 
 =head1 NAME
 
@@ -74,8 +75,8 @@ __PACKAGE__->belongs_to(
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07001 @ 2010-09-16 19:02:39
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:WFnVUxHgZteoJXrfQR93rQ
+# Created by DBIx::Class::Schema::Loader v0.07010 @ 2012-01-16 19:08:29
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:v1TNbaUiirbmoND9zSSK3Q
 
 
 

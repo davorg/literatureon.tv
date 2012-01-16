@@ -8,6 +8,7 @@ use warnings;
 
 use base 'DBIx::Class::Core';
 
+__PACKAGE__->load_components("InflateColumn::DateTime");
 
 =head1 NAME
 
@@ -34,6 +35,7 @@ __PACKAGE__->table("work");
 =head2 published
 
   data_type: 'date'
+  datetime_undef_if_invalid: 1
   is_nullable: 1
 
 =cut
@@ -44,7 +46,7 @@ __PACKAGE__->add_columns(
   "title",
   { data_type => "varchar", is_nullable => 0, size => 255 },
   "published",
-  { data_type => "date", is_nullable => 1 },
+  { data_type => "date", datetime_undef_if_invalid => 1, is_nullable => 1 },
 );
 __PACKAGE__->set_primary_key("id");
 
@@ -61,6 +63,21 @@ Related object: L<Literature::Schema::Result::AuthorWork>
 __PACKAGE__->has_many(
   "author_works",
   "Literature::Schema::Result::AuthorWork",
+  { "foreign.work" => "self.id" },
+  { cascade_copy => 0, cascade_delete => 0 },
+);
+
+=head2 character_appearances
+
+Type: has_many
+
+Related object: L<Literature::Schema::Result::CharacterAppearance>
+
+=cut
+
+__PACKAGE__->has_many(
+  "character_appearances",
+  "Literature::Schema::Result::CharacterAppearance",
   { "foreign.work" => "self.id" },
   { cascade_copy => 0, cascade_delete => 0 },
 );
@@ -95,24 +112,9 @@ __PACKAGE__->has_many(
   { cascade_copy => 0, cascade_delete => 0 },
 );
 
-=head2 work_products
 
-Type: has_many
-
-Related object: L<Literature::Schema::Result::WorkProduct>
-
-=cut
-
-__PACKAGE__->has_many(
-  "work_products",
-  "Literature::Schema::Result::WorkProduct",
-  { "foreign.work" => "self.id" },
-  { cascade_copy => 0, cascade_delete => 0 },
-);
-
-
-# Created by DBIx::Class::Schema::Loader v0.07001 @ 2010-09-16 19:02:39
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:gfdTzYgb2rxpXoYAKNysag
+# Created by DBIx::Class::Schema::Loader v0.07010 @ 2012-01-16 19:08:29
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:4VmuEEYWnqpaC/ap4DFZ7A
 
 
 

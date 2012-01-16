@@ -8,6 +8,7 @@ use warnings;
 
 use base 'DBIx::Class::Core';
 
+__PACKAGE__->load_components("InflateColumn::DateTime");
 
 =head1 NAME
 
@@ -31,12 +32,6 @@ __PACKAGE__->table("fictional_character");
   is_nullable: 0
   size: 255
 
-=head2 imdb
-
-  data_type: 'char'
-  is_nullable: 1
-  size: 15
-
 =cut
 
 __PACKAGE__->add_columns(
@@ -44,8 +39,6 @@ __PACKAGE__->add_columns(
   { data_type => "integer", is_auto_increment => 1, is_nullable => 0 },
   "name",
   { data_type => "varchar", is_nullable => 0, size => 255 },
-  "imdb",
-  { data_type => "char", is_nullable => 1, size => 15 },
 );
 __PACKAGE__->set_primary_key("id");
 
@@ -82,8 +75,8 @@ __PACKAGE__->has_many(
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07001 @ 2010-09-16 22:25:19
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:nxJrJ2YBEbsUJe6gISQDdA
+# Created by DBIx::Class::Schema::Loader v0.07010 @ 2012-01-16 19:08:29
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:tuJMH1jzzURlsLcJ66G+ug
 
 
 

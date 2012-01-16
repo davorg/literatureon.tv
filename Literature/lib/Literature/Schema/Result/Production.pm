@@ -8,6 +8,7 @@ use warnings;
 
 use base 'DBIx::Class::Core';
 
+__PACKAGE__->load_components("InflateColumn::DateTime");
 
 =head1 NAME
 
@@ -48,12 +49,6 @@ __PACKAGE__->table("production");
   is_nullable: 1
   size: 255
 
-=head2 imdb
-
-  data_type: 'char'
-  is_nullable: 1
-  size: 15
-
 =cut
 
 __PACKAGE__->add_columns(
@@ -67,8 +62,6 @@ __PACKAGE__->add_columns(
   { data_type => "year", is_nullable => 1 },
   "made_by",
   { data_type => "varchar", is_nullable => 1, size => 255 },
-  "imdb",
-  { data_type => "char", is_nullable => 1, size => 15 },
 );
 __PACKAGE__->set_primary_key("id");
 
@@ -104,24 +97,9 @@ __PACKAGE__->belongs_to(
   { is_deferrable => 1, on_delete => "CASCADE", on_update => "CASCADE" },
 );
 
-=head2 production_products
 
-Type: has_many
-
-Related object: L<Literature::Schema::Result::ProductionProduct>
-
-=cut
-
-__PACKAGE__->has_many(
-  "production_products",
-  "Literature::Schema::Result::ProductionProduct",
-  { "foreign.production" => "self.id" },
-  { cascade_copy => 0, cascade_delete => 0 },
-);
-
-
-# Created by DBIx::Class::Schema::Loader v0.07001 @ 2010-09-16 22:19:02
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:Hl6OWBSUNf5ohu9lemYkqQ
+# Created by DBIx::Class::Schema::Loader v0.07010 @ 2012-01-16 19:08:29
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:z/Zz14R2tojBky7RHNQ8hw
 
 
 
