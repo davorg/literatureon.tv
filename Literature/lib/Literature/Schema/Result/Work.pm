@@ -34,7 +34,7 @@ __PACKAGE__->table("work");
 
 =head2 published
 
-  data_type: 'date'
+  data_type: 'datetime'
   datetime_undef_if_invalid: 1
   is_nullable: 1
 
@@ -46,7 +46,11 @@ __PACKAGE__->add_columns(
   "title",
   { data_type => "varchar", is_nullable => 0, size => 255 },
   "published",
-  { data_type => "date", datetime_undef_if_invalid => 1, is_nullable => 1 },
+  {
+    data_type => "datetime",
+    datetime_undef_if_invalid => 1,
+    is_nullable => 1,
+  },
 );
 __PACKAGE__->set_primary_key("id");
 
@@ -113,8 +117,8 @@ __PACKAGE__->has_many(
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07010 @ 2012-01-16 19:08:29
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:4VmuEEYWnqpaC/ap4DFZ7A
+# Created by DBIx::Class::Schema::Loader v0.07010 @ 2012-01-16 19:16:15
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:+CFOaGhALLRSgNqCQapqZA
 
 
 

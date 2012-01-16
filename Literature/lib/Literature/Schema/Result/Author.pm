@@ -34,13 +34,13 @@ __PACKAGE__->table("author");
 
 =head2 born
 
-  data_type: 'date'
+  data_type: 'datetime'
   datetime_undef_if_invalid: 1
   is_nullable: 1
 
 =head2 died
 
-  data_type: 'date'
+  data_type: 'datetime'
   datetime_undef_if_invalid: 1
   is_nullable: 1
 
@@ -58,9 +58,17 @@ __PACKAGE__->add_columns(
   "name",
   { data_type => "varchar", is_nullable => 0, size => 255 },
   "born",
-  { data_type => "date", datetime_undef_if_invalid => 1, is_nullable => 1 },
+  {
+    data_type => "datetime",
+    datetime_undef_if_invalid => 1,
+    is_nullable => 1,
+  },
   "died",
-  { data_type => "date", datetime_undef_if_invalid => 1, is_nullable => 1 },
+  {
+    data_type => "datetime",
+    datetime_undef_if_invalid => 1,
+    is_nullable => 1,
+  },
   "imdb",
   { data_type => "char", is_nullable => 0, size => 15 },
 );
@@ -84,8 +92,8 @@ __PACKAGE__->has_many(
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07010 @ 2012-01-16 19:08:29
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:LxFw8k8d9cKRzqcbprA6hg
+# Created by DBIx::Class::Schema::Loader v0.07010 @ 2012-01-16 19:16:15
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:BXICXVHmishvaieMbrqssA
 
 
 
