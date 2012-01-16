@@ -3,6 +3,5 @@ use strict;
 use warnings;
 use Literature;
 
-Literature->setup_engine('PSGI');
-my $app = sub { Literature->run(@_) };
+my $app = Literature->psgi_app(@_);
 
