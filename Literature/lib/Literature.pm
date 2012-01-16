@@ -19,8 +19,8 @@ use Catalyst qw/
                 ConfigLoader
                 Static::Simple
                 StackTrace
+                AutoCRUD
                /;
-                # AutoCRUD
 our $VERSION = '0.01';
 
 # Configure the application.
