@@ -1,0 +1,28 @@
+[% META title = 'Work' %]
+
+<h2>[% work.title %]</h2>
+<p>By [% FOR a IN work.authors; '<a href="/authors/'; a.id; '">'; a.name; '</a> '; END %]</p>
+<h3>Characters</h3>
+[% IF work.fictional_character_appearances.size %]
+<ul>
+[% FOR ch IN work.fictional_character_appearances %]
+<li><a href="/fictional_characters/[% ch.fictional_character.id %]">[% ch.fictional_character.name %]</a></li>
+[% END %]
+</ul>
+[% ELSE %]
+<p>No characters found.</p>
+[% END %]
+<h3>Productions</h3>
+[% IF work.productions.size %]
+<ul>
+[% FOR p IN work.productions %]
+<li><a href="/productions/[% p.id %]">[% p.made_by %] ([% p.year %])</a></li>
+[% END %]
+</ul>
+[% ELSE %]
+<p>No productions found</p>
+[% END %]
+<h3>Buy the Book</h3>
+[% FOR p IN work.work_products %]
+<iframe src="http://rcm-uk.amazon.co.uk/e/cm?lt1=_blank&bc1=FFFFFF&IS2=1&nou=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=davblog-21&o=2&p=8&l=as1&m=amazon&f=ifr&asins=[% p.asin %]" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+[% END %]
