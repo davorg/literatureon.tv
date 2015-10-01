@@ -13,7 +13,10 @@ Literature::Schema::Result::FictionalCharacter
 use strict;
 use warnings;
 
-use base 'DBIx::Class::Core';
+use Moose;
+use MooseX::NonMoose;
+use MooseX::MarkAsMethods autoclean => 1;
+extends 'DBIx::Class::Core';
 
 =head1 COMPONENTS LOADED
 
@@ -111,9 +114,10 @@ Composing rels: L</fictional_character_appearances> -> work
 __PACKAGE__->many_to_many("works", "fictional_character_appearances", "work");
 
 
-# Created by DBIx::Class::Schema::Loader v0.07042 @ 2015-10-01 12:22:59
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:rijiRr927KyuIU1KWltm6w
+# Created by DBIx::Class::Schema::Loader v0.07042 @ 2015-10-01 20:37:37
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:QHRzydGpe0VXBrLvTZkD5g
 
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration
+__PACKAGE__->meta->make_immutable;
 1;

@@ -3,11 +3,14 @@
 use strict;
 use warnings;
 
+use FindBin '$Bin';
 use DBIx::Class::Schema::Loader qw/ make_schema_at /;
 
 make_schema_at(
-  'Literature::Schema',
-   { debug => 1, dump_directory => './lib',
-     components => [ 'InflateColumn::DateTime' ] },
-   [ 'dbi:mysql:literature','literature','l173r47ur3' ],
+  'Literature::Schema', {
+    dump_directory => "$Bin/Literature/lib",
+    components     => [ 'InflateColumn::DateTime' ],
+    use_moose      => 1,
+  },
+  [ 'dbi:mysql:literature','literature','l173r47ur3' ],
 );

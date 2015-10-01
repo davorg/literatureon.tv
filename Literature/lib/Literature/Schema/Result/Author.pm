@@ -13,7 +13,10 @@ Literature::Schema::Result::Author
 use strict;
 use warnings;
 
-use base 'DBIx::Class::Core';
+use Moose;
+use MooseX::NonMoose;
+use MooseX::MarkAsMethods autoclean => 1;
+extends 'DBIx::Class::Core';
 
 =head1 COMPONENTS LOADED
 
@@ -128,9 +131,10 @@ Composing rels: L</author_works> -> work
 __PACKAGE__->many_to_many("works", "author_works", "work");
 
 
-# Created by DBIx::Class::Schema::Loader v0.07042 @ 2015-10-01 12:22:59
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:0R/ciq13VoQWM8yA2Ka7aQ
+# Created by DBIx::Class::Schema::Loader v0.07042 @ 2015-10-01 20:37:37
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:B5frba6YXeF2FXSyH6YNPw
 
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration
+__PACKAGE__->meta->make_immutable;
 1;
