@@ -85,6 +85,15 @@ INSERT INTO `production` VALUES (1,'Pride and Prejudice',22,1995,'BBC'),(2,'Prid
 UNLOCK TABLES;
 
 --
+-- Dumping data for table `production_product`
+--
+
+LOCK TABLES `production_product` WRITE;
+/*!40000 ALTER TABLE `production_product` DISABLE KEYS */;
+/*!40000 ALTER TABLE `production_product` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Dumping data for table `work`
 --
 
@@ -92,6 +101,16 @@ LOCK TABLES `work` WRITE;
 /*!40000 ALTER TABLE `work` DISABLE KEYS */;
 INSERT INTO `work` VALUES (1,'The Pickwick Papers','1836-03-31 00:00:00'),(2,'The Adventures of Oliver Twist','1837-02-28 00:00:00'),(3,'The Life and Adventures of Nicholas Nickleby','1838-04-30 00:00:00'),(4,'The Old Curiosity Shop','1840-04-25 00:00:00'),(5,'Barnaby Rudge','1841-02-13 00:00:00'),(6,'A Christmas Carol','1843-12-19 00:00:00'),(7,'The Chimes','1844-12-01 00:00:00'),(8,'The Cricket on the Hearth','1845-12-20 00:00:00'),(9,'The Battle of Life','1846-12-01 00:00:00'),(10,'The Haunted Man and the Ghost\'s Bargain','1848-12-19 00:00:00'),(11,'The Life and Adventures of Martin Chuzzlewit','1843-01-01 00:00:00'),(12,'Dombey and Son','1846-10-01 00:00:00'),(13,'David Copperfield','1849-05-01 00:00:00'),(14,'Bleak House','1852-03-01 00:00:00'),(15,'Hard Times','1854-04-01 00:00:00'),(16,'Little Dorrit','1855-12-01 00:00:00'),(17,'A Tale of Two Cities','1859-04-30 00:00:00'),(18,'Great Expectations','1860-12-01 00:00:00'),(19,'Our Mutual Friend','1864-05-01 00:00:00'),(20,'The Mystery of Edwin Drood','1870-04-01 00:00:00'),(21,'Sense and Sensibility','1811-01-01 00:00:00'),(22,'Pride and Prejudice','1813-01-28 00:00:00'),(23,'Mansfield Park','1814-07-01 00:00:00'),(24,'Emma','1815-12-01 00:00:00'),(25,'Northanger Abbey','1817-12-01 00:00:00'),(26,'Persuasion','1818-01-01 00:00:00'),(27,'Henry VI Part I',NULL),(28,'Henry VI Part II',NULL),(29,'Henry VI Part III',NULL),(30,'Richard III',NULL),(31,'The Comedy of Errors',NULL),(32,'Titus Andronicus',NULL),(33,'The Taming of the Shrew',NULL),(34,'The Two Gentlemen of Verona',NULL),(35,'Love\'s Labour\'s Lost',NULL),(36,'Romeo and Juliet',NULL),(37,'Richard II',NULL),(38,'A Midsummers Night\'s Dream',NULL),(39,'King John',NULL),(40,'The Merchant of Venice',NULL),(41,'Henry IV Part I',NULL),(42,'Henry IV Part II',NULL),(43,'Henry V',NULL),(44,'Julius Caesar',NULL),(45,'Much Ado About Nothing',NULL),(46,'As You Like It',NULL),(47,'The  Merry Wives of Windsor',NULL),(48,'Hamlet',NULL),(49,'Twelfth Night',NULL),(50,'Troilus and Cressida',NULL),(51,'All\'s Well That Ends Well',NULL),(52,'Othello',NULL),(53,'King Lear',NULL),(54,'Macbeth',NULL),(55,'Measure for Measure',NULL),(56,'Antony and Cleopatra',NULL),(57,'Coriolanus',NULL),(58,'Timon of Athens',NULL),(59,'Pericles Prince of Tyre',NULL),(60,'Cymberline',NULL),(61,'The Winter\'s Tales',NULL),(62,'The Tempest',NULL);
 /*!40000 ALTER TABLE `work` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `work_product`
+--
+
+LOCK TABLES `work_product` WRITE;
+/*!40000 ALTER TABLE `work_product` DISABLE KEYS */;
+INSERT INTO `work_product` VALUES (1,22,'1853260002'),(2,22,'1847624812'),(3,22,'0192789864'),(4,22,'B00CF69XOG'),(5,22,'B008476HBM'),(6,22,'190463351X');
+/*!40000 ALTER TABLE `work_product` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -102,4 +121,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-10-01 20:50:39
+-- Dump completed on 2015-10-01 21:43:23

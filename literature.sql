@@ -139,6 +139,23 @@ CREATE TABLE `production` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Table structure for table `production_product`
+--
+
+DROP TABLE IF EXISTS `production_product`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `production_product` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `production_id` int(11) NOT NULL,
+  `asin` char(20) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `production_id` (`production_id`),
+  CONSTRAINT `production_product_ibfk_1` FOREIGN KEY (`production_id`) REFERENCES `production` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `work`
 --
 
@@ -153,6 +170,23 @@ CREATE TABLE `work` (
   KEY `title` (`title`)
 ) ENGINE=InnoDB AUTO_INCREMENT=63 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `work_product`
+--
+
+DROP TABLE IF EXISTS `work_product`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `work_product` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `work_id` int(11) NOT NULL,
+  `asin` char(20) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `work_id` (`work_id`),
+  CONSTRAINT `work_product_ibfk_1` FOREIGN KEY (`work_id`) REFERENCES `work` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -163,4 +197,4 @@ CREATE TABLE `work` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-10-01 20:50:07
+-- Dump completed on 2015-10-01 21:43:34
