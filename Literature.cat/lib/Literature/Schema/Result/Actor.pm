@@ -1,37 +1,22 @@
-use utf8;
-package Literature::Schema::Result::Author;
+package Literature::Schema::Result::Actor;
 
 # Created by DBIx::Class::Schema::Loader
 # DO NOT MODIFY THE FIRST PART OF THIS FILE
-
-=head1 NAME
-
-Literature::Schema::Result::Author
-
-=cut
 
 use strict;
 use warnings;
 
 use base 'DBIx::Class::Core';
 
-=head1 COMPONENTS LOADED
-
-=over 4
-
-=item * L<DBIx::Class::InflateColumn::DateTime>
-
-=back
-
-=cut
-
 __PACKAGE__->load_components("InflateColumn::DateTime");
 
-=head1 TABLE: C<author>
+=head1 NAME
+
+Literature::Schema::Result::Actor
 
 =cut
 
-__PACKAGE__->table("author");
+__PACKAGE__->table("actor");
 
 =head1 ACCESSORS
 
@@ -62,7 +47,7 @@ __PACKAGE__->table("author");
 =head2 imdb
 
   data_type: 'char'
-  is_nullable: 0
+  is_nullable: 1
   size: 15
 
 =cut
@@ -85,52 +70,43 @@ __PACKAGE__->add_columns(
     is_nullable => 1,
   },
   "imdb",
-  { data_type => "char", is_nullable => 0, size => 15 },
+  { data_type => "char", is_nullable => 1, size => 15 },
 );
-
-=head1 PRIMARY KEY
-
-=over 4
-
-=item * L</id>
-
-=back
-
-=cut
-
 __PACKAGE__->set_primary_key("id");
 
 =head1 RELATIONS
 
-=head2 author_works
+=head2 actor_roles
 
 Type: has_many
 
-Related object: L<Literature::Schema::Result::AuthorWork>
+Related object: L<Literature::Schema::Result::ActorRole>
 
 =cut
 
 __PACKAGE__->has_many(
-  "author_works",
-  "Literature::Schema::Result::AuthorWork",
-  { "foreign.author" => "self.id" },
+  "actor_roles",
+  "Literature::Schema::Result::ActorRole",
+  { "foreign.actor" => "self.id" },
   { cascade_copy => 0, cascade_delete => 0 },
 );
 
-=head2 works
 
-Type: many_to_many
-
-Composing rels: L</author_works> -> work
-
-=cut
-
-__PACKAGE__->many_to_many("works", "author_works", "work");
+# Created by DBIx::Class::Schema::Loader v0.07010 @ 2012-01-16 19:16:15
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:Em+SljLhA9AucfhfRCwjkw
 
 
-# Created by DBIx::Class::Schema::Loader v0.07042 @ 2015-10-01 12:22:59
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:0R/ciq13VoQWM8yA2Ka7aQ
+
+# You can replace this text with custom content, and it will be preserved on regeneration
+
+sub display_name {
+  my $self = shift;
+  return $self->name || '';
+}
+
+1;
 
 
-# You can replace this text with custom code or comments, and it will be preserved on regeneration
+
+# You can replace this text with custom content, and it will be preserved on regeneration
 1;

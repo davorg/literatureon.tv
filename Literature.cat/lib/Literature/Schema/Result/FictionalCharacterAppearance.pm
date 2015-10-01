@@ -1,33 +1,18 @@
-use utf8;
 package Literature::Schema::Result::FictionalCharacterAppearance;
 
 # Created by DBIx::Class::Schema::Loader
 # DO NOT MODIFY THE FIRST PART OF THIS FILE
-
-=head1 NAME
-
-Literature::Schema::Result::FictionalCharacterAppearance
-
-=cut
 
 use strict;
 use warnings;
 
 use base 'DBIx::Class::Core';
 
-=head1 COMPONENTS LOADED
-
-=over 4
-
-=item * L<DBIx::Class::InflateColumn::DateTime>
-
-=back
-
-=cut
-
 __PACKAGE__->load_components("InflateColumn::DateTime");
 
-=head1 TABLE: C<fictional_character_appearance>
+=head1 NAME
+
+Literature::Schema::Result::FictionalCharacterAppearance
 
 =cut
 
@@ -55,19 +40,6 @@ __PACKAGE__->add_columns(
   "work",
   { data_type => "integer", is_foreign_key => 1, is_nullable => 0 },
 );
-
-=head1 PRIMARY KEY
-
-=over 4
-
-=item * L</fictional_character>
-
-=item * L</work>
-
-=back
-
-=cut
-
 __PACKAGE__->set_primary_key("fictional_character", "work");
 
 =head1 RELATIONS
@@ -103,9 +75,22 @@ __PACKAGE__->belongs_to(
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07042 @ 2015-10-01 12:22:59
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:0xZTYJC6j16adjAtEPm7Tw
+# Created by DBIx::Class::Schema::Loader v0.07010 @ 2012-01-16 19:08:29
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:v1TNbaUiirbmoND9zSSK3Q
 
 
-# You can replace this text with custom code or comments, and it will be preserved on regeneration
+
+# You can replace this text with custom content, and it will be preserved on regeneration
+
+sub display_name {
+  my $self = shift;
+
+  return $self->name . ' appears in ' . $self->work->title;
+}
+
+1;
+
+
+
+# You can replace this text with custom content, and it will be preserved on regeneration
 1;

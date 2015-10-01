@@ -1,33 +1,18 @@
-use utf8;
 package Literature::Schema::Result::Work;
 
 # Created by DBIx::Class::Schema::Loader
 # DO NOT MODIFY THE FIRST PART OF THIS FILE
-
-=head1 NAME
-
-Literature::Schema::Result::Work
-
-=cut
 
 use strict;
 use warnings;
 
 use base 'DBIx::Class::Core';
 
-=head1 COMPONENTS LOADED
-
-=over 4
-
-=item * L<DBIx::Class::InflateColumn::DateTime>
-
-=back
-
-=cut
-
 __PACKAGE__->load_components("InflateColumn::DateTime");
 
-=head1 TABLE: C<work>
+=head1 NAME
+
+Literature::Schema::Result::Work
 
 =cut
 
@@ -67,17 +52,6 @@ __PACKAGE__->add_columns(
     is_nullable => 1,
   },
 );
-
-=head1 PRIMARY KEY
-
-=over 4
-
-=item * L</id>
-
-=back
-
-=cut
-
 __PACKAGE__->set_primary_key("id");
 
 =head1 RELATIONS
@@ -93,6 +67,21 @@ Related object: L<Literature::Schema::Result::AuthorWork>
 __PACKAGE__->has_many(
   "author_works",
   "Literature::Schema::Result::AuthorWork",
+  { "foreign.work" => "self.id" },
+  { cascade_copy => 0, cascade_delete => 0 },
+);
+
+=head2 character_appearances
+
+Type: has_many
+
+Related object: L<Literature::Schema::Result::CharacterAppearance>
+
+=cut
+
+__PACKAGE__->has_many(
+  "character_appearances",
+  "Literature::Schema::Result::CharacterAppearance",
   { "foreign.work" => "self.id" },
   { cascade_copy => 0, cascade_delete => 0 },
 );
@@ -127,34 +116,25 @@ __PACKAGE__->has_many(
   { cascade_copy => 0, cascade_delete => 0 },
 );
 
-=head2 authors
 
-Type: many_to_many
-
-Composing rels: L</author_works> -> author
-
-=cut
-
-__PACKAGE__->many_to_many("authors", "author_works", "author");
-
-=head2 fictional_characters
-
-Type: many_to_many
-
-Composing rels: L</fictional_character_appearances> -> fictional_character
-
-=cut
-
-__PACKAGE__->many_to_many(
-  "fictional_characters",
-  "fictional_character_appearances",
-  "fictional_character",
-);
+# Created by DBIx::Class::Schema::Loader v0.07010 @ 2012-01-16 19:16:15
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:+CFOaGhALLRSgNqCQapqZA
 
 
-# Created by DBIx::Class::Schema::Loader v0.07042 @ 2015-10-01 12:22:59
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:8BGh+Iql5Dt7gMmfnhJzJg
+
+# You can replace this text with custom content, and it will be preserved on regeneration
+
+sub display_name {
+  my $self = shift;
+  return $self->title || '';
+}
+
+1;
 
 
-# You can replace this text with custom code or comments, and it will be preserved on regeneration
+
+# You can replace this text with custom content, and it will be preserved on regeneration
+
+__PACKAGE__->many_to_many(authors => 'author_works', 'author');
+
 1;

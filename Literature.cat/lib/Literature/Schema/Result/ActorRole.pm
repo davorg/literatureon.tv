@@ -1,33 +1,18 @@
-use utf8;
 package Literature::Schema::Result::ActorRole;
 
 # Created by DBIx::Class::Schema::Loader
 # DO NOT MODIFY THE FIRST PART OF THIS FILE
-
-=head1 NAME
-
-Literature::Schema::Result::ActorRole
-
-=cut
 
 use strict;
 use warnings;
 
 use base 'DBIx::Class::Core';
 
-=head1 COMPONENTS LOADED
-
-=over 4
-
-=item * L<DBIx::Class::InflateColumn::DateTime>
-
-=back
-
-=cut
-
 __PACKAGE__->load_components("InflateColumn::DateTime");
 
-=head1 TABLE: C<actor_role>
+=head1 NAME
+
+Literature::Schema::Result::ActorRole
 
 =cut
 
@@ -63,21 +48,6 @@ __PACKAGE__->add_columns(
   "fictional_character",
   { data_type => "integer", is_foreign_key => 1, is_nullable => 0 },
 );
-
-=head1 PRIMARY KEY
-
-=over 4
-
-=item * L</actor>
-
-=item * L</production>
-
-=item * L</fictional_character>
-
-=back
-
-=cut
-
 __PACKAGE__->set_primary_key("actor", "production", "fictional_character");
 
 =head1 RELATIONS
@@ -97,21 +67,6 @@ __PACKAGE__->belongs_to(
   { is_deferrable => 1, on_delete => "CASCADE", on_update => "CASCADE" },
 );
 
-=head2 fictional_character
-
-Type: belongs_to
-
-Related object: L<Literature::Schema::Result::FictionalCharacter>
-
-=cut
-
-__PACKAGE__->belongs_to(
-  "fictional_character",
-  "Literature::Schema::Result::FictionalCharacter",
-  { id => "fictional_character" },
-  { is_deferrable => 1, on_delete => "CASCADE", on_update => "CASCADE" },
-);
-
 =head2 production
 
 Type: belongs_to
@@ -127,10 +82,42 @@ __PACKAGE__->belongs_to(
   { is_deferrable => 1, on_delete => "CASCADE", on_update => "CASCADE" },
 );
 
+=head2 fictional_character
 
-# Created by DBIx::Class::Schema::Loader v0.07042 @ 2015-10-01 12:22:59
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:4vAWbHTzJhIolMhgWflLAw
+Type: belongs_to
+
+Related object: L<Literature::Schema::Result::FictionalCharacter>
+
+=cut
+
+__PACKAGE__->belongs_to(
+  "fictional_character",
+  "Literature::Schema::Result::FictionalCharacter",
+  { id => "fictional_character" },
+  { is_deferrable => 1, on_delete => "CASCADE", on_update => "CASCADE" },
+);
 
 
-# You can replace this text with custom code or comments, and it will be preserved on regeneration
+# Created by DBIx::Class::Schema::Loader v0.07010 @ 2012-01-16 19:08:29
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:Ax7FCmo8QD+zTFfZ6v7mUA
+
+
+
+# You can replace this text with custom content, and it will be preserved on regeneration
+
+sub display_name {
+  my $self = shift;
+
+  return $self->actor->name . ' played ' . 
+         $self->fictional_character->name . ' in ' .
+         $self->production->title . ' (' .
+         $self->production->made_by . ', ' .
+         $self->production->year . ')';
+}
+
+1;
+
+
+
+# You can replace this text with custom content, and it will be preserved on regeneration
 1;

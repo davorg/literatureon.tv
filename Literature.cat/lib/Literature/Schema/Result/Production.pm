@@ -1,33 +1,18 @@
-use utf8;
 package Literature::Schema::Result::Production;
 
 # Created by DBIx::Class::Schema::Loader
 # DO NOT MODIFY THE FIRST PART OF THIS FILE
-
-=head1 NAME
-
-Literature::Schema::Result::Production
-
-=cut
 
 use strict;
 use warnings;
 
 use base 'DBIx::Class::Core';
 
-=head1 COMPONENTS LOADED
-
-=over 4
-
-=item * L<DBIx::Class::InflateColumn::DateTime>
-
-=back
-
-=cut
-
 __PACKAGE__->load_components("InflateColumn::DateTime");
 
-=head1 TABLE: C<production>
+=head1 NAME
+
+Literature::Schema::Result::Production
 
 =cut
 
@@ -78,17 +63,6 @@ __PACKAGE__->add_columns(
   "made_by",
   { data_type => "varchar", is_nullable => 1, size => 255 },
 );
-
-=head1 PRIMARY KEY
-
-=over 4
-
-=item * L</id>
-
-=back
-
-=cut
-
 __PACKAGE__->set_primary_key("id");
 
 =head1 RELATIONS
@@ -120,13 +94,25 @@ __PACKAGE__->belongs_to(
   "work",
   "Literature::Schema::Result::Work",
   { id => "work" },
-  { is_deferrable => 1, on_delete => "RESTRICT", on_update => "RESTRICT" },
+  { is_deferrable => 1, on_delete => "CASCADE", on_update => "CASCADE" },
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07042 @ 2015-10-01 12:22:59
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:kJZJ46fsEE4sWCuWaQcn/Q
+# Created by DBIx::Class::Schema::Loader v0.07010 @ 2012-01-16 19:08:29
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:z/Zz14R2tojBky7RHNQ8hw
 
 
-# You can replace this text with custom code or comments, and it will be preserved on regeneration
+
+# You can replace this text with custom content, and it will be preserved on regeneration
+
+sub display_name {
+  my $self = shift;
+  return $self->title || '';
+}
+
+1;
+
+
+
+# You can replace this text with custom content, and it will be preserved on regeneration
 1;

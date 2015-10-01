@@ -1,0 +1,5 @@
+<ul>
+[% FOREACH author IN authors.all -%]
+<li>[% author.name %]</li>
+[% END -%]
+</ul>

@@ -1,3 +1,4 @@
+use utf8;
 package Literature::Schema;
 
 # Created by DBIx::Class::Schema::Loader
@@ -11,9 +12,9 @@ use base 'DBIx::Class::Schema';
 __PACKAGE__->load_namespaces;
 
 
-# Created by DBIx::Class::Schema::Loader v0.07001 @ 2010-09-12 14:05:58
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:TuzB0spCqLGoM61gRH1APQ
+# Created by DBIx::Class::Schema::Loader v0.07042 @ 2015-10-01 12:22:59
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:MT39iJoIjN21xSMELGcKRg
 
 
-# You can replace this text with custom content, and it will be preserved on regeneration
+# You can replace this text with custom code or comments, and it will be preserved on regeneration
 1;

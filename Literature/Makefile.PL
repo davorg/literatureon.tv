@@ -1,21 +1,26 @@
-#!/usr/bin/env perl
-# IMPORTANT: if you delete this file your app will not work as
-# expected.  You have been warned.
-use inc::Module::Install;
+use strict;
+use warnings;
+use ExtUtils::MakeMaker;
 
-name 'Literature';
-all_from 'lib/Literature.pm';
+# Normalize version strings like 6.30_02 to 6.3002,
+# so that we can do numerical comparisons on it.
+my $eumm_version = $ExtUtils::MakeMaker::VERSION;
+$eumm_version =~ s/_//;
 
-requires 'Catalyst::Runtime' => '5.80013';
-requires 'Catalyst::Plugin::ConfigLoader';
-requires 'Catalyst::Plugin::Static::Simple';
-requires 'Catalyst::Action::RenderView';
-requires 'Catalyst::Plugin::StackTrace';
-requires 'parent';
-requires 'Config::General'; # This should reflect the config file format you've chosen
-                 # See Catalyst::Plugin::ConfigLoader for supported formats
-catalyst;
-
-install_script glob('script/*.pl');
-auto_install;
-WriteAll;
+WriteMakefile(
+    NAME                => 'Literature',
+    AUTHOR              => q{YOUR NAME <youremail@example.com>},
+    VERSION_FROM        => 'lib/Literature.pm',
+    ABSTRACT            => 'YOUR APPLICATION ABSTRACT',
+    ($eumm_version >= 6.3001
+      ? ('LICENSE'=> 'perl')
+      : ()),
+    PL_FILES            => {},
+    PREREQ_PM => {
+        'Test::More' => 0,
+        'YAML'       => 0,
+        'Dancer2'     => 0.160000,
+    },
+    dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
+    clean               => { FILES => 'Literature-*' },
+);
