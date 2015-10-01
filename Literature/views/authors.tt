@@ -1,5 +1,5 @@
 <ul>
 [% FOREACH author IN authors.all -%]
-<li>[% author.name %]</li>
+<li><a href="/authors/[% author.id %]">[% author.name %]</a></li>
 [% END -%]
 </ul>

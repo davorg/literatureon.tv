@@ -16,4 +16,8 @@ get '/authors/' => sub {
     template 'authors', { authors => resultset('Author') };
 };
 
+get '/authors/:id' => sub {
+    template 'author', { author => resultset('Author')->find(param('id')) };
+};
+
 true;
