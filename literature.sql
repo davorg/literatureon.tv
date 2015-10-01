@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.5.18, for Linux (i686)
+-- MySQL dump 10.15  Distrib 10.0.21-MariaDB, for Linux (x86_64)
 --
 -- Host: localhost    Database: literature
 -- ------------------------------------------------------
--- Server version	5.5.18
+-- Server version	10.0.21-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -30,18 +30,8 @@ CREATE TABLE `actor` (
   `imdb` char(15) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `name` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `actor`
---
-
-LOCK TABLES `actor` WRITE;
-/*!40000 ALTER TABLE `actor` DISABLE KEYS */;
-INSERT INTO `actor` VALUES (1,'Jennifer Ehle','1969-12-29 00:00:00','0000-00-00 00:00:00','nm0000383'),(2,'Colin Firth','1960-09-10 00:00:00','0000-00-00 00:00:00','nm0000147');
-/*!40000 ALTER TABLE `actor` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `actor_role`
@@ -64,16 +54,6 @@ CREATE TABLE `actor_role` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `actor_role`
---
-
-LOCK TABLES `actor_role` WRITE;
-/*!40000 ALTER TABLE `actor_role` DISABLE KEYS */;
-INSERT INTO `actor_role` VALUES (1,1,1),(2,1,2);
-/*!40000 ALTER TABLE `actor_role` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `author`
 --
 
@@ -90,16 +70,6 @@ CREATE TABLE `author` (
   KEY `name` (`name`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `author`
---
-
-LOCK TABLES `author` WRITE;
-/*!40000 ALTER TABLE `author` DISABLE KEYS */;
-INSERT INTO `author` VALUES (1,'Charles Dickens','1812-02-07 00:00:00','1870-06-09 00:00:00','nm0002042'),(2,'Jane Austen','1775-12-16 00:00:00','1817-07-18 00:00:00','nm0000807'),(3,'William Shakespeare','1564-04-26 00:00:00','1616-04-23 00:00:00','nm0000636');
-/*!40000 ALTER TABLE `author` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `author_work`
@@ -119,39 +89,6 @@ CREATE TABLE `author_work` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `author_work`
---
-
-LOCK TABLES `author_work` WRITE;
-/*!40000 ALTER TABLE `author_work` DISABLE KEYS */;
-INSERT INTO `author_work` VALUES (1,1),(1,2),(1,3),(1,4),(1,5),(1,6),(1,7),(1,8),(1,9),(1,10),(1,11),(1,12),(1,13),(1,14),(1,15),(1,16),(1,17),(1,18),(1,19),(1,20),(2,21),(2,22),(2,23),(2,24),(2,25),(2,26),(3,27),(3,28),(3,29),(3,30),(3,31),(3,32),(3,33),(3,34),(3,35),(3,36),(3,37),(3,38),(3,39),(3,40),(3,41),(3,42),(3,43),(3,44),(3,45),(3,46),(3,47),(3,48),(3,49),(3,50),(3,51),(3,52),(3,53),(3,54),(3,55),(3,56),(3,57),(3,58),(3,59),(3,60),(3,61),(3,62);
-/*!40000 ALTER TABLE `author_work` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `character`
---
-
-DROP TABLE IF EXISTS `character`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `character` (
-  `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `character`
---
-
-LOCK TABLES `character` WRITE;
-/*!40000 ALTER TABLE `character` DISABLE KEYS */;
-/*!40000 ALTER TABLE `character` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `fictional_character`
 --
 
@@ -164,16 +101,6 @@ CREATE TABLE `fictional_character` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `fictional_character`
---
-
-LOCK TABLES `fictional_character` WRITE;
-/*!40000 ALTER TABLE `fictional_character` DISABLE KEYS */;
-INSERT INTO `fictional_character` VALUES (1,'Elizabeth Bennet'),(2,'FitzWilliam D\'Arcy');
-/*!40000 ALTER TABLE `fictional_character` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `fictional_character_appearance`
@@ -193,16 +120,6 @@ CREATE TABLE `fictional_character_appearance` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `fictional_character_appearance`
---
-
-LOCK TABLES `fictional_character_appearance` WRITE;
-/*!40000 ALTER TABLE `fictional_character_appearance` DISABLE KEYS */;
-INSERT INTO `fictional_character_appearance` VALUES (1,22),(2,22);
-/*!40000 ALTER TABLE `fictional_character_appearance` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `production`
 --
 
@@ -218,18 +135,8 @@ CREATE TABLE `production` (
   PRIMARY KEY (`id`),
   KEY `work` (`work`),
   CONSTRAINT `production_ibfk_1` FOREIGN KEY (`work`) REFERENCES `work` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `production`
---
-
-LOCK TABLES `production` WRITE;
-/*!40000 ALTER TABLE `production` DISABLE KEYS */;
-INSERT INTO `production` VALUES (1,'Pride and Prejudice',22,1995,'BBC');
-/*!40000 ALTER TABLE `production` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `work`
@@ -246,16 +153,6 @@ CREATE TABLE `work` (
   KEY `title` (`title`)
 ) ENGINE=InnoDB AUTO_INCREMENT=63 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `work`
---
-
-LOCK TABLES `work` WRITE;
-/*!40000 ALTER TABLE `work` DISABLE KEYS */;
-INSERT INTO `work` VALUES (1,'The Pickwick Papers','1836-03-31 00:00:00'),(2,'The Adventures of Oliver Twist','1837-02-28 00:00:00'),(3,'The Life and Adventures of Nicholas Nickleby','1838-04-30 00:00:00'),(4,'The Old Curiosity Shop','1840-04-25 00:00:00'),(5,'Barnaby Rudge','1841-02-13 00:00:00'),(6,'A Christmas Carol','1843-12-19 00:00:00'),(7,'The Chimes','1844-12-01 00:00:00'),(8,'The Cricket on the Hearth','1845-12-20 00:00:00'),(9,'The Battle of Life','1846-12-01 00:00:00'),(10,'The Haunted Man and the Ghost\'s Bargain','1848-12-19 00:00:00'),(11,'The Life and Adventures of Martin Chuzzlewit','1843-01-01 00:00:00'),(12,'Dombey and Son','1846-10-01 00:00:00'),(13,'David Copperfield','1849-05-01 00:00:00'),(14,'Bleak House','1852-03-01 00:00:00'),(15,'Hard Times','1854-04-01 00:00:00'),(16,'Little Dorrit','1855-12-01 00:00:00'),(17,'A Tale of Two Cities','1859-04-30 00:00:00'),(18,'Great Expectations','1860-12-01 00:00:00'),(19,'Our Mutual Friend','1864-05-01 00:00:00'),(20,'The Mystery of Edwin Drood','1870-04-01 00:00:00'),(21,'Sense and Sensibility','1811-01-01 00:00:00'),(22,'Pride and Prejudice','1813-01-28 00:00:00'),(23,'Mansfield Park','1814-07-01 00:00:00'),(24,'Emma','1815-12-01 00:00:00'),(25,'Northanger Abbey','1817-12-01 00:00:00'),(26,'Persuasion','1818-01-01 00:00:00'),(27,'Henry VI Part I',NULL),(28,'Henry VI Part II',NULL),(29,'Henry VI Part III',NULL),(30,'Richard III',NULL),(31,'The Comedy of Errors',NULL),(32,'Titus Andronicus',NULL),(33,'The Taming of the Shrew',NULL),(34,'The Two Gentlemen of Verona',NULL),(35,'Love\'s Labour\'s Lost',NULL),(36,'Romeo and Juliet',NULL),(37,'Richard II',NULL),(38,'A Midsummers Night\'s Dream',NULL),(39,'King John',NULL),(40,'The Merchant of Venice',NULL),(41,'Henry IV Part I',NULL),(42,'Henry IV Part II',NULL),(43,'Henry V',NULL),(44,'Julius Caesar',NULL),(45,'Much Ado About Nothing',NULL),(46,'As You Like It',NULL),(47,'The  Merry Wives of Windsor',NULL),(48,'Hamlet',NULL),(49,'Twelfth Night',NULL),(50,'Troilus and Cressida',NULL),(51,'All\'s Well That Ends Well',NULL),(52,'Othello',NULL),(53,'King Lear',NULL),(54,'Macbeth',NULL),(55,'Measure for Measure',NULL),(56,'Antony and Cleopatra',NULL),(57,'Coriolanus',NULL),(58,'Timon of Athens',NULL),(59,'Pericles Prince of Tyre',NULL),(60,'Cymberline',NULL),(61,'The Winter\'s Tales',NULL),(62,'The Tempest',NULL);
-/*!40000 ALTER TABLE `work` ENABLE KEYS */;
-UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -266,4 +163,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2012-01-16 19:30:34
+-- Dump completed on 2015-10-01 20:50:07
