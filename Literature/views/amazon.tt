@@ -1,0 +1,18 @@
+<script type='text/javascript'>
+var amzn_wdgt={widget:'MyFavorites'};
+amzn_wdgt.tag='davblog-20';
+amzn_wdgt.columns='6';
+amzn_wdgt.rows='1';
+amzn_wdgt.title='Pride and Prejudice';
+amzn_wdgt.width='800';
+amzn_wdgt.ASIN='0893817449,0500410607,050054199X,0500286426,0893818755,050054333X,0500543178,0945506562';
+amzn_wdgt.showImage='True';
+amzn_wdgt.showPrice='True';
+amzn_wdgt.showRating='True';
+amzn_wdgt.design='2';
+amzn_wdgt.colorTheme='White';
+amzn_wdgt.headerTextColor='#333333';
+amzn_wdgt.marketPlace='GB';
+</script>
+<script type='text/javascript' src='http://wms-na.amazon-adsystem.com/20070822/US//js/AmazonWidgets.js'>
+</script>
