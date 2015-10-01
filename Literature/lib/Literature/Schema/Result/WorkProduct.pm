@@ -1,12 +1,12 @@
 use utf8;
-package Literature::Schema::Result::Production;
+package Literature::Schema::Result::WorkProduct;
 
 # Created by DBIx::Class::Schema::Loader
 # DO NOT MODIFY THE FIRST PART OF THIS FILE
 
 =head1 NAME
 
-Literature::Schema::Result::Production
+Literature::Schema::Result::WorkProduct
 
 =cut
 
@@ -30,11 +30,11 @@ extends 'DBIx::Class::Core';
 
 __PACKAGE__->load_components("InflateColumn::DateTime");
 
-=head1 TABLE: C<production>
+=head1 TABLE: C<work_product>
 
 =cut
 
-__PACKAGE__->table("production");
+__PACKAGE__->table("work_product");
 
 =head1 ACCESSORS
 
@@ -44,42 +44,27 @@ __PACKAGE__->table("production");
   is_auto_increment: 1
   is_nullable: 0
 
-=head2 title
-
-  data_type: 'varchar'
-  is_nullable: 1
-  size: 255
-
-=head2 work
+=head2 work_id
 
   data_type: 'integer'
   is_foreign_key: 1
   is_nullable: 0
 
-=head2 year
+=head2 asin
 
-  data_type: 'year'
-  is_nullable: 1
-
-=head2 made_by
-
-  data_type: 'varchar'
-  is_nullable: 1
-  size: 255
+  data_type: 'char'
+  is_nullable: 0
+  size: 20
 
 =cut
 
 __PACKAGE__->add_columns(
   "id",
   { data_type => "integer", is_auto_increment => 1, is_nullable => 0 },
-  "title",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "work",
+  "work_id",
   { data_type => "integer", is_foreign_key => 1, is_nullable => 0 },
-  "year",
-  { data_type => "year", is_nullable => 1 },
-  "made_by",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
+  "asin",
+  { data_type => "char", is_nullable => 0, size => 20 },
 );
 
 =head1 PRIMARY KEY
@@ -96,36 +81,6 @@ __PACKAGE__->set_primary_key("id");
 
 =head1 RELATIONS
 
-=head2 actor_roles
-
-Type: has_many
-
-Related object: L<Literature::Schema::Result::ActorRole>
-
-=cut
-
-__PACKAGE__->has_many(
-  "actor_roles",
-  "Literature::Schema::Result::ActorRole",
-  { "foreign.production" => "self.id" },
-  { cascade_copy => 0, cascade_delete => 0 },
-);
-
-=head2 production_products
-
-Type: has_many
-
-Related object: L<Literature::Schema::Result::ProductionProduct>
-
-=cut
-
-__PACKAGE__->has_many(
-  "production_products",
-  "Literature::Schema::Result::ProductionProduct",
-  { "foreign.production_id" => "self.id" },
-  { cascade_copy => 0, cascade_delete => 0 },
-);
-
 =head2 work
 
 Type: belongs_to
@@ -137,13 +92,13 @@ Related object: L<Literature::Schema::Result::Work>
 __PACKAGE__->belongs_to(
   "work",
   "Literature::Schema::Result::Work",
-  { id => "work" },
+  { id => "work_id" },
   { is_deferrable => 1, on_delete => "RESTRICT", on_update => "RESTRICT" },
 );
 
 
 # Created by DBIx::Class::Schema::Loader v0.07042 @ 2015-10-01 21:43:50
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:VKyKvC7VRvcrLrcmb7NMKA
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:ejeRY+8ND9weKp9VO8W4bw
 
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration

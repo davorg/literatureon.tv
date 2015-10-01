@@ -130,6 +130,21 @@ __PACKAGE__->has_many(
   { cascade_copy => 0, cascade_delete => 0 },
 );
 
+=head2 work_products
+
+Type: has_many
+
+Related object: L<Literature::Schema::Result::WorkProduct>
+
+=cut
+
+__PACKAGE__->has_many(
+  "work_products",
+  "Literature::Schema::Result::WorkProduct",
+  { "foreign.work_id" => "self.id" },
+  { cascade_copy => 0, cascade_delete => 0 },
+);
+
 =head2 authors
 
 Type: many_to_many
@@ -155,9 +170,16 @@ __PACKAGE__->many_to_many(
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07042 @ 2015-10-01 20:37:37
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:P4SAb/GK/gfabamQ5HGNBA
+# Created by DBIx::Class::Schema::Loader v0.07042 @ 2015-10-01 21:43:50
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:iNlGbrhdinEjHcBTc609zg
 
+sub asins {
+  my $self = shift;
+
+  return () unless $self->work_products->count;
+
+  return map { $_->asin } $self->work_products->all;
+}
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration
 __PACKAGE__->meta->make_immutable;
