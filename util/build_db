@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Make sure we're in the expected place
+SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
+cd $SCRIPTPATH
+cd ..
+
+mysql -u$LIT_USER -p$LIT_PASS -Dliterature < db/literature.sql
+mysql -u$LIT_USER -p$LIT_PASS -Dliterature < db/literature.dat

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Make sure we're in the expected place
+SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
+cd $SCRIPTPATH
+cd ..
+
+mysqldump -u$LIT_USER --no-data -p$LIT_PASS literature > db/literature.sql
+mysqldump -u$LIT_USER --no-create-info -p$LIT_PASS literature > db/literature.dat
