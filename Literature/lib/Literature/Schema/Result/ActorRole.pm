@@ -56,6 +56,12 @@ __PACKAGE__->table("actor_role");
   is_foreign_key: 1
   is_nullable: 0
 
+=head2 name
+
+  data_type: 'varchar'
+  is_nullable: 1
+  size: 100
+
 =cut
 
 __PACKAGE__->add_columns(
@@ -65,6 +71,8 @@ __PACKAGE__->add_columns(
   { data_type => "integer", is_foreign_key => 1, is_nullable => 0 },
   "fictional_character",
   { data_type => "integer", is_foreign_key => 1, is_nullable => 0 },
+  "name",
+  { data_type => "varchar", is_nullable => 1, size => 100 },
 );
 
 =head1 PRIMARY KEY
@@ -131,8 +139,8 @@ __PACKAGE__->belongs_to(
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07042 @ 2015-10-01 20:37:37
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:JDEk/1HSGvguOqR9mXGelQ
+# Created by DBIx::Class::Schema::Loader v0.07042 @ 2015-10-02 13:27:16
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:BC70mzdOdt5zvpzHqV7KtQ
 
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration

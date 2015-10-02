@@ -44,6 +44,7 @@ CREATE TABLE `actor_role` (
   `actor` int(11) NOT NULL,
   `production` int(11) NOT NULL,
   `fictional_character` int(11) NOT NULL,
+  `name` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`actor`,`production`,`fictional_character`),
   KEY `production` (`production`),
   KEY `fictional_character` (`fictional_character`),
@@ -197,4 +198,4 @@ CREATE TABLE `work_product` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-10-02 13:24:51
+-- Dump completed on 2015-10-02 13:27:31
