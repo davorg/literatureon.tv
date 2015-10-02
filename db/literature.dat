@@ -60,7 +60,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `fictional_character` WRITE;
 /*!40000 ALTER TABLE `fictional_character` DISABLE KEYS */;
-INSERT INTO `fictional_character` VALUES (1,'Elizabeth Bennet'),(2,'FitzWilliam D\'Arcy');
+INSERT INTO `fictional_character` VALUES (1,'Elizabeth Bennet'),(2,'FitzWilliam D\'Arcy'),(3,'Mr Bennet'),(4,'Mrs Bennet'),(5,'Jane Bennet'),(6,'Mary Bennet'),(7,'Catherine Bennet'),(8,'Lydia Bennet'),(9,'Charles Bingley'),(10,'Caroline Bingley'),(11,'George Wickham'),(12,'William Collins'),(13,'Lady Catherine de Bourgh');
 /*!40000 ALTER TABLE `fictional_character` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -70,7 +70,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `fictional_character_appearance` WRITE;
 /*!40000 ALTER TABLE `fictional_character_appearance` DISABLE KEYS */;
-INSERT INTO `fictional_character_appearance` VALUES (1,22),(2,22);
+INSERT INTO `fictional_character_appearance` VALUES (1,22),(2,22),(3,22),(4,22),(5,22),(6,22),(7,22),(8,22),(9,22),(10,22),(11,22),(12,22),(13,22);
 /*!40000 ALTER TABLE `fictional_character_appearance` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -121,4 +121,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-10-02 13:27:31
+-- Dump completed on 2015-10-02 14:22:20

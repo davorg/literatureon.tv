@@ -1,0 +1,32 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+use FindBin '$Bin';
+use lib "$Bin/../Literature/lib";
+use 5.010;
+
+use Literature::Schema;
+
+my $sch = Literature::Schema->get_schema;
+
+my $work_rs = $sch->resultset('Work');
+my $pp = $work_rs->find({ title => 'Pride and Prejudice' });
+
+while (<DATA>) {
+  chomp;
+  $pp->add_to_fictional_characters({ name => $_ });
+}
+
+__DATA__
+Mr Bennet
+Mrs Bennet
+Jane Bennet
+Mary Bennet
+Catherine Bennet
+Lydia Bennet
+Charles Bingley
+Caroline Bingley
+George Wickham
+William Collins
+Lady Catherine de Bourgh
