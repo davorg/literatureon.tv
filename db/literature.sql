@@ -135,7 +135,7 @@ CREATE TABLE `production` (
   PRIMARY KEY (`id`),
   KEY `work` (`work`),
   CONSTRAINT `production_ibfk_1` FOREIGN KEY (`work`) REFERENCES `work` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -197,4 +197,4 @@ CREATE TABLE `work_product` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-10-01 21:43:34
+-- Dump completed on 2015-10-02 13:24:51
