@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Make sure we're in the expected place
+SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
+cd $SCRIPTPATH
+cd ..
+
+sqlt-graph -f=MySQL -o db/literature.png db/literature.sql
