@@ -15,8 +15,8 @@
 <h3>Productions</h3>
 [% IF work.productions.size %]
 <ul>
-[% FOR p IN work.productions %]
-<li><a href="/productions/[% p.id %]">[% p.made_by %] ([% p.year %])</a></li>
+[% FOR p IN work.productions.sort('year') %]
+<li><a href="/productions/[% p.id %]">[% p.year %] [% IF p.title; '('; p.title; ')'; END %]</a></li>
 [% END %]
 </ul>
 [% ELSE %]
