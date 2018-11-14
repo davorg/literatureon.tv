@@ -1,0 +1,18 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+use Template;
+use Literature::Schema;
+
+my $tt = Template->new({
+  INCLUDE_PATH => [ qw( in tt_lib ) ],
+  OUTPUT_PATH  => 'docs',
+  WRAPPER      => 'main.tt',
+});
+
+my $sch = Literature::Schema->get_schema;
+
+$tt->process('index.tt', {}, 'index.html')
+  or die $tt->error;

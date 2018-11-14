@@ -1,0 +1,11 @@
+[% META title = 'Literature on TV' %]
+
+<p>Browse the database:</p>
+<ul>
+<li>By <a href="/authors/">author</a></li>
+<li>By <a href="/works/">works</a></li>
+<li>By <a href="/fictional_characters/">characters</a></li>
+<li>By <a href="/productions/">productions</a></li>
+<li>By <a href="/actors/">actors</a></li>
+</ul>
+
