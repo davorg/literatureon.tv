@@ -1,0 +1,8 @@
+[% # Provide a title -%]
+[% META title = 'List of Productions' -%]
+<ul>
+[% FOREACH p IN productions.all.sort('year', 'title')-%]
+<li><a href="/productions/[% p.id %]">[% p.title %]</a>
+      ([% p.made_by %] - [% p.year %])</li>
+[% END -%]
+</ul>
