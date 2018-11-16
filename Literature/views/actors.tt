@@ -1,8 +1,0 @@
-[% # Provide a title -%]
-[% META title = 'List of Actors' -%]
-    
-<ul>
-[% FOREACH a IN actors.all.sort('name')-%]
-<li><a href="/actors/[% a.id %]">[% a.name %]</a></li>
-[% END -%]
-</ul>

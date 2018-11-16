@@ -1,5 +1,0 @@
-<ul>
-[% FOREACH author IN authors.all.sort('name') -%]
-<li><a href="/authors/[% author.id %]">[% author.name %]</a></li>
-[% END -%]
-</ul>
