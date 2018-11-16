@@ -29,6 +29,6 @@ $tt->process('index.tt', {}, 'index2.html')
 for (keys %resources) {
   my $rs = $sch->resultset($resources{$_});
 
-  $tt->process("$_.tt", { $_ => $rs }, "$_.html")
+  $tt->process("$_.tt", { $_ => $rs }, "$_/index.html")
     or die $tt->error;
 }
