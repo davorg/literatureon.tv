@@ -1,0 +1,22 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+use feature 'say';
+
+use Literature::Schema;
+
+my $sch = Literature::Schema->get_schema;
+
+for (qw[Author Actor Production Work]) {
+
+  my $rs = $sch->resultset($_);
+
+  while (my $obj = $rs->next) {
+    next if defined $obj->slug;
+    my $slug = $obj->make_slug;
+    say $slug;
+    $obj->slug($slug);
+    $obj->update;
+  }
+}
