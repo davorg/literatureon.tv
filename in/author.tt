@@ -10,7 +10,7 @@
 [% IF author.author_works.size %]
 <ul>
 [% FOR w IN author.author_works.sort('published') %]
-<li><a href="/works/[% w.work.id %]">[% w.work.title %]</a></li>
+<li><a href="/works/[% w.work.slug %]">[% w.work.title %]</a></li>
 [% END %]
 </ul>
 [% ELSE %]
