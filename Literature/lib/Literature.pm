@@ -7,7 +7,7 @@ our $VERSION = '0.1';
 
 my $cfg = dancer_app->config;
 $cfg->{plugins}{DBIC}{default}{user} = $ENV{LIT_USER};
-$cfg->{plugins}{DBIC}{default}{pass} = $ENV{LIT_PASS};
+$cfg->{plugins}{DBIC}{default}{password} = $ENV{LIT_PASS};
 
 my %resources = qw[
   actors Actor
