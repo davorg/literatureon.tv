@@ -1,13 +1,13 @@
--- MySQL dump 10.15  Distrib 10.0.21-MariaDB, for Linux (x86_64)
+-- MySQL dump 10.17  Distrib 10.3.12-MariaDB, for Linux (x86_64)
 --
 -- Host: localhost    Database: literature
 -- ------------------------------------------------------
--- Server version	10.0.21-MariaDB
+-- Server version	10.3.12-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -28,6 +28,7 @@ CREATE TABLE `actor` (
   `born` datetime DEFAULT NULL,
   `died` datetime DEFAULT NULL,
   `imdb` char(15) DEFAULT NULL,
+  `slug` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `name` (`name`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
@@ -50,7 +51,7 @@ CREATE TABLE `actor_role` (
   KEY `fictional_character` (`fictional_character`),
   CONSTRAINT `actor_role_ibfk_1` FOREIGN KEY (`actor`) REFERENCES `actor` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `actor_role_ibfk_2` FOREIGN KEY (`production`) REFERENCES `production` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `actor_role_ibfk_3` FOREIGN KEY (`fictional_character`) REFERENCES `fictional_character` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+  CONSTRAINT `actor_role_ibfk_3` FOREIGN KEY (`fictional_character`) REFERENCES `character` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -67,6 +68,7 @@ CREATE TABLE `author` (
   `born` datetime DEFAULT NULL,
   `died` datetime DEFAULT NULL,
   `imdb` char(15) NOT NULL,
+  `slug` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `name` (`name`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
@@ -90,33 +92,34 @@ CREATE TABLE `author_work` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `fictional_character`
+-- Table structure for table `character`
 --
 
-DROP TABLE IF EXISTS `fictional_character`;
+DROP TABLE IF EXISTS `character`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `fictional_character` (
+CREATE TABLE `character` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
+  `slug` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `fictional_character_appearance`
+-- Table structure for table `character_appearance`
 --
 
-DROP TABLE IF EXISTS `fictional_character_appearance`;
+DROP TABLE IF EXISTS `character_appearance`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `fictional_character_appearance` (
+CREATE TABLE `character_appearance` (
   `fictional_character` int(11) NOT NULL,
   `work` int(11) NOT NULL,
   PRIMARY KEY (`fictional_character`,`work`),
   KEY `work` (`work`),
-  CONSTRAINT `fictional_character_appearance_ibfk_1` FOREIGN KEY (`fictional_character`) REFERENCES `fictional_character` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `fictional_character_appearance_ibfk_2` FOREIGN KEY (`work`) REFERENCES `work` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+  CONSTRAINT `character_appearance_ibfk_1` FOREIGN KEY (`fictional_character`) REFERENCES `character` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `character_appearance_ibfk_2` FOREIGN KEY (`work`) REFERENCES `work` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -133,6 +136,7 @@ CREATE TABLE `production` (
   `work` int(11) NOT NULL,
   `year` year(4) DEFAULT NULL,
   `made_by` varchar(255) DEFAULT NULL,
+  `slug` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `work` (`work`),
   CONSTRAINT `production_ibfk_1` FOREIGN KEY (`work`) REFERENCES `work` (`id`)
@@ -167,6 +171,7 @@ CREATE TABLE `work` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
   `published` datetime DEFAULT NULL,
+  `slug` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `title` (`title`)
 ) ENGINE=InnoDB AUTO_INCREMENT=63 DEFAULT CHARSET=utf8;
@@ -198,4 +203,4 @@ CREATE TABLE `work_product` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-10-02 14:22:20
+-- Dump completed on 2019-04-19 16:03:21

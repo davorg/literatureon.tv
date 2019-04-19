@@ -1,12 +1,12 @@
 use utf8;
-package Literature::Schema::Result::ActorRole;
+package Literature::Schema::Result::CharacterAppearance;
 
 # Created by DBIx::Class::Schema::Loader
 # DO NOT MODIFY THE FIRST PART OF THIS FILE
 
 =head1 NAME
 
-Literature::Schema::Result::ActorRole
+Literature::Schema::Result::CharacterAppearance
 
 =cut
 
@@ -30,25 +30,13 @@ extends 'DBIx::Class::Core';
 
 __PACKAGE__->load_components("InflateColumn::DateTime");
 
-=head1 TABLE: C<actor_role>
+=head1 TABLE: C<character_appearance>
 
 =cut
 
-__PACKAGE__->table("actor_role");
+__PACKAGE__->table("character_appearance");
 
 =head1 ACCESSORS
-
-=head2 actor
-
-  data_type: 'integer'
-  is_foreign_key: 1
-  is_nullable: 0
-
-=head2 production
-
-  data_type: 'integer'
-  is_foreign_key: 1
-  is_nullable: 0
 
 =head2 fictional_character
 
@@ -56,57 +44,36 @@ __PACKAGE__->table("actor_role");
   is_foreign_key: 1
   is_nullable: 0
 
-=head2 name
+=head2 work
 
-  data_type: 'varchar'
-  is_nullable: 1
-  size: 100
+  data_type: 'integer'
+  is_foreign_key: 1
+  is_nullable: 0
 
 =cut
 
 __PACKAGE__->add_columns(
-  "actor",
-  { data_type => "integer", is_foreign_key => 1, is_nullable => 0 },
-  "production",
-  { data_type => "integer", is_foreign_key => 1, is_nullable => 0 },
   "fictional_character",
   { data_type => "integer", is_foreign_key => 1, is_nullable => 0 },
-  "name",
-  { data_type => "varchar", is_nullable => 1, size => 100 },
+  "work",
+  { data_type => "integer", is_foreign_key => 1, is_nullable => 0 },
 );
 
 =head1 PRIMARY KEY
 
 =over 4
 
-=item * L</actor>
-
-=item * L</production>
-
 =item * L</fictional_character>
+
+=item * L</work>
 
 =back
 
 =cut
 
-__PACKAGE__->set_primary_key("actor", "production", "fictional_character");
+__PACKAGE__->set_primary_key("fictional_character", "work");
 
 =head1 RELATIONS
-
-=head2 actor
-
-Type: belongs_to
-
-Related object: L<Literature::Schema::Result::Actor>
-
-=cut
-
-__PACKAGE__->belongs_to(
-  "actor",
-  "Literature::Schema::Result::Actor",
-  { id => "actor" },
-  { is_deferrable => 1, on_delete => "CASCADE", on_update => "CASCADE" },
-);
 
 =head2 fictional_character
 
@@ -123,24 +90,24 @@ __PACKAGE__->belongs_to(
   { is_deferrable => 1, on_delete => "CASCADE", on_update => "CASCADE" },
 );
 
-=head2 production
+=head2 work
 
 Type: belongs_to
 
-Related object: L<Literature::Schema::Result::Production>
+Related object: L<Literature::Schema::Result::Work>
 
 =cut
 
 __PACKAGE__->belongs_to(
-  "production",
-  "Literature::Schema::Result::Production",
-  { id => "production" },
+  "work",
+  "Literature::Schema::Result::Work",
+  { id => "work" },
   { is_deferrable => 1, on_delete => "CASCADE", on_update => "CASCADE" },
 );
 
 
 # Created by DBIx::Class::Schema::Loader v0.07049 @ 2019-04-19 15:09:14
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:zLk58LK75cn/acUthjuXhQ
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:E7acrHmV/w54uPWA6MWgsQ
 
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration

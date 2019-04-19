@@ -67,6 +67,12 @@ __PACKAGE__->table("production");
   is_nullable: 1
   size: 255
 
+=head2 slug
+
+  data_type: 'varchar'
+  is_nullable: 1
+  size: 255
+
 =cut
 
 __PACKAGE__->add_columns(
@@ -79,6 +85,8 @@ __PACKAGE__->add_columns(
   "year",
   { data_type => "year", is_nullable => 1 },
   "made_by",
+  { data_type => "varchar", is_nullable => 1, size => 255 },
+  "slug",
   { data_type => "varchar", is_nullable => 1, size => 255 },
 );
 
@@ -142,9 +150,23 @@ __PACKAGE__->belongs_to(
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07042 @ 2015-10-01 21:43:50
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:VKyKvC7VRvcrLrcmb7NMKA
+# Created by DBIx::Class::Schema::Loader v0.07049 @ 2019-04-19 15:09:14
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:GzGSZGAZyDrytjA6Ygmyyg
 
+with 'Literature::Role::HasSlug';
+
+sub slug_cols { return qw[title year]; }
+
+around title => sub {
+  my $orig = shift;
+  my $self = shift;
+
+  if (@_) {
+    return $self->$orig(@_);
+  } else {
+    return $self->$orig // $self->work->title;
+  }
+};
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration
 __PACKAGE__->meta->make_immutable;

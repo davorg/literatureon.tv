@@ -56,6 +56,12 @@ __PACKAGE__->table("work");
   datetime_undef_if_invalid: 1
   is_nullable: 1
 
+=head2 slug
+
+  data_type: 'varchar'
+  is_nullable: 1
+  size: 255
+
 =cut
 
 __PACKAGE__->add_columns(
@@ -69,6 +75,8 @@ __PACKAGE__->add_columns(
     datetime_undef_if_invalid => 1,
     is_nullable => 1,
   },
+  "slug",
+  { data_type => "varchar", is_nullable => 1, size => 255 },
 );
 
 =head1 PRIMARY KEY
@@ -100,17 +108,17 @@ __PACKAGE__->has_many(
   { cascade_copy => 0, cascade_delete => 0 },
 );
 
-=head2 fictional_character_appearances
+=head2 character_appearances
 
 Type: has_many
 
-Related object: L<Literature::Schema::Result::FictionalCharacterAppearance>
+Related object: L<Literature::Schema::Result::CharacterAppearance>
 
 =cut
 
 __PACKAGE__->has_many(
-  "fictional_character_appearances",
-  "Literature::Schema::Result::FictionalCharacterAppearance",
+  "character_appearances",
+  "Literature::Schema::Result::CharacterAppearance",
   { "foreign.work" => "self.id" },
   { cascade_copy => 0, cascade_delete => 0 },
 );
@@ -159,19 +167,23 @@ __PACKAGE__->many_to_many("authors", "author_works", "author");
 
 Type: many_to_many
 
-Composing rels: L</fictional_character_appearances> -> fictional_character
+Composing rels: L</character_appearances> -> fictional_character
 
 =cut
 
 __PACKAGE__->many_to_many(
   "fictional_characters",
-  "fictional_character_appearances",
+  "character_appearances",
   "fictional_character",
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07042 @ 2015-10-01 21:43:50
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:iNlGbrhdinEjHcBTc609zg
+# Created by DBIx::Class::Schema::Loader v0.07049 @ 2019-04-19 15:09:14
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:wKSnP2WxfypmPw5NDXiQFA
+
+with 'Literature::Role::HasSlug';
+
+sub slug_cols { return qw[title]; }
 
 sub asins {
   my $self = shift;

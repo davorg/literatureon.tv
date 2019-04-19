@@ -1,12 +1,12 @@
 use utf8;
-package Literature::Schema::Result::Actor;
+package Literature::Schema::Result::Character;
 
 # Created by DBIx::Class::Schema::Loader
 # DO NOT MODIFY THE FIRST PART OF THIS FILE
 
 =head1 NAME
 
-Literature::Schema::Result::Actor
+Literature::Schema::Result::Character
 
 =cut
 
@@ -30,11 +30,11 @@ extends 'DBIx::Class::Core';
 
 __PACKAGE__->load_components("InflateColumn::DateTime");
 
-=head1 TABLE: C<actor>
+=head1 TABLE: C<character>
 
 =cut
 
-__PACKAGE__->table("actor");
+__PACKAGE__->table("character");
 
 =head1 ACCESSORS
 
@@ -50,24 +50,6 @@ __PACKAGE__->table("actor");
   is_nullable: 0
   size: 255
 
-=head2 born
-
-  data_type: 'datetime'
-  datetime_undef_if_invalid: 1
-  is_nullable: 1
-
-=head2 died
-
-  data_type: 'datetime'
-  datetime_undef_if_invalid: 1
-  is_nullable: 1
-
-=head2 imdb
-
-  data_type: 'char'
-  is_nullable: 1
-  size: 15
-
 =head2 slug
 
   data_type: 'varchar'
@@ -81,20 +63,6 @@ __PACKAGE__->add_columns(
   { data_type => "integer", is_auto_increment => 1, is_nullable => 0 },
   "name",
   { data_type => "varchar", is_nullable => 0, size => 255 },
-  "born",
-  {
-    data_type => "datetime",
-    datetime_undef_if_invalid => 1,
-    is_nullable => 1,
-  },
-  "died",
-  {
-    data_type => "datetime",
-    datetime_undef_if_invalid => 1,
-    is_nullable => 1,
-  },
-  "imdb",
-  { data_type => "char", is_nullable => 1, size => 15 },
   "slug",
   { data_type => "varchar", is_nullable => 1, size => 255 },
 );
@@ -124,13 +92,38 @@ Related object: L<Literature::Schema::Result::ActorRole>
 __PACKAGE__->has_many(
   "actor_roles",
   "Literature::Schema::Result::ActorRole",
-  { "foreign.actor" => "self.id" },
+  { "foreign.fictional_character" => "self.id" },
   { cascade_copy => 0, cascade_delete => 0 },
 );
 
+=head2 character_appearances
+
+Type: has_many
+
+Related object: L<Literature::Schema::Result::CharacterAppearance>
+
+=cut
+
+__PACKAGE__->has_many(
+  "character_appearances",
+  "Literature::Schema::Result::CharacterAppearance",
+  { "foreign.fictional_character" => "self.id" },
+  { cascade_copy => 0, cascade_delete => 0 },
+);
+
+=head2 works
+
+Type: many_to_many
+
+Composing rels: L</character_appearances> -> work
+
+=cut
+
+__PACKAGE__->many_to_many("works", "character_appearances", "work");
+
 
 # Created by DBIx::Class::Schema::Loader v0.07049 @ 2019-04-19 15:09:14
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:INL0Qo42zMtlg0o8evBMoA
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:BRLQ9KtLTnz8issqwWF4qg
 
 with 'Literature::Role::HasSlug';
 

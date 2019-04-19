@@ -68,6 +68,12 @@ __PACKAGE__->table("author");
   is_nullable: 0
   size: 15
 
+=head2 slug
+
+  data_type: 'varchar'
+  is_nullable: 1
+  size: 255
+
 =cut
 
 __PACKAGE__->add_columns(
@@ -89,6 +95,8 @@ __PACKAGE__->add_columns(
   },
   "imdb",
   { data_type => "char", is_nullable => 0, size => 15 },
+  "slug",
+  { data_type => "varchar", is_nullable => 1, size => 255 },
 );
 
 =head1 PRIMARY KEY
@@ -131,9 +139,12 @@ Composing rels: L</author_works> -> work
 __PACKAGE__->many_to_many("works", "author_works", "work");
 
 
-# Created by DBIx::Class::Schema::Loader v0.07042 @ 2015-10-01 20:37:37
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:B5frba6YXeF2FXSyH6YNPw
+# Created by DBIx::Class::Schema::Loader v0.07049 @ 2019-04-19 15:09:14
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:niNTrnT/xawzB/3DfXxSCQ
 
+with 'Literature::Role::HasSlug';
+
+sub slug_cols { return qw[name]; }
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration
 __PACKAGE__->meta->make_immutable;
