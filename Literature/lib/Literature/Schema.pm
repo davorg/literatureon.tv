@@ -24,7 +24,11 @@ sub get_schema {
   return $class->connect(
     "dbi:mysql:database=literature",
     $ENV{LIT_USER}, $ENV{LIT_PASS},
-    { mysql_enable_utf8 => 1 },
+    {
+      mysql_enable_utf8 => 1,
+      quote_char => '`',
+      name_sep   => '.'
+    },
   ) || die;
 }
 
