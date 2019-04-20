@@ -3,10 +3,10 @@
 <h2>[% work.title %]</h2>
 <p>By [% FOR a IN work.authors; '<a href="/authors/'; a.slug; '">'; a.name; '</a> '; END %]</p>
 <h3>Characters</h3>
-[% IF work.fictional_character_appearances.size %]
+[% IF work.character_appearances.size %]
 <ul>
-[% FOR ch IN work.fictional_character_appearances %]
-<li><a href="/fictional_characters/[% ch.fictional_character.slug %]">[% ch.fictional_character.name %]</a></li>
+[% FOR ch IN work.character_appearances %]
+<li><a href="/characters/[% ch.character.slug %]">[% ch.character.name %]</a></li>
 [% END %]
 </ul>
 [% ELSE %]

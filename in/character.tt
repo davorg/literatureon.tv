@@ -1,11 +1,11 @@
 [% META title = 'Character' %]
 
-<h2>[% fictionalcharacter.name %]</h2>
-[% IF fictionalcharacter.imdb %]<p><a href="http://imdb.com/character/[% fictionalcharacter.imdb %]">[% fictionalcharacter.name %] on IMDB</a></p>[% END %]
+<h2>[% character.name %]</h2>
+[% IF character.imdb %]<p><a href="http://imdb.com/character/[% fictionalcharacter.imdb %]">[% fictionalcharacter.name %] on IMDB</a></p>[% END %]
 <h3>Appearances</h3>
-[% IF fictionalcharacter.fictional_character_appearances.size %]
+[% IF character.character_appearances.size %]
 <ul>
-[% FOR a IN fictionalcharacter.fictional_character_appearances %]
+[% FOR a IN character.character_appearances %]
 <li><a href="/works/[% a.work.slug %]">[% a.work.title %]</a>
 by
 [% FOR au IN a.work.authors %]
@@ -19,9 +19,9 @@ by
 [% END %]
 
 <h3>Played By</h3>
-[% IF fictionalcharacter.actor_roles.size %]
+[% IF character.actor_roles.size %]
 <ul>
-[% FOR r IN fictionalcharacter.actor_roles %]
+[% FOR r IN character.actor_roles %]
 <li><a href="/actors/[% r.actor.slug %]">[% r.actor.name %]</a> in
 <a href="/productions/[% r.production.slug %]">[% r.production.title %]
   ([% r.description %])</a></li>

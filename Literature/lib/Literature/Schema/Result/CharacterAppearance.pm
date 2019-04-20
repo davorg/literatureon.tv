@@ -38,7 +38,7 @@ __PACKAGE__->table("character_appearance");
 
 =head1 ACCESSORS
 
-=head2 fictional_character
+=head2 character
 
   data_type: 'integer'
   is_foreign_key: 1
@@ -53,7 +53,7 @@ __PACKAGE__->table("character_appearance");
 =cut
 
 __PACKAGE__->add_columns(
-  "fictional_character",
+  "character",
   { data_type => "integer", is_foreign_key => 1, is_nullable => 0 },
   "work",
   { data_type => "integer", is_foreign_key => 1, is_nullable => 0 },
@@ -63,7 +63,7 @@ __PACKAGE__->add_columns(
 
 =over 4
 
-=item * L</fictional_character>
+=item * L</character>
 
 =item * L</work>
 
@@ -71,11 +71,11 @@ __PACKAGE__->add_columns(
 
 =cut
 
-__PACKAGE__->set_primary_key("fictional_character", "work");
+__PACKAGE__->set_primary_key("character", "work");
 
 =head1 RELATIONS
 
-=head2 fictional_character
+=head2 character
 
 Type: belongs_to
 
@@ -84,9 +84,9 @@ Related object: L<Literature::Schema::Result::Character>
 =cut
 
 __PACKAGE__->belongs_to(
-  "fictional_character",
+  "character",
   "Literature::Schema::Result::Character",
-  { id => "fictional_character" },
+  { id => "character" },
   { is_deferrable => 1, on_delete => "CASCADE", on_update => "CASCADE" },
 );
 
@@ -106,8 +106,8 @@ __PACKAGE__->belongs_to(
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07049 @ 2019-04-19 15:09:14
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:E7acrHmV/w54uPWA6MWgsQ
+# Created by DBIx::Class::Schema::Loader v0.07049 @ 2019-04-20 15:23:29
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:k2VvpkxMLka2E11gvnBWMg
 
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration

@@ -163,23 +163,19 @@ Composing rels: L</author_works> -> author
 
 __PACKAGE__->many_to_many("authors", "author_works", "author");
 
-=head2 fictional_characters
+=head2 characters
 
 Type: many_to_many
 
-Composing rels: L</character_appearances> -> fictional_character
+Composing rels: L</character_appearances> -> character
 
 =cut
 
-__PACKAGE__->many_to_many(
-  "fictional_characters",
-  "character_appearances",
-  "fictional_character",
-);
+__PACKAGE__->many_to_many("characters", "character_appearances", "character");
 
 
-# Created by DBIx::Class::Schema::Loader v0.07049 @ 2019-04-19 15:09:14
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:wKSnP2WxfypmPw5NDXiQFA
+# Created by DBIx::Class::Schema::Loader v0.07049 @ 2019-04-20 15:23:29
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:vv5TmYJOhw1s70meTyfteA
 
 with 'Literature::Role::HasSlug';
 

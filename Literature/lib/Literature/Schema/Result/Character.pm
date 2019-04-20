@@ -92,7 +92,7 @@ Related object: L<Literature::Schema::Result::ActorRole>
 __PACKAGE__->has_many(
   "actor_roles",
   "Literature::Schema::Result::ActorRole",
-  { "foreign.fictional_character" => "self.id" },
+  { "foreign.character" => "self.id" },
   { cascade_copy => 0, cascade_delete => 0 },
 );
 
@@ -107,7 +107,7 @@ Related object: L<Literature::Schema::Result::CharacterAppearance>
 __PACKAGE__->has_many(
   "character_appearances",
   "Literature::Schema::Result::CharacterAppearance",
-  { "foreign.fictional_character" => "self.id" },
+  { "foreign.character" => "self.id" },
   { cascade_copy => 0, cascade_delete => 0 },
 );
 
@@ -122,8 +122,8 @@ Composing rels: L</character_appearances> -> work
 __PACKAGE__->many_to_many("works", "character_appearances", "work");
 
 
-# Created by DBIx::Class::Schema::Loader v0.07049 @ 2019-04-19 15:09:14
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:BRLQ9KtLTnz8issqwWF4qg
+# Created by DBIx::Class::Schema::Loader v0.07049 @ 2019-04-20 15:23:29
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:DEr25X61p2zl9TDdZeBawQ
 
 with 'Literature::Role::HasSlug';
 

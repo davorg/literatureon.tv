@@ -15,7 +15,7 @@ my $pp = $work_rs->find({ title => 'Pride and Prejudice' });
 
 while (<DATA>) {
   chomp;
-  $pp->add_to_fictional_characters({ name => $_ });
+  $pp->add_to_characters({ name => $_ });
 }
 
 __DATA__

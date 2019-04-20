@@ -60,7 +60,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `character` WRITE;
 /*!40000 ALTER TABLE `character` DISABLE KEYS */;
-INSERT INTO `character` VALUES (1,'Elizabeth Bennet',NULL),(2,'FitzWilliam D\'Arcy',NULL),(3,'Mr Bennet',NULL),(4,'Mrs Bennet',NULL),(5,'Jane Bennet',NULL),(6,'Mary Bennet',NULL),(7,'Catherine Bennet',NULL),(8,'Lydia Bennet',NULL),(9,'Charles Bingley',NULL),(10,'Caroline Bingley',NULL),(11,'George Wickham',NULL),(12,'William Collins',NULL),(13,'Lady Catherine de Bourgh',NULL);
+INSERT INTO `character` VALUES (1,'Elizabeth Bennet','elizabeth-bennet'),(2,'FitzWilliam D\'Arcy','fitzwilliam-darcy'),(3,'Mr Bennet','mr-bennet'),(4,'Mrs Bennet','mrs-bennet'),(5,'Jane Bennet','jane-bennet'),(6,'Mary Bennet','mary-bennet'),(7,'Catherine Bennet','catherine-bennet'),(8,'Lydia Bennet','lydia-bennet'),(9,'Charles Bingley','charles-bingley'),(10,'Caroline Bingley','caroline-bingley'),(11,'George Wickham','george-wickham'),(12,'William Collins','william-collins'),(13,'Lady Catherine de Bourgh','lady-catherine-de-bourgh');
 /*!40000 ALTER TABLE `character` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -121,4 +121,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-04-19 16:03:21
+-- Dump completed on 2019-04-20 15:27:19

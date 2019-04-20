@@ -50,7 +50,7 @@ __PACKAGE__->table("actor_role");
   is_foreign_key: 1
   is_nullable: 0
 
-=head2 fictional_character
+=head2 character
 
   data_type: 'integer'
   is_foreign_key: 1
@@ -69,7 +69,7 @@ __PACKAGE__->add_columns(
   { data_type => "integer", is_foreign_key => 1, is_nullable => 0 },
   "production",
   { data_type => "integer", is_foreign_key => 1, is_nullable => 0 },
-  "fictional_character",
+  "character",
   { data_type => "integer", is_foreign_key => 1, is_nullable => 0 },
   "name",
   { data_type => "varchar", is_nullable => 1, size => 100 },
@@ -83,13 +83,13 @@ __PACKAGE__->add_columns(
 
 =item * L</production>
 
-=item * L</fictional_character>
+=item * L</character>
 
 =back
 
 =cut
 
-__PACKAGE__->set_primary_key("actor", "production", "fictional_character");
+__PACKAGE__->set_primary_key("actor", "production", "character");
 
 =head1 RELATIONS
 
@@ -108,7 +108,7 @@ __PACKAGE__->belongs_to(
   { is_deferrable => 1, on_delete => "CASCADE", on_update => "CASCADE" },
 );
 
-=head2 fictional_character
+=head2 character
 
 Type: belongs_to
 
@@ -117,9 +117,9 @@ Related object: L<Literature::Schema::Result::Character>
 =cut
 
 __PACKAGE__->belongs_to(
-  "fictional_character",
+  "character",
   "Literature::Schema::Result::Character",
-  { id => "fictional_character" },
+  { id => "character" },
   { is_deferrable => 1, on_delete => "CASCADE", on_update => "CASCADE" },
 );
 
@@ -139,8 +139,8 @@ __PACKAGE__->belongs_to(
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07049 @ 2019-04-19 15:09:14
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:zLk58LK75cn/acUthjuXhQ
+# Created by DBIx::Class::Schema::Loader v0.07049 @ 2019-04-20 15:23:29
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:dw+mOHBU4K5B1o1wJys83A
 
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration

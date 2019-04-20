@@ -44,14 +44,14 @@ DROP TABLE IF EXISTS `actor_role`;
 CREATE TABLE `actor_role` (
   `actor` int(11) NOT NULL,
   `production` int(11) NOT NULL,
-  `fictional_character` int(11) NOT NULL,
+  `character` int(11) NOT NULL,
   `name` varchar(100) DEFAULT NULL,
-  PRIMARY KEY (`actor`,`production`,`fictional_character`),
+  PRIMARY KEY (`actor`,`production`,`character`),
   KEY `production` (`production`),
-  KEY `fictional_character` (`fictional_character`),
+  KEY `fictional_character` (`character`),
   CONSTRAINT `actor_role_ibfk_1` FOREIGN KEY (`actor`) REFERENCES `actor` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `actor_role_ibfk_2` FOREIGN KEY (`production`) REFERENCES `production` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `actor_role_ibfk_3` FOREIGN KEY (`fictional_character`) REFERENCES `character` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+  CONSTRAINT `actor_role_ibfk_3` FOREIGN KEY (`character`) REFERENCES `character` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -114,11 +114,11 @@ DROP TABLE IF EXISTS `character_appearance`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `character_appearance` (
-  `fictional_character` int(11) NOT NULL,
+  `character` int(11) NOT NULL,
   `work` int(11) NOT NULL,
-  PRIMARY KEY (`fictional_character`,`work`),
+  PRIMARY KEY (`character`,`work`),
   KEY `work` (`work`),
-  CONSTRAINT `character_appearance_ibfk_1` FOREIGN KEY (`fictional_character`) REFERENCES `character` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `character_appearance_ibfk_1` FOREIGN KEY (`character`) REFERENCES `character` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `character_appearance_ibfk_2` FOREIGN KEY (`work`) REFERENCES `work` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -203,4 +203,4 @@ CREATE TABLE `work_product` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-04-19 16:03:21
+-- Dump completed on 2019-04-20 15:27:19

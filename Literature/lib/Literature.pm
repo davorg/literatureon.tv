@@ -14,7 +14,7 @@ my %resources = qw[
   authors Author
   productions Production
   works Work
-  fictional_characters FictionalCharacter
+  characters Character
 ];
 
 my $route_re = '/(' . join('|', keys %resources) . ')/(\d+)?';

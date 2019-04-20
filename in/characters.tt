@@ -2,7 +2,7 @@
 [% META title = 'List of Characters' -%]
     
 <ul>
-[% FOREACH ch IN fictional_characters.all.sort('name')-%]
-<li><a href="/fictional_characters/[% ch.slug %]">[% ch.name %]</a></li>
+[% FOREACH ch IN characters.all.sort('name')-%]
+<li><a href="/characters/[% ch.slug %]">[% ch.name %]</a></li>
 [% END -%]
 </ul>

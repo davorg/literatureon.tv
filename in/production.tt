@@ -15,7 +15,7 @@
 <ul>
 [% FOR a IN production.actor_roles %]
 <li><a href="/actors/[% a.actor.slug %]">[% a.actor.name %]</a>
-as <a href="/fictional_characters/[% a.fictional_character.slug %]">[% a.fictional_character.name %]</a></li>
+as <a href="/characters/[% a.character.slug %]">[% a.character.name %]</a></li>
 [% END %]
 </ul>
 [% ELSE %]
