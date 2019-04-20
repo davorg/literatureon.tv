@@ -8,7 +8,7 @@ use Literature::Schema;
 
 my $sch = Literature::Schema->get_schema;
 
-for (qw[Author Actor Production Work]) {
+for (qw[Author Actor Character Production Work]) {
 
   my $rs = $sch->resultset($_);
 
