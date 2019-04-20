@@ -7,7 +7,11 @@ use Template;
 use Literature::Schema;
 
 my %resources = qw[
-  authors Author
+  actors      Actor
+  authors     Author
+  characters  Character
+  productions Production
+  works       Work
 ];
 
 my $tt = Template->new({
@@ -23,6 +27,8 @@ $tt->process('index.tt', {}, 'index2.html')
   or die $tt->error;
 
 for (keys %resources) {
+  print "Processing $_\n";
+
   my $rs = $sch->resultset($resources{$_});
 
   $tt->process("$_.tt", { $_ => $rs }, "$_/index.html")
