@@ -24,7 +24,7 @@ by
 [% FOR r IN character.actor_roles %]
 <li><a href="/actors/[% r.actor.slug %]">[% r.actor.name %]</a> in
 <a href="/productions/[% r.production.slug %]">[% r.production.title %]
-  ([% r.description %])</a></li>
+  ([% r.production.description %])</a></li>
 [% END %]
 [% ELSE %]
 <p>No-one</p>
