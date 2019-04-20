@@ -6,7 +6,7 @@
 [% # Display each book in a table row %]
 [% FOREACH work IN works.all.sort('title')-%]
   <tr>
-    <td><a href="/works/[% work.id %]">[% work.title %]</a></td>
+    <td><a href="/works/[% work.slug %]">[% work.title %]</a></td>
     <td>[% FOREACH a IN work.authors; a.name; ' '; END %]</td>
   </tr>
 [% END -%]
