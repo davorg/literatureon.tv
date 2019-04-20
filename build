@@ -4,6 +4,7 @@ use strict;
 use warnings;
 
 use Template;
+use File::Copy::Recursive 'dircopy';
 use Literature::Schema;
 
 my %resources = qw[
@@ -42,3 +43,5 @@ for (keys %resources) {
       or die $tt->error;
   }
 }
+
+dircopy('static', 'docs');
