@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../../../favicon.ico">
 
-    <title>[% template.title %]</title>
+    <title>Literature on TV[% IF template.title; ': ' _ template.title; END %]</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.1/examples/jumbotron/">
 
@@ -58,7 +58,6 @@
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
         <div class="container">
-          <h1 class="display-3">[% template.title %]</h1>
 [% content %]
         </div>
       </div>

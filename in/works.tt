@@ -1,6 +1,8 @@
 [% # Provide a title -%]
 [% META title = 'List of Works' -%]
-    
+
+<h1 class="display-3">[% template.title or 'Literature on TV' %]</h1>    
+
 <table>
 <tr><th>Title</th><th>Author(s)</th></tr>
 [% # Display each book in a table row %]

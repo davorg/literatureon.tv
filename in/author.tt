@@ -1,6 +1,8 @@
 [% META title = 'Author' %]
 
-<h2>[% author.name %]</h2>
+<p class="text-muted">[% template.title or 'Literature on TV' %]</p>
+
+<h1 class="display-3">[% author.name %]</h1>
 [% IF author.born OR author.died %]
 <p>[% IF author.born %]Born: [% author.born.strftime('%m %B %Y'); END -%]
 [% IF author.born AND author.died %], [% END %]

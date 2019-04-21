@@ -1,4 +1,6 @@
-[% META title = 'Literature on TV' %]
+[% META title = '' %]
+
+<h1 class="display-3">Literature on TV</h1>
 
 <p>Browse the database:</p>
 <ul>
@@ -8,4 +10,3 @@
 <li>By <a href="/productions/">productions</a></li>
 <li>By <a href="/actors/">actors</a></li>
 </ul>
-

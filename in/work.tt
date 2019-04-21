@@ -1,6 +1,8 @@
 [% META title = 'Work' %]
 
-<h2>[% work.title %]</h2>
+<p class="text-muted">[% template.title or 'Literature on TV' %]</p>
+
+<h1 class="display-3">[% work.title %]</h1>
 <p>By [% FOR a IN work.authors; '<a href="/authors/'; a.slug; '">'; a.name; '</a> '; END %]</p>
 <h3>Characters</h3>
 [% IF work.character_appearances.size %]
