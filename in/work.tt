@@ -24,27 +24,5 @@
 [% ELSE %]
 <p>No productions found</p>
 [% END %]
-[% IF work.work_products.all.size -%]
-<h3>Buy the Book</h3>
-<script type='text/javascript'>
-var amzn_wdgt={widget:'MyFavorites'};
-amzn_wdgt.tag='davblog-20';
-amzn_wdgt.columns='6';
-amzn_wdgt.rows='1';
-amzn_wdgt.title='[% work.title %]';
-amzn_wdgt.width='800';
-amzn_wdgt.ASIN='[% work.asins.join(',') %]';
-amzn_wdgt.showImage='True';
-amzn_wdgt.showPrice='True';
-amzn_wdgt.showRating='True';
-amzn_wdgt.design='2';
-amzn_wdgt.colorTheme='White';
-amzn_wdgt.headerTextColor='#333333';
-amzn_wdgt.marketPlace='GB';
-</script>
-<script type='text/javascript' src='http://wms-na.amazon-adsystem.com/20070822/US//js/AmazonWidgets.js'>
-</script>
-[% FOR p IN work.work_products %]
-<iframe src="http://rcm-uk.amazon.co.uk/e/cm?lt1=_blank&bc1=FFFFFF&IS2=1&nou=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=davblog-21&o=2&p=8&l=as1&m=amazon&f=ifr&asins=[% p.asin %]" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
-[% END -%]
-[% END -%]
+
+<script type="text/javascript">amzn_assoc_ad_type ="responsive_search_widget"; amzn_assoc_tracking_id ="davblog-21"; amzn_assoc_marketplace ="amazon"; amzn_assoc_region ="GB"; amzn_assoc_placement =""; amzn_assoc_search_type = "search_widget";amzn_assoc_width ="auto"; amzn_assoc_height ="auto"; amzn_assoc_default_search_category ="Books"; amzn_assoc_default_search_key ="[% work.title.lower %]";amzn_assoc_theme ="light"; amzn_assoc_bg_color ="FFFFFF"; </script><script src="//z-eu.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1&Marketplace=GB"></script>

@@ -23,7 +23,5 @@ as <a href="/characters/[% a.character.slug %]">[% a.character.name %]</a></li>
 [% ELSE %]
 <p>No cast found.</p>
 [% END %]
-<h3>Buy the DVD/BluRay</h3>
-[% FOR p IN production.production_products %]
-<iframe src="http://rcm-uk.amazon.co.uk/e/cm?lt1=_blank&bc1=FFFFFF&IS2=1&nou=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=davblog-21&o=2&p=8&l=as1&m=amazon&f=ifr&asins=[% p.asin %]" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
-[% END %]
+
+<script type="text/javascript">amzn_assoc_ad_type ="responsive_search_widget"; amzn_assoc_tracking_id ="davblog-21"; amzn_assoc_marketplace ="amazon"; amzn_assoc_region ="GB"; amzn_assoc_placement =""; amzn_assoc_search_type = "search_widget";amzn_assoc_width ="auto"; amzn_assoc_height ="auto"; amzn_assoc_default_search_category ="DVD"; amzn_assoc_default_search_key ="[% production.title %]";amzn_assoc_theme ="light"; amzn_assoc_bg_color ="FFFFFF"; </script><script src="//z-eu.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1&Marketplace=GB"></script>
