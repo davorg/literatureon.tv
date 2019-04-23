@@ -20,3 +20,5 @@
 [% ELSE %]
 <p>No roles found.</p>
 [% END %]
+
+[% INCLUDE amazon.tt type='DVD', search=actor.name %]
