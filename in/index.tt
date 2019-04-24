@@ -1,5 +1,7 @@
 [% META title = '' %]
 
+[% INCLUDE modal.tt %]
+
 <h1 class="display-3">Literature on TV</h1>
 
 <p>Browse the database:</p>

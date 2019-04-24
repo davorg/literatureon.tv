@@ -1,0 +1,23 @@
+<div id="modal" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Literature on TV</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Welcome to the alpha test version of Literature on TV.</p>
+        <p>Currently we're testing the look and feel of the site. This means
+        that we don't actually have much data. (<b>Hint:</b> If you'd like
+        to see the data that we do have, we recommend that you look into
+        <i><a href="/works/pride-and-prejudice/">Pride and Prejudice</a></i>
+        by <a href="/authors/jane-austen/">Jane Austen</a>.)</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
