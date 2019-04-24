@@ -9,10 +9,10 @@
 [% IF author.died %]Died: [% author.died.strftime('%m %B %Y'); END %]</p>
 [% END %]
 <h3>Works</h3>
-[% IF author.author_works.size %]
+[% IF author.works.size %]
 <ul>
-[% FOR w IN author.author_works.sort('published') %]
-<li><a href="/works/[% w.work.slug %]">[% w.work.title %]</a></li>
+[% FOR w IN author.works.sort('published') %]
+<li><a href="/works/[% w.slug %]">[% w.title %] ([% w.published.strftime('%Y') %])</a></li>
 [% END %]
 </ul>
 [% ELSE %]
