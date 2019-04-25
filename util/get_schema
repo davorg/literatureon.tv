@@ -8,7 +8,7 @@ use DBIx::Class::Schema::Loader qw/ make_schema_at /;
 
 make_schema_at(
   'Literature::Schema', {
-    dump_directory => "$Bin/../Literature/lib",
+    dump_directory => "$Bin/../lib",
     components     => [ 'InflateColumn::DateTime' ],
     use_moose      => 1,
   },
