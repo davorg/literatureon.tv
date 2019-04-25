@@ -1,5 +1,7 @@
 [% META title = 'Author' %]
 
+<script type="application/ld+json">
+[% author.json_ld %]</script>
 <p class="text-muted">[% template.title or 'Literature on TV' %]</p>
 
 <h1 class="display-3">[% author.name %]</h1>
