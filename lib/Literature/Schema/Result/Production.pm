@@ -73,6 +73,12 @@ __PACKAGE__->table("production");
   is_nullable: 1
   size: 255
 
+=head2 type
+
+  data_type: 'enum'
+  extra: {list => ["Film","TV Series"]}
+  is_nullable: 1
+
 =cut
 
 __PACKAGE__->add_columns(
@@ -88,6 +94,12 @@ __PACKAGE__->add_columns(
   { data_type => "varchar", is_nullable => 1, size => 255 },
   "slug",
   { data_type => "varchar", is_nullable => 1, size => 255 },
+  "type",
+  {
+    data_type => "enum",
+    extra => { list => ["Film", "TV Series"] },
+    is_nullable => 1,
+  },
 );
 
 =head1 PRIMARY KEY
@@ -150,8 +162,8 @@ __PACKAGE__->belongs_to(
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07049 @ 2019-04-19 15:09:14
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:GzGSZGAZyDrytjA6Ygmyyg
+# Created by DBIx::Class::Schema::Loader v0.07048 @ 2019-04-25 14:55:29
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:Hszq6UGmkAh+2J8hRr9BzQ
 
 with 'Literature::Role::HasSlug';
 

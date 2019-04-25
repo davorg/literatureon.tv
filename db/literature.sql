@@ -1,8 +1,8 @@
--- MySQL dump 10.17  Distrib 10.3.12-MariaDB, for Linux (x86_64)
+-- MySQL dump 10.16  Distrib 10.1.38-MariaDB, for debian-linux-gnu (x86_64)
 --
 -- Host: localhost    Database: literature
 -- ------------------------------------------------------
--- Server version	10.3.12-MariaDB
+-- Server version	10.1.38-MariaDB-0ubuntu0.18.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -124,6 +124,37 @@ CREATE TABLE `character_appearance` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Table structure for table `fictional_character`
+--
+
+DROP TABLE IF EXISTS `fictional_character`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `fictional_character` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `fictional_character_appearance`
+--
+
+DROP TABLE IF EXISTS `fictional_character_appearance`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `fictional_character_appearance` (
+  `fictional_character` int(11) NOT NULL,
+  `work` int(11) NOT NULL,
+  PRIMARY KEY (`fictional_character`,`work`),
+  KEY `work` (`work`),
+  CONSTRAINT `fictional_character_appearance_ibfk_1` FOREIGN KEY (`fictional_character`) REFERENCES `fictional_character` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `fictional_character_appearance_ibfk_2` FOREIGN KEY (`work`) REFERENCES `work` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `production`
 --
 
@@ -137,6 +168,7 @@ CREATE TABLE `production` (
   `year` year(4) DEFAULT NULL,
   `made_by` varchar(255) DEFAULT NULL,
   `slug` varchar(255) DEFAULT NULL,
+  `type` enum('Film','TV Series') DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `work` (`work`),
   CONSTRAINT `production_ibfk_1` FOREIGN KEY (`work`) REFERENCES `work` (`id`)
@@ -172,6 +204,7 @@ CREATE TABLE `work` (
   `title` varchar(255) NOT NULL,
   `published` datetime DEFAULT NULL,
   `slug` varchar(255) DEFAULT NULL,
+  `type` enum('Book','Play') DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `title` (`title`)
 ) ENGINE=InnoDB AUTO_INCREMENT=63 DEFAULT CHARSET=utf8;
@@ -203,4 +236,4 @@ CREATE TABLE `work_product` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-04-20 15:27:19
+-- Dump completed on 2019-04-25 14:54:13

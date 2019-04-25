@@ -1,8 +1,8 @@
--- MySQL dump 10.17  Distrib 10.3.12-MariaDB, for Linux (x86_64)
+-- MySQL dump 10.16  Distrib 10.1.38-MariaDB, for debian-linux-gnu (x86_64)
 --
 -- Host: localhost    Database: literature
 -- ------------------------------------------------------
--- Server version	10.3.12-MariaDB
+-- Server version	10.1.38-MariaDB-0ubuntu0.18.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -75,12 +75,32 @@ INSERT INTO `character_appearance` VALUES (1,22),(2,22),(3,22),(4,22),(5,22),(6,
 UNLOCK TABLES;
 
 --
+-- Dumping data for table `fictional_character`
+--
+
+LOCK TABLES `fictional_character` WRITE;
+/*!40000 ALTER TABLE `fictional_character` DISABLE KEYS */;
+INSERT INTO `fictional_character` VALUES (1,'Elizabeth Bennet'),(2,'FitzWilliam D\'Arcy'),(3,'Mr Bennet'),(4,'Mrs Bennet'),(5,'Jane Bennet'),(6,'Mary Bennet'),(7,'Catherine Bennet'),(8,'Lydia Bennet'),(9,'Charles Bingley'),(10,'Caroline Bingley'),(11,'George Wickham'),(12,'William Collins'),(13,'Lady Catherine de Bourgh');
+/*!40000 ALTER TABLE `fictional_character` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Dumping data for table `fictional_character_appearance`
+--
+
+LOCK TABLES `fictional_character_appearance` WRITE;
+/*!40000 ALTER TABLE `fictional_character_appearance` DISABLE KEYS */;
+INSERT INTO `fictional_character_appearance` VALUES (1,22),(2,22),(3,22),(4,22),(5,22),(6,22),(7,22),(8,22),(9,22),(10,22),(11,22),(12,22),(13,22);
+/*!40000 ALTER TABLE `fictional_character_appearance` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Dumping data for table `production`
 --
 
 LOCK TABLES `production` WRITE;
 /*!40000 ALTER TABLE `production` DISABLE KEYS */;
-INSERT INTO `production` VALUES (1,NULL,22,1995,'BBC','pride-and-prejudice_1995'),(2,NULL,22,2005,'StudioCanal/Working Title','pride-and-prejudice_2005'),(3,NULL,22,1938,NULL,'pride-and-prejudice_1938'),(4,NULL,22,1940,NULL,'pride-and-prejudice_1940'),(5,NULL,22,1952,NULL,'pride-and-prejudice_1952'),(6,'Orgoglio e pregiudizio',22,1957,NULL,'orgoglio-e-pregiudizio_1957'),(7,NULL,22,1958,NULL,'pride-and-prejudice_1958'),(8,'De vier dochters Bennet',22,1961,NULL,'de-vier-dochters-bennet_1961'),(9,NULL,22,1967,NULL,'pride-and-prejudice_1967'),(10,NULL,22,1980,NULL,'pride-and-prejudice_1980'),(11,'Bride and Prejudice',22,2004,NULL,'bride-and-prejudice_2004');
+INSERT INTO `production` VALUES (1,NULL,22,1995,'BBC','pride-and-prejudice_1995','TV Series'),(2,NULL,22,2005,'StudioCanal/Working Title','pride-and-prejudice_2005','Film'),(3,NULL,22,1938,NULL,'pride-and-prejudice_1938','TV Series'),(4,NULL,22,1940,NULL,'pride-and-prejudice_1940','Film'),(5,NULL,22,1952,NULL,'pride-and-prejudice_1952','TV Series'),(6,'Orgoglio e pregiudizio',22,1957,NULL,'orgoglio-e-pregiudizio_1957','TV Series'),(7,NULL,22,1958,NULL,'pride-and-prejudice_1958','TV Series'),(8,'De vier dochters Bennet',22,1961,NULL,'de-vier-dochters-bennet_1961','TV Series'),(9,NULL,22,1967,NULL,'pride-and-prejudice_1967','TV Series'),(10,NULL,22,1980,NULL,'pride-and-prejudice_1980','TV Series'),(11,'Bride and Prejudice',22,2004,NULL,'bride-and-prejudice_2004','Film');
 /*!40000 ALTER TABLE `production` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -99,7 +119,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `work` WRITE;
 /*!40000 ALTER TABLE `work` DISABLE KEYS */;
-INSERT INTO `work` VALUES (1,'The Pickwick Papers','1836-03-31 00:00:00','the-pickwick-papers'),(2,'The Adventures of Oliver Twist','1837-02-28 00:00:00','the-adventures-of-oliver-twist'),(3,'The Life and Adventures of Nicholas Nickleby','1838-04-30 00:00:00','the-life-and-adventures-of-nicholas-nickleby'),(4,'The Old Curiosity Shop','1840-04-25 00:00:00','the-old-curiosity-shop'),(5,'Barnaby Rudge','1841-02-13 00:00:00','barnaby-rudge'),(6,'A Christmas Carol','1843-12-19 00:00:00','a-christmas-carol'),(7,'The Chimes','1844-12-01 00:00:00','the-chimes'),(8,'The Cricket on the Hearth','1845-12-20 00:00:00','the-cricket-on-the-hearth'),(9,'The Battle of Life','1846-12-01 00:00:00','the-battle-of-life'),(10,'The Haunted Man and the Ghost\'s Bargain','1848-12-19 00:00:00','the-haunted-man-and-the-ghosts-bargain'),(11,'The Life and Adventures of Martin Chuzzlewit','1843-01-01 00:00:00','the-life-and-adventures-of-martin-chuzzlewit'),(12,'Dombey and Son','1846-10-01 00:00:00','dombey-and-son'),(13,'David Copperfield','1849-05-01 00:00:00','david-copperfield'),(14,'Bleak House','1852-03-01 00:00:00','bleak-house'),(15,'Hard Times','1854-04-01 00:00:00','hard-times'),(16,'Little Dorrit','1855-12-01 00:00:00','little-dorrit'),(17,'A Tale of Two Cities','1859-04-30 00:00:00','a-tale-of-two-cities'),(18,'Great Expectations','1860-12-01 00:00:00','great-expectations'),(19,'Our Mutual Friend','1864-05-01 00:00:00','our-mutual-friend'),(20,'The Mystery of Edwin Drood','1870-04-01 00:00:00','the-mystery-of-edwin-drood'),(21,'Sense and Sensibility','1811-01-01 00:00:00','sense-and-sensibility'),(22,'Pride and Prejudice','1813-01-28 00:00:00','pride-and-prejudice'),(23,'Mansfield Park','1814-07-01 00:00:00','mansfield-park'),(24,'Emma','1815-12-01 00:00:00','emma'),(25,'Northanger Abbey','1817-12-01 00:00:00','northanger-abbey'),(26,'Persuasion','1818-01-01 00:00:00','persuasion'),(27,'Henry VI Part I',NULL,'henry-vi-part-i'),(28,'Henry VI Part II',NULL,'henry-vi-part-ii'),(29,'Henry VI Part III',NULL,'henry-vi-part-iii'),(30,'Richard III',NULL,'richard-iii'),(31,'The Comedy of Errors',NULL,'the-comedy-of-errors'),(32,'Titus Andronicus',NULL,'titus-andronicus'),(33,'The Taming of the Shrew',NULL,'the-taming-of-the-shrew'),(34,'The Two Gentlemen of Verona',NULL,'the-two-gentlemen-of-verona'),(35,'Love\'s Labour\'s Lost',NULL,'loves-labours-lost'),(36,'Romeo and Juliet',NULL,'romeo-and-juliet'),(37,'Richard II',NULL,'richard-ii'),(38,'A Midsummers Night\'s Dream',NULL,'a-midsummers-nights-dream'),(39,'King John',NULL,'king-john'),(40,'The Merchant of Venice',NULL,'the-merchant-of-venice'),(41,'Henry IV Part I',NULL,'henry-iv-part-i'),(42,'Henry IV Part II',NULL,'henry-iv-part-ii'),(43,'Henry V',NULL,'henry-v'),(44,'Julius Caesar',NULL,'julius-caesar'),(45,'Much Ado About Nothing',NULL,'much-ado-about-nothing'),(46,'As You Like It',NULL,'as-you-like-it'),(47,'The  Merry Wives of Windsor',NULL,'the-merry-wives-of-windsor'),(48,'Hamlet',NULL,'hamlet'),(49,'Twelfth Night',NULL,'twelfth-night'),(50,'Troilus and Cressida',NULL,'troilus-and-cressida'),(51,'All\'s Well That Ends Well',NULL,'alls-well-that-ends-well'),(52,'Othello',NULL,'othello'),(53,'King Lear',NULL,'king-lear'),(54,'Macbeth',NULL,'macbeth'),(55,'Measure for Measure',NULL,'measure-for-measure'),(56,'Antony and Cleopatra',NULL,'antony-and-cleopatra'),(57,'Coriolanus',NULL,'coriolanus'),(58,'Timon of Athens',NULL,'timon-of-athens'),(59,'Pericles Prince of Tyre',NULL,'pericles-prince-of-tyre'),(60,'Cymberline',NULL,'cymberline'),(61,'The Winter\'s Tales',NULL,'the-winters-tales'),(62,'The Tempest',NULL,'the-tempest');
+INSERT INTO `work` VALUES (1,'The Pickwick Papers','1836-03-31 00:00:00','the-pickwick-papers','Book'),(2,'The Adventures of Oliver Twist','1837-02-28 00:00:00','the-adventures-of-oliver-twist','Book'),(3,'The Life and Adventures of Nicholas Nickleby','1838-04-30 00:00:00','the-life-and-adventures-of-nicholas-nickleby','Book'),(4,'The Old Curiosity Shop','1840-04-25 00:00:00','the-old-curiosity-shop','Book'),(5,'Barnaby Rudge','1841-02-13 00:00:00','barnaby-rudge','Book'),(6,'A Christmas Carol','1843-12-19 00:00:00','a-christmas-carol','Book'),(7,'The Chimes','1844-12-01 00:00:00','the-chimes','Book'),(8,'The Cricket on the Hearth','1845-12-20 00:00:00','the-cricket-on-the-hearth','Book'),(9,'The Battle of Life','1846-12-01 00:00:00','the-battle-of-life','Book'),(10,'The Haunted Man and the Ghost\'s Bargain','1848-12-19 00:00:00','the-haunted-man-and-the-ghosts-bargain','Book'),(11,'The Life and Adventures of Martin Chuzzlewit','1843-01-01 00:00:00','the-life-and-adventures-of-martin-chuzzlewit','Book'),(12,'Dombey and Son','1846-10-01 00:00:00','dombey-and-son','Book'),(13,'David Copperfield','1849-05-01 00:00:00','david-copperfield','Book'),(14,'Bleak House','1852-03-01 00:00:00','bleak-house','Book'),(15,'Hard Times','1854-04-01 00:00:00','hard-times','Book'),(16,'Little Dorrit','1855-12-01 00:00:00','little-dorrit','Book'),(17,'A Tale of Two Cities','1859-04-30 00:00:00','a-tale-of-two-cities','Book'),(18,'Great Expectations','1860-12-01 00:00:00','great-expectations','Book'),(19,'Our Mutual Friend','1864-05-01 00:00:00','our-mutual-friend','Book'),(20,'The Mystery of Edwin Drood','1870-04-01 00:00:00','the-mystery-of-edwin-drood','Book'),(21,'Sense and Sensibility','1811-01-01 00:00:00','sense-and-sensibility','Book'),(22,'Pride and Prejudice','1813-01-28 00:00:00','pride-and-prejudice','Book'),(23,'Mansfield Park','1814-07-01 00:00:00','mansfield-park','Book'),(24,'Emma','1815-12-01 00:00:00','emma','Book'),(25,'Northanger Abbey','1817-12-01 00:00:00','northanger-abbey','Book'),(26,'Persuasion','1818-01-01 00:00:00','persuasion','Book'),(27,'Henry VI Part I',NULL,'henry-vi-part-i','Play'),(28,'Henry VI Part II',NULL,'henry-vi-part-ii','Play'),(29,'Henry VI Part III',NULL,'henry-vi-part-iii','Play'),(30,'Richard III',NULL,'richard-iii','Play'),(31,'The Comedy of Errors',NULL,'the-comedy-of-errors','Play'),(32,'Titus Andronicus',NULL,'titus-andronicus','Play'),(33,'The Taming of the Shrew',NULL,'the-taming-of-the-shrew','Play'),(34,'The Two Gentlemen of Verona',NULL,'the-two-gentlemen-of-verona','Play'),(35,'Love\'s Labour\'s Lost',NULL,'loves-labours-lost','Play'),(36,'Romeo and Juliet',NULL,'romeo-and-juliet','Play'),(37,'Richard II',NULL,'richard-ii','Play'),(38,'A Midsummers Night\'s Dream',NULL,'a-midsummers-nights-dream','Play'),(39,'King John',NULL,'king-john','Play'),(40,'The Merchant of Venice',NULL,'the-merchant-of-venice','Play'),(41,'Henry IV Part I',NULL,'henry-iv-part-i','Play'),(42,'Henry IV Part II',NULL,'henry-iv-part-ii','Play'),(43,'Henry V',NULL,'henry-v','Play'),(44,'Julius Caesar',NULL,'julius-caesar','Play'),(45,'Much Ado About Nothing',NULL,'much-ado-about-nothing','Play'),(46,'As You Like It',NULL,'as-you-like-it','Play'),(47,'The  Merry Wives of Windsor',NULL,'the-merry-wives-of-windsor','Play'),(48,'Hamlet',NULL,'hamlet','Play'),(49,'Twelfth Night',NULL,'twelfth-night','Play'),(50,'Troilus and Cressida',NULL,'troilus-and-cressida','Play'),(51,'All\'s Well That Ends Well',NULL,'alls-well-that-ends-well','Play'),(52,'Othello',NULL,'othello','Play'),(53,'King Lear',NULL,'king-lear','Play'),(54,'Macbeth',NULL,'macbeth','Play'),(55,'Measure for Measure',NULL,'measure-for-measure','Play'),(56,'Antony and Cleopatra',NULL,'antony-and-cleopatra','Play'),(57,'Coriolanus',NULL,'coriolanus','Play'),(58,'Timon of Athens',NULL,'timon-of-athens','Play'),(59,'Pericles Prince of Tyre',NULL,'pericles-prince-of-tyre','Play'),(60,'Cymberline',NULL,'cymberline','Play'),(61,'The Winter\'s Tales',NULL,'the-winters-tales','Play'),(62,'The Tempest',NULL,'the-tempest','Play');
 /*!40000 ALTER TABLE `work` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -121,4 +141,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-04-20 15:27:19
+-- Dump completed on 2019-04-25 14:54:13

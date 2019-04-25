@@ -62,6 +62,12 @@ __PACKAGE__->table("work");
   is_nullable: 1
   size: 255
 
+=head2 type
+
+  data_type: 'enum'
+  extra: {list => ["Book","Play"]}
+  is_nullable: 1
+
 =cut
 
 __PACKAGE__->add_columns(
@@ -77,6 +83,12 @@ __PACKAGE__->add_columns(
   },
   "slug",
   { data_type => "varchar", is_nullable => 1, size => 255 },
+  "type",
+  {
+    data_type => "enum",
+    extra => { list => ["Book", "Play"] },
+    is_nullable => 1,
+  },
 );
 
 =head1 PRIMARY KEY
@@ -119,6 +131,21 @@ Related object: L<Literature::Schema::Result::CharacterAppearance>
 __PACKAGE__->has_many(
   "character_appearances",
   "Literature::Schema::Result::CharacterAppearance",
+  { "foreign.work" => "self.id" },
+  { cascade_copy => 0, cascade_delete => 0 },
+);
+
+=head2 fictional_character_appearances
+
+Type: has_many
+
+Related object: L<Literature::Schema::Result::FictionalCharacterAppearance>
+
+=cut
+
+__PACKAGE__->has_many(
+  "fictional_character_appearances",
+  "Literature::Schema::Result::FictionalCharacterAppearance",
   { "foreign.work" => "self.id" },
   { cascade_copy => 0, cascade_delete => 0 },
 );
@@ -173,9 +200,23 @@ Composing rels: L</character_appearances> -> character
 
 __PACKAGE__->many_to_many("characters", "character_appearances", "character");
 
+=head2 fictional_characters
 
-# Created by DBIx::Class::Schema::Loader v0.07049 @ 2019-04-20 15:23:29
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:vv5TmYJOhw1s70meTyfteA
+Type: many_to_many
+
+Composing rels: L</fictional_character_appearances> -> fictional_character
+
+=cut
+
+__PACKAGE__->many_to_many(
+  "fictional_characters",
+  "fictional_character_appearances",
+  "fictional_character",
+);
+
+
+# Created by DBIx::Class::Schema::Loader v0.07048 @ 2019-04-25 14:55:29
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:xtnwNE+fA9uoIHf4kCRPeA
 
 with 'Literature::Role::HasSlug';
 
