@@ -165,9 +165,20 @@ __PACKAGE__->belongs_to(
 # Created by DBIx::Class::Schema::Loader v0.07048 @ 2019-04-25 14:55:29
 # DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:Hszq6UGmkAh+2J8hRr9BzQ
 
-with 'Literature::Role::HasSlug';
+with 'Literature::Role::HasSlug', 'MooX::Role::JSON_LD';
 
 sub slug_cols { return qw[title year]; }
+
+sub json_ld_type {
+  return {
+    'Film'      => 'Movie',
+    'TV Series' => 'TVSeries',
+  }->{$_[0]->type};
+}
+
+sub json_ld_fields {
+  return [ { name => 'title' } ];
+}
 
 around title => sub {
   my $orig = shift;

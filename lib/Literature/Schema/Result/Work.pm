@@ -218,9 +218,12 @@ __PACKAGE__->many_to_many(
 # Created by DBIx::Class::Schema::Loader v0.07048 @ 2019-04-25 14:55:29
 # DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:xtnwNE+fA9uoIHf4kCRPeA
 
-with 'Literature::Role::HasSlug';
+with 'Literature::Role::HasSlug', 'MooX::Role::JSON_LD';
 
 sub slug_cols { return qw[title]; }
+
+sub json_ld_type { $_[0]->type }
+sub json_ld_fields { [ { name => 'title' } ] }
 
 sub asins {
   my $self = shift;
