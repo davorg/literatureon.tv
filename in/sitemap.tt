@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<url>
+  <loc>[% url %]/</loc>
+  <lastmod>[% date %]</lastmod>
+  <priority>1.00</priority>
+</url>
+[% FOREACH type IN ['actors', 'authors', 'characters', 'productions',
+                    'works' ] -%]
+<url>
+  <loc>[% url %]/[% type %]/</loc>
+  <lastmod>[% date %]</lastmod>
+  <priority>0.90</priority>
+</url>
+[% END -%]
+[% FOREACH actor IN actors -%]
+<url>
+  <loc>[% url %]/actors/[% actor.slug %]/</loc>
+  <lastmod>[% date %]</lastmod>
+  <priority>0.80</priority>
+</url>
+[% END -%]
+[% FOREACH author IN authors -%]
+<url>
+  <loc>[% url %]/authors/[% author.slug %]/</loc>
+  <lastmod>[% date %]</lastmod>
+  <priority>0.80</priority>
+</url>
+[% END -%]
+[% FOREACH character IN characters -%]
+<url>
+  <loc>[% url %]/characters/[% character.slug %]/</loc>
+  <lastmod>[% date %]</lastmod>
+  <priority>0.80</priority>
+</url>
+[% END -%]
+[% FOREACH production IN productions -%]
+<url>
+  <loc>[% url %]/productions/[% production.slug %]/</loc>
+  <lastmod>[% date %]</lastmod>
+  <priority>0.80</priority>
+</url>
+[% END -%]
+[% FOREACH work IN works -%]
+<url>
+  <loc>[% url %]/works/[% work.slug %]/</loc>
+  <lastmod>[% date %]</lastmod>
+  <priority>0.80</priority>
+</url>
+[% END -%]
+</urlset>

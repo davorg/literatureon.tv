@@ -5,6 +5,7 @@ use warnings;
 
 use Template;
 use File::Copy::Recursive 'dircopy';
+use Time::Piece;
 use Literature::Schema;
 
 my %resources = qw[
@@ -26,6 +27,11 @@ my $sch = Literature::Schema->get_schema;
 $tt->process('index.tt', {}, 'index.html')
   or die $tt->error;
 
+my $vars = {
+  url => 'https://literatureon.tv',
+  date => localtime->strftime('%Y-%m-%d'),
+};
+
 for (keys %resources) {
   print "Processing $_\n";
 
@@ -40,7 +46,17 @@ for (keys %resources) {
     $tt->process("$singular.tt", { $singular => $obj },
                  "$_/" . $obj->slug . '/index.html')
       or die $tt->error;
+
+    push @{$vars->{$_}}, $obj;
   }
 }
+
+$tt = Template->new({
+  INCLUDE_PATH => [ qw( in tt_lib ) ],
+  OUTPUT_PATH  => 'docs',
+});
+
+$tt->process('sitemap.tt', $vars, 'sitemap.xml')
+  or die $tt->error;
 
 dircopy('static', 'docs');
