@@ -14,8 +14,8 @@
 [% IF actor.actor_roles.size %]
 <ul>
 [% FOREACH r IN actor.actor_roles %]
-<li>Played <a href="/characters/[% r.character.slug %]">[% r.character.name %]</a> in
-<a href="/productions/[% r.production.slug %]">[% r.production.title %]</a>
+<li>Played <a href="/characters/[% r.character.slug %]/">[% r.character.name %]</a> in
+<a href="/productions/[% r.production.slug %]i">[% r.production.title %]</a>
 ([% r.production.description %])</li>
 [% END %]
 </ul>

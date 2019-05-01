@@ -14,7 +14,7 @@
 [% IF author.works.size %]
 <ul>
 [% FOR w IN author.works.sort('published') %]
-<li><a href="/works/[% w.slug %]">[% w.title %] ([% w.published.strftime('%Y') %])</a></li>
+<li><a href="/works/[% w.slug %]/">[% w.title %] ([% w.published.strftime('%Y') %])</a></li>
 [% END %]
 </ul>
 [% ELSE %]

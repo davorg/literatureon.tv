@@ -5,6 +5,6 @@
 
 <ul>
 [% FOREACH a IN actors.all.sort('name')-%]
-<li><a href="/actors/[% a.slug %]">[% a.name %]</a></li>
+<li><a href="/actors/[% a.slug %]/">[% a.name %]</a></li>
 [% END -%]
 </ul>

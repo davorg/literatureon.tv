@@ -4,6 +4,6 @@
 
 <ul>
 [% FOREACH ch IN characters.all.sort('name')-%]
-<li><a href="/characters/[% ch.slug %]">[% ch.name %]</a></li>
+<li><a href="/characters/[% ch.slug %]/">[% ch.name %]</a></li>
 [% END -%]
 </ul>

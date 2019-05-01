@@ -7,9 +7,9 @@
 <h1 class="display-3">[% production.title %]</h1>
 <p>[% production.description %]<p>
 <p>Based on
-<a href="/works/[% production.work.slug %]">[% production.work.title %]</a> by
+<a href="/works/[% production.work.slug %]/">[% production.work.title %]</a> by
 [% FOR a IN production.work.authors %]
-<a href="/authors/[% a.slug %]">[% a.name %]</a>
+<a href="/authors/[% a.slug %]/">[% a.name %]</a>
 [% END %]</p>
 
 <p><a href="http://imdb.com/title/[% production.imdb %]">[% production.title %] on IMDB</a></p>
@@ -18,8 +18,8 @@
 [% IF production.actor_roles.size %]
 <ul>
 [% FOR a IN production.actor_roles %]
-<li><a href="/actors/[% a.actor.slug %]">[% a.actor.name %]</a>
-as <a href="/characters/[% a.character.slug %]">[% a.character.name %]</a></li>
+<li><a href="/actors/[% a.actor.slug %]/">[% a.actor.name %]</a>
+as <a href="/characters/[% a.character.slug %]/">[% a.character.name %]</a></li>
 [% END %]
 </ul>
 [% ELSE %]

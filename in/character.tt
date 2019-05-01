@@ -8,10 +8,10 @@
 [% IF character.works.size %]
 <ul>
 [% FOR w IN character.works %]
-<li><a href="/works/[% w.slug %]">[% w.title %]</a>
+<li><a href="/works/[% w.slug %]/">[% w.title %]</a>
 by
 [% FOR au IN w.authors %]
-<a href="/authors/[% au.slug %]">[% au.name %]</a>
+<a href="/authors/[% au.slug %]/">[% au.name %]</a>
 [% END %]
 </li>
 [% END %]
@@ -24,8 +24,8 @@ by
 [% IF character.actor_roles.size %]
 <ul>
 [% FOR r IN character.actor_roles %]
-<li><a href="/actors/[% r.actor.slug %]">[% r.actor.name %]</a> in
-<a href="/productions/[% r.production.slug %]">[% r.production.title %]
+<li><a href="/actors/[% r.actor.slug %]/">[% r.actor.name %]</a> in
+<a href="/productions/[% r.production.slug %]/">[% r.production.title %]
   ([% r.production.description %])</a></li>
 [% END %]
 [% ELSE %]

@@ -5,7 +5,7 @@
 
 <ul>
 [% FOREACH p IN productions.all.sort('year', 'title')-%]
-<li><a href="/productions/[% p.slug %]">[% p.title %]</a>
+<li><a href="/productions/[% p.slug %]/">[% p.title %]</a>
       ([% p.description %])</li>
 [% END -%]
 </ul>
