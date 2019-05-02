@@ -125,9 +125,15 @@ __PACKAGE__->many_to_many("works", "character_appearances", "work");
 # Created by DBIx::Class::Schema::Loader v0.07049 @ 2019-04-20 15:23:29
 # DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:DEr25X61p2zl9TDdZeBawQ
 
-with 'Literature::Role::HasSlug';
+with 'Literature::Role::HasSlug', 'MooX::Role::JSON_LD';
 
 sub slug_cols { return qw[name]; }
+
+sub json_ld_type { 'Person' }
+
+sub json_ld_fields {
+  [ qw[ name ] ]
+}
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration
 __PACKAGE__->meta->make_immutable;

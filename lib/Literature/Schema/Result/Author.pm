@@ -149,7 +149,10 @@ sub slug_cols { return qw[name]; }
 sub json_ld_type { 'Person' }
 
 sub json_ld_fields {
-  [ qw[ name ] ]
+  [
+    'name',
+    { birthDate => sub { $_[0]->born->strftime('%Y-%m-%d') } },
+  ]
 }
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration
