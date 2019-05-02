@@ -177,7 +177,10 @@ sub json_ld_type {
 }
 
 sub json_ld_fields {
-  return [ { name => 'title' } ];
+  return [
+    { name => 'title' },
+    { productionCompany => 'made_by' },
+  ];
 }
 
 around title => sub {

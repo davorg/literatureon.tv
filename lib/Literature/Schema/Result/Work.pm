@@ -223,7 +223,11 @@ with 'Literature::Role::HasSlug', 'MooX::Role::JSON_LD';
 sub slug_cols { return qw[title]; }
 
 sub json_ld_type { $_[0]->type }
-sub json_ld_fields { [ { name => 'title' } ] }
+sub json_ld_fields { [
+  { name => 'title' },
+  { datePublished => sub { $_[0]->published ?
+	                $_[0]->published->strftime('%Y-%m-%d') : undef } },
+] }
 
 sub asins {
   my $self = shift;
