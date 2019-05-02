@@ -141,6 +141,8 @@ sub json_ld_type { 'Person' }
 sub json_ld_fields {
   [ 'name',
     { birthDate => sub { $_[0]->born->strftime('%Y-%m-%d') } },
+    { deathDate => sub { $_[0]->died ?
+		     $_[0]->died->strftime('%Y-%m-%d') : undef } },
   ]
 }
 
