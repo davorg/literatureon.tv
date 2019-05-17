@@ -19,7 +19,8 @@ my %resources = qw[
 my $tt = Template->new({
   INCLUDE_PATH => [ qw( in tt_lib ) ],
   OUTPUT_PATH  => 'docs',
-  WRAPPER      => 'main.tt',
+  PRE_PROCESS  => 'header.tt',
+  POST_PROCESS => 'footer.tt',
 });
 
 my $sch = Literature::Schema->get_schema;
