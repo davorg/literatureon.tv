@@ -1,7 +1,10 @@
-[% META title = 'List of Authors' -%]
-<h1 class="display-3">[% template.title or 'Literature on TV' %]</h1>
+[% title = 'Authors' -%]
+[% INCLUDE header.tt -%]
+
+<h1 class="display-3">[% title or 'Literature on TV' %]</h1>
 <ul>
 [% FOREACH author IN authors.all.sort('name') -%]
 <li><a href="/authors/[% author.slug %]/">[% author.name %]</a></li>
 [% END -%]
 </ul>
+[% INCLUDE footer.tt -%]

@@ -1,4 +1,5 @@
-[% META title = '' %]
+[% title = '' -%]
+[% INCLUDE header.tt -%]
 
 [% INCLUDE modal.tt %]
 
@@ -12,3 +13,4 @@
 <li>By <a href="/productions/">productions</a></li>
 <li>By <a href="/actors/">actors</a></li>
 </ul>
+[% INCLUDE footer.tt %]

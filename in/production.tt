@@ -1,8 +1,9 @@
-[% META title = 'Production' %]
+[% title = production.title -%]
+[% INCLUDE header.tt -%]
 
 <script type="application/ld+json">
 [% production.json_ld %]</script>
-<p class="text-muted">[% template.title or 'Literature on TV' %]</p>
+<p class="text-muted">Production</p>
 
 <h1 class="display-3">[% production.title %]</h1>
 <p>[% production.description %]<p>
@@ -27,3 +28,4 @@ as <a href="/characters/[% a.character.slug %]/">[% a.character.name %]</a></li>
 [% END %]
 
 [% INCLUDE amazon.tt type='DVD', search=production.title %]
+[% INCLUDE footer.tt -%]

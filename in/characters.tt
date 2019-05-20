@@ -1,9 +1,11 @@
-[% META title = 'List of Characters' -%]
+[% title = 'Characters' -%]
+[% INCLUDE header.tt -%]
     
-<h1 class="display-3">[% template.title or 'Literature on TV' %]</h1>
+<h1 class="display-3">[% title or 'Literature on TV' %]</h1>
 
 <ul>
 [% FOREACH ch IN characters.all.sort('name')-%]
 <li><a href="/characters/[% ch.slug %]/">[% ch.name %]</a></li>
 [% END -%]
 </ul>
+[% INCLUDE footer.tt -%]

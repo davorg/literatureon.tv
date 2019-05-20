@@ -1,11 +1,12 @@
-[% META title = 'Character' %]
+[% title = character.name %]
+[% INCLUDE header.tt -%]
 
 <script type="application/ld+json">
 [% character.json_ld %]</script>
-<p class="text-muted">[% template.title or 'Literature on TV' %]</p>
+<p class="text-muted">Character</p>
 
 <h1 class="display-3">[% character.name %]</h1>
-[% IF character.imdb %]<p><a href="http://imdb.com/character/[% fictionalcharacter.imdb %]">[% fictionalcharacter.name %] on IMDB</a></p>[% END %]
+[% IF character.imdb %]<p><a href="http://imdb.com/character/[% character.imdb %]">[% character.name %] on IMDB</a></p>[% END %]
 <h3>Appearances</h3>
 [% IF character.works.size %]
 <ul>
@@ -33,3 +34,4 @@ by
 [% ELSE %]
 <p>No-one</p>
 [% END %]
+[% INCLUDE footer.tt -%]

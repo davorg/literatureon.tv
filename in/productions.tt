@@ -1,7 +1,7 @@
-[% # Provide a title -%]
-[% META title = 'List of Productions' -%]
+[% title = 'Productions' -%]
+[% INCLUDE header.tt -%]
 
-<h1 class="display-3">[% template.title or 'Literature on TV' %]</h1>
+<h1 class="display-3">[% title or 'Literature on TV' %]</h1>
 
 <ul>
 [% FOREACH p IN productions.all.sort('year', 'title')-%]
@@ -9,3 +9,4 @@
       ([% p.description %])</li>
 [% END -%]
 </ul>
+[% INCLUDE footer.tt -%]

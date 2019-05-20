@@ -1,8 +1,9 @@
-[% META title = 'Author' %]
+[% title = author.name %]
+[% INCLUDE header.tt -%]
 
 <script type="application/ld+json">
 [% author.json_ld %]</script>
-<p class="text-muted">[% template.title or 'Literature on TV' %]</p>
+<p class="text-muted">Author</p>
 
 <h1 class="display-3">[% author.name %]</h1>
 [% IF author.born OR author.died %]
@@ -22,3 +23,4 @@
 [% END %]
 
 [% INCLUDE amazon.tt type='Books', search=author.name %]
+[% INCLUDE footer.tt -%]

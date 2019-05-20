@@ -1,10 +1,11 @@
-[% META title = 'Actor' -%]
+[% title = actor.name -%]
+[% INCLUDE header.tt -%]
 
 <script type="application/ld+json">
 [% actor.json_ld %]</script>
-<p class="text-muted">[% template.title or 'Literature on TV' %]</hp>
+<p class="text-muted">Actor</hp>
 
-<h1 class="display-3">[% actor.name %]</h1>
+<h1 class="display-3">[% title %]</h1>
 [% IF actor.born OR actor.died %]
 <p>[% IF actor.born %]Born: [% actor.born.strftime('%m %B %Y'); END -%]
 [% IF actor.born AND actor.died %], [% END %]
@@ -24,3 +25,4 @@
 [% END %]
 
 [% INCLUDE amazon.tt type='DVD', search=actor.name %]
+[% INCLUDE footer.tt -%]
