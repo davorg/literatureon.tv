@@ -17,13 +17,23 @@ __PACKAGE__->load_namespaces;
 sub get_schema {
   my $class = shift;
 
-  unless ($ENV{LIT_USER} and $ENV{LIT_PASS}) {
-    die "You must set LIT_USER and LIT_PASS\n";
+  my @env_vars = qw[LIT_DB_HOST LIT_DB_PORT LIT_DB_NAME LIT_DB_USER LIT_DB_PASS];
+
+  $ENV{LIT_DB_PORT} //= 3306;
+
+  my @errs = grep { ! defined $ENV{$_} } @env_vars;
+
+  if (@errs) {
+    die "You must set ", join(', ', @errs), "\n";
   }
 
+  my $dsn = 'dbi:mysql:' .
+    "database=$ENV{LIT_DB_NAME};" .
+    "host=$ENV{LIT_DB_HOST};" .
+    "port=$ENV{LIT_DB_PORT}";
+
   return $class->connect(
-    "dbi:mysql:database=literature",
-    $ENV{LIT_USER}, $ENV{LIT_PASS},
+    $dsn, $ENV{LIT_DB_USER}, $ENV{LIT_DB_PASS},
     {
       mysql_enable_utf8 => 1,
       quote_char => '`',
