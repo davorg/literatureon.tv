@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Our Mutual Friend",
+    "year": 1976,
+    "format": "TV Series",
+    "productionIMDB": "tt0074038",
+    "cast": {
+      "John Harmon/Rokesmith": {"actor": "John McEnery", "imdb": "nm0568400"},
+      "Bella Wilfer": {"actor": "Lesley Dunlop", "imdb": "nm0242720"},
+      "Mr. Boffin": {"actor": "Leo McKern", "imdb": "nm0571106"},
+      "Lizzie Hexam": {"actor": "Jane Seymour", "imdb": "nm0005412"},
+      "Eugene Wrayburn": {"actor": "Nicholas Jones", "imdb": "nm0428121"}
+    }
+  },
+  {
+    "title": "Our Mutual Friend",
+    "year": 1998,
+    "format": "TV Miniseries",
+    "productionIMDB": "tt0144727",
+    "cast": {
+      "John Harmon/Rokesmith": {"actor": "Steven Mackintosh", "imdb": "nm0532928"},
+      "Bella Wilfer": {"actor": "Keeley Hawes", "imdb": "nm0370071"},
+      "Mr. Boffin": {"actor": "Peter Vaughan", "imdb": "nm0891098"},
+      "Lizzie Hexam": {"actor": "Anna Friel", "imdb": "nm0001224"}, // Corrected actress for Lizzie Hexam
+      "Eugene Wrayburn": {"actor": "Paul McGann", "imdb": "nm0569000"}
+    }
+  }
+]
+

@@ -1,0 +1,68 @@
+[
+  {
+    "title": "Jane Eyre",
+    "year": 1943,
+    "format": "Film",
+    "productionIMDB": "tt0036969",
+    "cast": {
+      "Jane Eyre": {"actor": "Joan Fontaine", "imdb": "nm0001221"},
+      "Edward Rochester": {"actor": "Orson Welles", "imdb": "nm0000080"},
+      "St. John Rivers": {"actor": "", "imdb": ""},
+      "Bertha Mason": {"actor": "Uncredited", "imdb": ""},
+      "Mrs. Fairfax": {"actor": "Edith Barrett", "imdb": "nm0057365"}
+    }
+  },
+  {
+    "title": "Jane Eyre",
+    "year": 1970,
+    "format": "TV Movie",
+    "productionIMDB": "tt0065854",
+    "cast": {
+      "Jane Eyre": {"actor": "Susannah York", "imdb": "nm0949075"},
+      "Edward Rochester": {"actor": "George C. Scott", "imdb": "nm0001715"},
+      "St. John Rivers": {"actor": "", "imdb": ""},
+      "Bertha Mason": {"actor": "", "imdb": ""},
+      "Mrs. Fairfax": {"actor": "Rachel Kempson", "imdb": "nm0447150"}
+    }
+  },
+  {
+    "title": "Jane Eyre",
+    "year": 1983,
+    "format": "TV Series",
+    "productionIMDB": "tt0085037",
+    "cast": {
+      "Jane Eyre": {"actor": "Zelah Clarke", "imdb": "nm0164809"},
+      "Edward Rochester": {"actor": "Timothy Dalton", "imdb": "nm0001096"},
+      "St. John Rivers": {"actor": "Andrew Bicknell", "imdb": "nm0081601"},
+      "Bertha Mason": {"actor": "Judy Cornwell", "imdb": "nm0180982"},
+      "Mrs. Fairfax": {"actor": "Jean Harvey", "imdb": ""}
+    }
+  },
+  {
+    "title": "Jane Eyre",
+    "year": 2006,
+    "format": "TV Miniseries",
+    "productionIMDB": "tt0780362",
+    "cast": {
+      "Jane Eyre": {"actor": "Ruth Wilson", "imdb": "nm0935541"},
+      "Edward Rochester": {"actor": "Toby Stephens", "imdb": "nm0827170"},
+      "St. John Rivers": {"actor": "Andrew Buchan", "imdb": "nm0117887"},
+      "Bertha Mason": {"actor": "Claudia Coulter", "imdb": ""},
+      "Mrs. Fairfax": {"actor": "Lorraine Ashbourne", "imdb": "nm0038825"}
+    }
+  },
+  {
+    "title": "Jane Eyre",
+    "year": 2011,
+    "format": "Film",
+    "productionIMDB": "tt1229822",
+    "cast": {
+      "Jane Eyre": {"actor": "Mia Wasikowska", "imdb": "nm1985859"},
+      "Edward Rochester": {"actor": "Michael Fassbender", "imdb": "nm1055413"},
+      "St. John Rivers": {"actor": "Jamie Bell", "imdb": "nm0068260"},
+      "Bertha Mason": {"actor": "Valentina Cervi", "imdb": "nm0148715"},
+      "Mrs. Fairfax": {"actor": "Judi Dench", "imdb": "nm0001132"}
+    }
+  }
+]
+

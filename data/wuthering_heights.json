@@ -1,0 +1,55 @@
+[
+  {
+    "title": "Wuthering Heights",
+    "year": 1939,
+    "format": "Film",
+    "productionIMDB": "tt0032145",
+    "cast": {
+      "Heathcliff": {"actor": "Laurence Olivier", "imdb": "nm0000059"},
+      "Catherine Earnshaw": {"actor": "Merle Oberon", "imdb": "nm0643353"},
+      "Edgar Linton": {"actor": "David Niven", "imdb": "nm0000057"},
+      "Isabella Linton": {"actor": "Geraldine Fitzgerald", "imdb": "nm0280246"},
+      "Hindley Earnshaw": {"actor": "Hugh Williams", "imdb": "nm0930944"}
+    }
+  },
+  {
+    "title": "Wuthering Heights",
+    "year": 1970,
+    "format": "Film",
+    "productionIMDB": "tt0066586",
+    "cast": {
+      "Heathcliff": {"actor": "Timothy Dalton", "imdb": "nm0001096"},
+      "Catherine Earnshaw": {"actor": "Anna Calder-Marshall", "imdb": "nm0129990"},
+      "Edgar Linton": {"actor": "Ian Ogilvy", "imdb": "nm0645560"},
+      "Isabella Linton": {"actor": "Hilary Dwyer", "imdb": "nm0245711"},
+      "Hindley Earnshaw": {"actor": "Julian Glover", "imdb": "nm0002103"}
+    }
+  },
+  {
+    "title": "Wuthering Heights",
+    "year": 1992,
+    "format": "Film",
+    "productionIMDB": "tt0104181",
+    "cast": {
+      "Heathcliff": {"actor": "Ralph Fiennes", "imdb": "nm0000146"},
+      "Catherine Earnshaw": {"actor": "Juliette Binoche", "imdb": "nm0000300"},
+      "Edgar Linton": {"actor": "Simon Ward", "imdb": "nm0912000"},
+      "Isabella Linton": {"actor": "Sophie Ward", "imdb": "nm0911635"},
+      "Hindley Earnshaw": {"actor": "Jeremy Northam", "imdb": "nm0000566"}
+    }
+  },
+  {
+    "title": "Wuthering Heights",
+    "year": 2009,
+    "format": "TV Series",
+    "productionIMDB": "tt1238834",
+    "cast": {
+      "Heathcliff": {"actor": "Tom Hardy", "imdb": "nm0362766"},
+      "Catherine Earnshaw": {"actor": "Charlotte Riley", "imdb": "nm2067956"},
+      "Edgar Linton": {"actor": "Andrew Lincoln", "imdb": "nm0511088"},
+      "Isabella Linton": {"actor": "Rosalind Halstead", "imdb": "nm0356209"},
+      "Hindley Earnshaw": {"actor": "Burn Gorman", "imdb": "nm1218607"}
+    }
+  }
+]
+

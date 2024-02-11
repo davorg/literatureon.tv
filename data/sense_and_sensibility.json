@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Sense and Sensibility",
+    "year": 1981,
+    "format": "TV Series",
+    "productionIMDB": "tt0082879",
+    "cast": {
+      "Elinor Dashwood": {"actor": "Irene Richard", "imdb": "nm0723981"},
+      "Marianne Dashwood": {"actor": "Tracey Childs", "imdb": "nm0157953"},
+      "Edward Ferrars": {"actor": "Bosco Hogan", "imdb": "nm0389444"},
+      "Colonel Brandon": {"actor": "Robert Swann", "imdb": "nm0841910"},
+      "John Willoughby": {"actor": "Peter Woodward", "imdb": "nm0940851"}
+    }
+  },
+  {
+    "title": "Sense and Sensibility",
+    "year": 1995,
+    "format": "Film",
+    "productionIMDB": "tt0114388",
+    "cast": {
+      "Elinor Dashwood": {"actor": "Emma Thompson", "imdb": "nm0000668"},
+      "Marianne Dashwood": {"actor": "Kate Winslet", "imdb": "nm0000701"},
+      "Edward Ferrars": {"actor": "Hugh Grant", "imdb": "nm0000424"},
+      "Colonel Brandon": {"actor": "Alan Rickman", "imdb": "nm0000614"},
+      "John Willoughby": {"actor": "Greg Wise", "imdb": "nm0936295"}
+    }
+  },
+  {
+    "title": "Sense and Sensibility",
+    "year": 2008,
+    "format": "TV Miniseries",
+    "productionIMDB": "tt0847150",
+    "cast": {
+      "Elinor Dashwood": {"actor": "Hattie Morahan", "imdb": "nm0601405"},
+      "Marianne Dashwood": {"actor": "Charity Wakefield", "imdb": "nm1977855"},
+      "Edward Ferrars": {"actor": "Dan Stevens", "imdb": "nm1405398"},
+      "Colonel Brandon": {"actor": "David Morrissey", "imdb": "nm0607375"},
+      "John Willoughby": {"actor": "Dominic Cooper", "imdb": "nm0177896"}
+    }
+  }
+]
+

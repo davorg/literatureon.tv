@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Mansfield Park",
+    "year": 1983,
+    "format": "TV Series",
+    "productionIMDB": "tt0085077",
+    "cast": {
+      "Fanny Price": {"actor": "Sylvestra Le Touzel", "imdb": "nm0523604"},
+      "Edmund Bertram": {"actor": "Nicholas Farrell", "imdb": "nm0268048"},
+      "Mary Crawford": {"actor": "Jackie Smith-Wood", "imdb": "nm0808916"},
+      "Henry Crawford": {"actor": "Robert Burbage", "imdb": ""},
+      "Sir Thomas Bertram": {"actor": "Bernard Hepton", "imdb": "nm0378144"}
+    }
+  },
+  {
+    "title": "Mansfield Park",
+    "year": 1999,
+    "format": "Film",
+    "productionIMDB": "tt0178737",
+    "cast": {
+      "Fanny Price": {"actor": "Frances O'Connor", "imdb": "nm0640323"},
+      "Edmund Bertram": {"actor": "Jonny Lee Miller", "imdb": "nm0001538"},
+      "Mary Crawford": {"actor": "Embeth Davidtz", "imdb": "nm0001110"},
+      "Henry Crawford": {"actor": "Alessandro Nivola", "imdb": "nm0005273"},
+      "Sir Thomas Bertram": {"actor": "Harold Pinter", "imdb": "nm0685245"}
+    }
+  },
+  {
+    "title": "Mansfield Park",
+    "year": 2007,
+    "format": "TV Film",
+    "productionIMDB": "tt0847182",
+    "cast": {
+      "Fanny Price": {"actor": "Billie Piper", "imdb": "nm0684877"},
+      "Edmund Bertram": {"actor": "Blake Ritson", "imdb": "nm0727773"},
+      "Mary Crawford": {"actor": "Hayley Atwell", "imdb": "nm2017943"},
+      "Henry Crawford": {"actor": "Joseph Beattie", "imdb": "nm0064089"},
+      "Sir Thomas Bertram": {"actor": "Douglas Hodge", "imdb": "nm0388038"}
+    }
+  }
+]
+

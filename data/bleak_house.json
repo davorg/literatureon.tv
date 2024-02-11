@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Bleak House",
+    "year": 1985,
+    "format": "TV Series",
+    "productionIMDB": "tt0088478",
+    "cast": {
+      "Esther Summerson": {"actor": "Suzanne Burden", "imdb": "nm0120995"},
+      "John Jarndyce": {"actor": "Denholm Elliott", "imdb": "nm0255124"},
+      "Lady Dedlock": {"actor": "Diana Rigg", "imdb": "nm0725826"},
+      "Richard Carstone": {"actor": "Philip Franks", "imdb": "nm0291082"},
+      "Ada Clare": {"actor": "Lucy Hornak", "imdb": ""}
+    }
+  },
+  {
+    "title": "Bleak House",
+    "year": 2005,
+    "format": "TV Series",
+    "productionIMDB": "tt0442632",
+    "cast": {
+      "Esther Summerson": {"actor": "Anna Maxwell Martin", "imdb": "nm0552509"},
+      "John Jarndyce": {"actor": "Denis Lawson", "imdb": "nm0493200"},
+      "Lady Dedlock": {"actor": "Gillian Anderson", "imdb": "nm0000096"},
+      "Richard Carstone": {"actor": "Patrick Kennedy", "imdb": "nm0448124"},
+      "Ada Clare": {"actor": "Carey Mulligan", "imdb": "nm1659547"}
+    }
+  }
+]
+

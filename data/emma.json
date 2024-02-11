@@ -1,0 +1,55 @@
+[
+  {
+    "title": "Emma",
+    "year": 1996,
+    "format": "Film",
+    "productionIMDB": "tt0116191",
+    "cast": {
+      "Emma Woodhouse": {"actor": "Gwyneth Paltrow", "imdb": "nm0000569"},
+      "Mr. George Knightley": {"actor": "Jeremy Northam", "imdb": "nm0636562"},
+      "Harriet Smith": {"actor": "Toni Collette", "imdb": "nm0001057"},
+      "Frank Churchill": {"actor": "Ewan McGregor", "imdb": "nm0000191"},
+      "Jane Fairfax": {"actor": "Polly Walker", "imdb": "nm0908116"}
+    }
+  },
+  {
+    "title": "Emma",
+    "year": 1996,
+    "format": "TV Film",
+    "productionIMDB": "tt0118308",
+    "cast": {
+      "Emma Woodhouse": {"actor": "Kate Beckinsale", "imdb": "nm0000295"},
+      "Mr. George Knightley": {"actor": "Mark Strong", "imdb": "nm0835016"},
+      "Harriet Smith": {"actor": "Samantha Morton", "imdb": "nm0608090"},
+      "Frank Churchill": {"actor": "Raymond Coulthard", "imdb": "nm0183602"},
+      "Jane Fairfax": {"actor": "Olivia Williams", "imdb": "nm0931404"}
+    }
+  },
+  {
+    "title": "Emma",
+    "year": 2009,
+    "format": "TV Miniseries",
+    "productionIMDB": "tt1366312",
+    "cast": {
+      "Emma Woodhouse": {"actor": "Romola Garai", "imdb": "nm0304801"},
+      "Mr. George Knightley": {"actor": "Jonny Lee Miller", "imdb": "nm0001538"},
+      "Harriet Smith": {"actor": "Louise Dylan", "imdb": ""},
+      "Frank Churchill": {"actor": "Rupert Evans", "imdb": "nm0262635"},
+      "Jane Fairfax": {"actor": "Laura Pyper", "imdb": ""}
+    }
+  },
+  {
+    "title": "Emma",
+    "year": 2020,
+    "format": "Film",
+    "productionIMDB": "tt9214832",
+    "cast": {
+      "Emma Woodhouse": {"actor": "Anya Taylor-Joy", "imdb": "nm5896355"},
+      "Mr. George Knightley": {"actor": "Johnny Flynn", "imdb": "nm0283945"},
+      "Harriet Smith": {"actor": "Mia Goth", "imdb": "nm5323111"},
+      "Frank Churchill": {"actor": "Callum Turner", "imdb": "nm2636108"},
+      "Jane Fairfax": {"actor": "Amber Anderson", "imdb": "nm3845982"}
+    }
+  }
+]
+

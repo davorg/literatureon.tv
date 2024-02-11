@@ -1,0 +1,60 @@
+[
+  {
+    "title": "Romeo and Juliet",
+    "year": 1968,
+    "format": "Film",
+    "productionIMDB": "tt0063518",
+    "cast": {
+      "Romeo": {"actor": "Leonard Whiting", "imdb": "nm0926235"},
+      "Juliet": {"actor": "Olivia Hussey", "imdb": "nm0001377"},
+      "Mercutio": {"actor": "John McEnery", "imdb": "nm0566053"},
+      "Tybalt": {"actor": "Michael York", "imdb": "nm0001860"},
+      "Friar Laurence": {"actor": "Milo O'Shea", "imdb": "nm0642103"},
+      "Lord Montague": {"actor": "Antonio Pierfederici", "imdb": "nm0682007"},
+      "Lady Montague": {"actor": "Esmeralda Ruspoli", "imdb": ""},
+      "Lord Capulet": {"actor": "Paul Hardwick", "imdb": "nm0362730"},
+      "Lady Capulet": {"actor": "Natasha Parry", "imdb": "nm0662519"},
+      "Nurse": {"actor": "Pat Heywood", "imdb": "nm0382216"},
+      "Benvolio": {"actor": "Bruce Robinson", "imdb": "nm0732430"}
+    }
+  },
+  {
+    "title": "Romeo + Juliet",
+    "year": 1996,
+    "format": "Film",
+    "productionIMDB": "tt0117509",
+    "cast": {
+      "Romeo": {"actor": "Leonardo DiCaprio", "imdb": "nm0000138"},
+      "Juliet": {"actor": "Claire Danes", "imdb": "nm0000132"},
+      "Mercutio": {"actor": "Harold Perrineau", "imdb": "nm0674782"},
+      "Tybalt": {"actor": "John Leguizamo", "imdb": "nm0000491"},
+      "Friar Laurence": {"actor": "Pete Postlethwaite", "imdb": "nm0000592"},
+      "Lord Montague": {"actor": "Brian Dennehy", "imdb": "nm0001133"},
+      "Lady Montague": {"actor": "Christina Pickles", "imdb": "nm0681944"},
+      "Lord Capulet": {"actor": "Paul Sorvino", "imdb": "nm0001753"},
+      "Lady Capulet": {"actor": "Diane Venora", "imdb": "nm0893106"},
+      "Nurse": {"actor": "Miriam Margolyes", "imdb": "nm0546816"},
+      "Benvolio": {"actor": "Dash Mihok", "imdb": "nm0587001"}
+    }
+  },
+  {
+    "title": "Romeo and Juliet",
+    "year": 2013,
+    "format": "Film",
+    "productionIMDB": "tt1645131",
+    "cast": {
+      "Romeo": {"actor": "Douglas Booth", "imdb": "nm2947389"},
+      "Juliet": {"actor": "Hailee Steinfeld", "imdb": "nm2794962"},
+      "Mercutio": {"actor": "Christian Cooke", "imdb": "nm0177896"},
+      "Tybalt": {"actor": "Ed Westwick", "imdb": "nm2067953"},
+      "Friar Laurence": {"actor": "Paul Giamatti", "imdb": "nm0316079"},
+      "Lord Montague": {"actor": "Tomas Arana", "imdb": "nm0032819"},
+      "Lady Montague": {"actor": "Laura Morante", "imdb": "nm0603403"},
+      "Lord Capulet": {"actor": "Damian Lewis", "imdb": "nm0507073"},
+      "Lady Capulet": {"actor": "Natascha McElhone", "imdb": "nm0001523"},
+      "Nurse": {"actor": "Lesley Manville", "imdb": "nm0544334"},
+      "Benvolio": {"actor": "Kodi Smit-McPhee", "imdb": "nm2240346"}
+    }
+  }
+]
+

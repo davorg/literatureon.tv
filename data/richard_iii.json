@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Richard III",
+    "year": 1955,
+    "format": "Film",
+    "productionIMDB": "tt0049674",
+    "cast": {
+      "Richard III": {"actor": "Laurence Olivier", "imdb": "nm0000059"},
+      "Lady Anne": {"actor": "Claire Bloom", "imdb": "nm0001954"},
+      "Buckingham": {"actor": "Ralph Richardson", "imdb": "nm0724732"},
+      "Queen Elizabeth": {"actor": "Mary Kerridge", "imdb": "nm0449940"},
+      "Richmond": {"actor": "Stanley Baker", "imdb": "nm0048340"}
+    }
+  },
+  {
+    "title": "Richard III",
+    "year": 1995,
+    "format": "Film",
+    "productionIMDB": "tt0114279",
+    "cast": {
+      "Richard III": {"actor": "Ian McKellen", "imdb": "nm0005212"},
+      "Lady Anne": {"actor": "Kristin Scott Thomas", "imdb": "nm0000218"},
+      "Buckingham": {"actor": "Jim Broadbent", "imdb": "nm0000980"},
+      "Queen Elizabeth": {"actor": "Annette Bening", "imdb": "nm0000906"},
+      "Richmond": {"actor": "Dominic West", "imdb": "nm0922035"}
+    }
+  },
+  {
+    "title": "The Hollow Crown: Richard III",
+    "year": 2016,
+    "format": "Film",
+    "productionIMDB": "tt3671754",
+    "cast": {
+      "Richard III": {"actor": "Benedict Cumberbatch", "imdb": "nm1212722"},
+      "Lady Anne": {"actor": "Phoebe Fox", "imdb": "nm4288414"},
+      "Buckingham": {"actor": "Ben Daniels", "imdb": "nm0199842"},
+      "Queen Elizabeth": {"actor": "Judi Dench", "imdb": "nm0001132"},
+      "Richmond": {"actor": "Luke Treadaway", "imdb": "nm2067953"}
+    }
+  }
+]
+

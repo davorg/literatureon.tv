@@ -1,0 +1,83 @@
+[
+  {
+    "year": 1940,
+    "format": "Film",
+    "productionIMDB": "tt0032631",
+    "cast": {
+      "Elizabeth Bennet": {"actor": "Greer Garson", "imdb": "nm0002093"},
+      "Mr. Darcy": {"actor": "Laurence Olivier", "imdb": "nm0000059"},
+      "Mr. Bennet": {"actor": "Edmund Gwenn", "imdb": "nm0002103"},
+      "Mrs. Bennet": {"actor": "Mary Boland", "imdb": "nm0001966"},
+      "Jane Bennet": {"actor": "Maureen O'Sullivan", "imdb": "nm0001578"},
+      "Lydia Bennet": {"actor": "Ann Rutherford", "imdb": "nm0751114"},
+      "Kitty Bennet": {"actor": "Heather Angel", "imdb": "nm0029358"},
+      "Mary Bennet": {"actor": "Marsha Hunt", "imdb": "nm0402032"},
+      "Mr. Bingley": {"actor": "Bruce Lester", "imdb": "nm0504432"},
+      "Mr. Collins": {"actor": "Melville Cooper", "imdb": "nm0178134"},
+      "Lady Catherine": {"actor": "Edna May Oliver", "imdb": "nm0646051"},
+      "George Wickham": {"actor": "Edward Ashley", "imdb": "nm0039101"},
+      "Charlotte Lucas": {"actor": "Karen Morley", "imdb": "nm0606566"}
+    }
+  },
+  {
+    "year": 1980,
+    "format": "TV Series",
+    "productionIMDB": "tt0081353",
+    "cast": {
+      "Elizabeth Bennet": {"actor": "Elizabeth Garvie", "imdb": "nm0308705"},
+      "Mr. Darcy": {"actor": "David Rintoul", "imdb": "nm0727770"},
+      "Mr. Bennet": {"actor": "Moray Watson", "imdb": "nm0914084"},
+      "Mrs. Bennet": {"actor": "Priscilla Morgan", "imdb": "nm0605083"},
+      "Jane Bennet": {"actor": "Sabina Franklyn", "imdb": "nm0291266"},
+      "Lydia Bennet": {"actor": "Natalie Ogle", "imdb": "nm0645703"},
+      "Kitty Bennet": {"actor": "Clare Higgins", "imdb": "nm0383926"},
+      "Mary Bennet": {"actor": "Tessa Peake-Jones", "imdb": "nm0669669"},
+      "Mr. Bingley": {"actor": "Osmund Bullock", "imdb": ""},
+      "Mr. Collins": {"actor": "Malcolm Rennie", "imdb": "nm0719634"},
+      "Lady Catherine": {"actor": "Judy Parfitt", "imdb": "nm0661560"},
+      "George Wickham": {"actor": "Peter Settelen", "imdb": "nm0786459"},
+      "Charlotte Lucas": {"actor": "Irene Richard", "imdb": "nm0723981"}
+    }
+  },
+  {
+    "year": 1995,
+    "format": "TV Series",
+    "productionIMDB": "tt0112130",
+    "cast": {
+      "Elizabeth Bennet": {"actor": "Jennifer Ehle", "imdb": "nm0000382"},
+      "Mr. Darcy": {"actor": "Colin Firth", "imdb": "nm0000147"},
+      "Mr. Bennet": {"actor": "Benjamin Whitrow", "imdb": "nm0926235"},
+      "Mrs. Bennet": {"actor": "Alison Steadman", "imdb": "nm0823806"},
+      "Jane Bennet": {"actor": "Susannah Harker", "imdb": "nm0364813"},
+      "Lydia Bennet": {"actor": "Julia Sawalha", "imdb": "nm0768952"},
+      "Kitty Bennet": {"actor": "Polly Maberly", "imdb": "nm0530736"},
+      "Mary Bennet": {"actor": "Lucy Briers", "imdb": "nm0108955"},
+      "Mr. Bingley": {"actor": "Crispin Bonham-Carter", "imdb": "nm0094089"},
+      "Mr. Collins": {"actor": "David Bamber", "imdb": "nm0051509"},
+      "Lady Catherine": {"actor": "Barbara Leigh-Hunt", "imdb": "nm0499049"},
+      "George Wickham": {"actor": "Adrian Lukis", "imdb": "nm0525610"},
+      "Charlotte Lucas": {"actor": "Lucy Scott", "imdb": "nm0779084"}
+    }
+  },
+  {
+    "year": 2005,
+    "format": "Film",
+    "productionIMDB": "tt0414387",
+    "cast": {
+      "Elizabeth Bennet": {"actor": "Keira Knightley", "imdb": "nm0461136"},
+      "Mr. Darcy": {"actor": "Matthew Macfadyen", "imdb": "nm0532193"},
+      "Mr. Bennet": {"actor": "Donald Sutherland", "imdb": "nm0000661"},
+      "Mrs. Bennet": {"actor": "Brenda Blethyn", "imdb": "nm0000950"},
+      "Jane Bennet": {"actor": "Rosamund Pike", "imdb": "nm0683253"},
+      "Lydia Bennet": {"actor": "Jena Malone", "imdb": "nm0540441"},
+      "Kitty Bennet": {"actor": "Carey Mulligan", "imdb": "nm1659547"},
+      "Mary Bennet": {"actor": "Talulah Riley", "imdb": "nm0727778"},
+      "Mr. Bingley": {"actor": "Simon Woods", "imdb": "nm0940362"},
+      "Mr. Collins": {"actor": "Tom Hollander", "imdb": "nm0390903"},
+      "Lady Catherine": {"actor": "Judi Dench", "imdb": "nm0001132"},
+      "George Wickham": {"actor": "Rupert Friend", "imdb": "nm1670029"},
+      "Charlotte Lucas": {"actor": "Claudie Blakley", "imdb": "nm0086563"}
+    }
+  }
+]
+

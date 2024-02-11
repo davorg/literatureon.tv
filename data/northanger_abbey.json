@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Northanger Abbey",
+    "year": 1986,
+    "format": "TV Movie",
+    "productionIMDB": "tt0091655",
+    "cast": {
+      "Catherine Morland": {"actor": "Katharine Schlesinger", "imdb": "nm0772703"},
+      "Henry Tilney": {"actor": "Peter Firth", "imdb": "nm0002081"},
+      "Eleanor Tilney": {"actor": "Googie Withers", "imdb": "nm0936448"},
+      "General Tilney": {"actor": "Robert Hardy", "imdb": "nm0362735"},
+      "John Thorpe": {"actor": "Jonathan Coy", "imdb": "nm0185404"}
+    }
+  },
+  {
+    "title": "Northanger Abbey",
+    "year": 2007,
+    "format": "TV Movie",
+    "productionIMDB": "tt0844794",
+    "cast": {
+      "Catherine Morland": {"actor": "Felicity Jones", "imdb": "nm0428065"},
+      "Henry Tilney": {"actor": "JJ Feild", "imdb": "nm0270626"},
+      "Eleanor Tilney": {"actor": "Catherine Walker", "imdb": "nm0908110"},
+      "General Tilney": {"actor": "Liam Cunningham", "imdb": "nm0192377"},
+      "John Thorpe": {"actor": "William Beck", "imdb": "nm0065059"}
+    }
+  }
+]
+

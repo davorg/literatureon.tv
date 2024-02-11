@@ -1,0 +1,55 @@
+[
+  {
+    "title": "Great Expectations",
+    "year": 1946,
+    "format": "Film",
+    "productionIMDB": "tt0038574",
+    "cast": {
+      "Pip": {"actor": "John Mills", "imdb": "nm0590055"},
+      "Estella": {"actor": "Valerie Hobson", "imdb": "nm0388629"},
+      "Miss Havisham": {"actor": "Martita Hunt", "imdb": "nm0402037"},
+      "Joe Gargery": {"actor": "Bernard Miles", "imdb": "nm0587277"},
+      "Abel Magwitch": {"actor": "Finlay Currie", "imdb": "nm0192889"}
+    }
+  },
+  {
+    "title": "Great Expectations",
+    "year": 1998,
+    "format": "Film",
+    "productionIMDB": "tt0119223",
+    "cast": {
+      "Pip": {"actor": "Ethan Hawke", "imdb": "nm0000160"},
+      "Estella": {"actor": "Gwyneth Paltrow", "imdb": "nm0000569"},
+      "Miss Havisham": {"actor": "Anne Bancroft", "imdb": "nm0000843"},
+      "Joe Gargery": {"actor": "Chris Cooper", "imdb": "nm0177933"},
+      "Abel Magwitch": {"actor": "Robert De Niro", "imdb": "nm0000134"}
+    }
+  },
+  {
+    "title": "Great Expectations",
+    "year": 2011,
+    "format": "TV Miniseries",
+    "productionIMDB": "tt1949720",
+    "cast": {
+      "Pip": {"actor": "Douglas Booth", "imdb": "nm2940235"},
+      "Estella": {"actor": "Vanessa Kirby", "imdb": "nm3948952"},
+      "Miss Havisham": {"actor": "Gillian Anderson", "imdb": "nm0000096"},
+      "Joe Gargery": {"actor": "Shaun Dooley", "imdb": "nm0233310"},
+      "Abel Magwitch": {"actor": "Ray Winstone", "imdb": "nm0935653"}
+    }
+  },
+  {
+    "title": "Great Expectations",
+    "year": 2012,
+    "format": "Film",
+    "productionIMDB": "tt1836808",
+    "cast": {
+      "Pip": {"actor": "Jeremy Irvine", "imdb": "nm3528539"},
+      "Estella": {"actor": "Holliday Grainger", "imdb": "nm0334441"},
+      "Miss Havisham": {"actor": "Helena Bonham Carter", "imdb": "nm0000307"},
+      "Joe Gargery": {"actor": "Jason Flemyng", "imdb": "nm0281143"},
+      "Abel Magwitch": {"actor": "Ralph Fiennes", "imdb": "nm0000146"}
+    }
+  }
+]
+

@@ -1,0 +1,73 @@
+[
+  {
+    "title": "Oliver Twist",
+    "year": 1948,
+    "format": "Film",
+    "productionIMDB": "tt0040662",
+    "cast": {
+      "Oliver Twist": {"actor": "John Howard Davies", "imdb": "nm0203563"},
+      "Fagin": {"actor": "Alec Guinness", "imdb": "nm0000027"},
+      "Bill Sikes": {"actor": "Robert Newton", "imdb": "nm0628578"},
+      "Nancy": {"actor": "Kay Walsh", "imdb": "nm0909856"},
+      "Mr. Brownlow": {"actor": "Henry Stephenson", "imdb": "nm0827307"},
+      "Artful Dodger": {"actor": "Anthony Newley", "imdb": "nm0628102"}
+    }
+  },
+  {
+    "title": "Oliver!",
+    "year": 1968,
+    "format": "Film",
+    "productionIMDB": "tt0063385",
+    "cast": {
+      "Oliver Twist": {"actor": "Mark Lester", "imdb": "nm0504563"},
+      "Fagin": {"actor": "Ron Moody", "imdb": "nm0601136"},
+      "Bill Sikes": {"actor": "Oliver Reed", "imdb": "nm0001657"},
+      "Nancy": {"actor": "Shani Wallis", "imdb": "nm0909648"},
+      "Mr. Brownlow": {"actor": "Joseph O'Conor", "imdb": "nm0640617"},
+      "Artful Dodger": {"actor": "Jack Wild", "imdb": "nm0928337"}
+    }
+  },
+  {
+    "title": "Oliver Twist",
+    "year": 1985,
+    "format": "TV Miniseries",
+    "productionIMDB": "tt0088514",
+    "cast": {
+      "Oliver Twist": {"actor": "Ben Rodska", "imdb": "nm0736423"},
+      "Fagin": {"actor": "Eric Porter", "imdb": "nm0691938"},
+      "Bill Sikes": {"actor": "Michael Attwell", "imdb": "nm0041162"},
+      "Nancy": {"actor": "Amanda Harris", "imdb": "nm0364888"},
+      "Mr. Brownlow": {"actor": "Frank Middlemass", "imdb": "nm0585560"},
+      "Artful Dodger": {"actor": "Scott Funnell", "imdb": ""}
+    }
+  },
+  {
+    "title": "Oliver Twist",
+    "year": 2005,
+    "format": "TV Miniseries",
+    "productionIMDB": "tt0384243",
+    "cast": {
+      "Oliver Twist": {"actor": "William Miller", "imdb": "nm1093959"},
+      "Fagin": {"actor": "Timothy Spall", "imdb": "nm0001758"},
+      "Bill Sikes": {"actor": "Tom Hardy", "imdb": "nm0362766"},
+      "Nancy": {"actor": "Sophie Okonedo", "imdb": "nm0645683"},
+      "Mr. Brownlow": {"actor": "Edward Fox", "imdb": "nm0289344"},
+      "Artful Dodger": {"actor": "Adam Arnold", "imdb": ""}
+    }
+  },
+  {
+    "title": "Oliver Twist",
+    "year": 2007,
+    "format": "TV Miniseries",
+    "productionIMDB": "tt1055321",
+    "cast": {
+      "Oliver Twist": {"actor": "William Miller", "imdb": "nm1093959"},
+      "Fagin": {"actor": "Timothy Spall", "imdb": "nm0001758"},
+      "Bill Sikes": {"actor": "Tom Hardy", "imdb": "nm0362766"},
+      "Nancy": {"actor": "Sophie Okonedo", "imdb": "nm0645683"},
+      "Mr. Brownlow": {"actor": "Julian Rhind-Tutt", "imdb": "nm0722636"},
+      "Artful Dodger": {"actor": "Adam Arnold", "imdb": "nm0037739"}
+    }
+  }
+]
+

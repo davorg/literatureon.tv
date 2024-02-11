@@ -1,0 +1,41 @@
+[
+  {
+    "title": "Persuasion",
+    "year": 1995,
+    "format": "TV Movie",
+    "productionIMDB": "tt0114117",
+    "cast": {
+      "Anne Elliot": {"actor": "Amanda Root", "imdb": "nm0741627"},
+      "Captain Frederick Wentworth": {"actor": "Ciarán Hinds", "imdb": "nm0384060"},
+      "Sir Walter Elliot": {"actor": "Corin Redgrave", "imdb": "nm0714310"},
+      "Elizabeth Elliot": {"actor": "Phoebe Nicholls", "imdb": "nm0629736"},
+      "Lady Russell": {"actor": "Susan Fleetwood", "imdb": "nm0281506"}
+    }
+  },
+  {
+    "title": "Persuasion",
+    "year": 2007,
+    "format": "TV Movie",
+    "productionIMDB": "tt0847151",
+    "cast": {
+      "Anne Elliot": {"actor": "Sally Hawkins", "imdb": "nm1020089"},
+      "Captain Frederick Wentworth": {"actor": "Rupert Penry-Jones", "imdb": "nm0671980"},
+      "Sir Walter Elliot": {"actor": "Anthony Head", "imdb": "nm0372117"},
+      "Elizabeth Elliot": {"actor": "Julia Davis", "imdb": "nm0205061"},
+      "Lady Russell": {"actor": "Alice Krige", "imdb": "nm0000481"}
+    }
+  },
+  {
+    "title": "Persuasion",
+    "year": 2022,
+    "format": "Film",
+    "cast": {
+      "Anne Elliot": {"actor": "Dakota Johnson", "imdb": "nm0424848"},
+      "Captain Frederick Wentworth": {"actor": "Cosmo Jarvis", "imdb": "nm3688906"},
+      "Sir Walter Elliot": {"actor": "Richard E. Grant", "imdb": "nm0001290"},
+      "Elizabeth Elliot": {"actor": "Yolanda Kettle", "imdb": ""},
+      "Lady Russell": {"actor": "Nikki Amuka-Bird", "imdb": "nm0022306"}
+    }
+  }
+]
+

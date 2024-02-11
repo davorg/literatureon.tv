@@ -1,0 +1,71 @@
+[
+  {
+    "title": "Hamlet",
+    "year": 1948,
+    "format": "Film",
+    "productionIMDB": "tt0040416",
+    "cast": {
+      "Hamlet": {"actor": "Laurence Olivier", "imdb": "nm0000059"},
+      "Claudius": {"actor": "Basil Sydney", "imdb": "nm0843081"},
+      "Gertrude": {"actor": "Eileen Herlie", "imdb": "nm0378883"},
+      "Ophelia": {"actor": "Jean Simmons", "imdb": "nm0799723"},
+      "Polonius": {"actor": "Felix Aylmer", "imdb": "nm0043864"},
+      "Horatio": {"actor": "Norman Wooland", "imdb": "nm0940970"},
+      "Rosencrantz": {"actor": "Terence Morgan", "imdb": "nm0604702"},
+      "Guildenstern": {"actor": "Anthony Quayle", "imdb": "nm0703034"},
+      "Fortinbras": {"actor": "Stanley Holloway", "imdb": "nm0390889"}
+    }
+  },
+  {
+    "title": "Hamlet",
+    "year": 1990,
+    "format": "Film",
+    "productionIMDB": "tt0099726",
+    "cast": {
+      "Hamlet": {"actor": "Mel Gibson", "imdb": "nm0000154"},
+      "Claudius": {"actor": "Alan Bates", "imdb": "nm0000875"},
+      "Gertrude": {"actor": "Glenn Close", "imdb": "nm0000335"},
+      "Ophelia": {"actor": "Helena Bonham Carter", "imdb": "nm0000307"},
+      "Polonius": {"actor": "Ian Holm", "imdb": "nm0000453"},
+      "Horatio": {"actor": "Stephen Dillane", "imdb": "nm0226820"},
+      "Rosencrantz": {"actor": "Iain Glen", "imdb": "nm0322513"},
+      "Guildenstern": {"actor": "Sean Murray", "imdb": "nm0615266"},
+      "Fortinbras": {"actor": "Nathaniel Parker", "imdb": "nm0662519"}
+    }
+  },
+  {
+    "title": "Hamlet",
+    "year": 1996,
+    "format": "Film",
+    "productionIMDB": "tt0116477",
+    "cast": {
+      "Hamlet": {"actor": "Kenneth Branagh", "imdb": "nm0000110"},
+      "Claudius": {"actor": "Derek Jacobi", "imdb": "nm0001394"},
+      "Gertrude": {"actor": "Julie Christie", "imdb": "nm0001046"},
+      "Ophelia": {"actor": "Kate Winslet", "imdb": "nm0000701"},
+      "Polonius": {"actor": "Richard Briers", "imdb": "nm0001974"},
+      "Horatio": {"actor": "Nicholas Farrell", "imdb": "nm0268048"},
+      "Rosencrantz": {"actor": "Timothy Spall", "imdb": "nm0001758"},
+      "Guildenstern": {"actor": "Reece Dinsdale", "imdb": "nm0227759"},
+      "Fortinbras": {"actor": "Rufus Sewell", "imdb": "nm0001722"}
+    }
+  },
+  {
+    "title": "Hamlet",
+    "year": 2000,
+    "format": "Film",
+    "productionIMDB": "tt0171359",
+    "cast": {
+      "Hamlet": {"actor": "Ethan Hawke", "imdb": "nm0000160"},
+      "Claudius": {"actor": "Kyle MacLachlan", "imdb": "nm0001492"},
+      "Gertrude": {"actor": "Diane Venora", "imdb": "nm0893106"},
+      "Ophelia": {"actor": "Julia Stiles", "imdb": "nm0005466"},
+      "Polonius": {"actor": "Bill Murray", "imdb": "nm0000195"},
+      "Horatio": {"actor": "Karl Geary", "imdb": "nm0311476"},
+      "Rosencrantz": {"actor": "Steve Zahn", "imdb": "nm0001872"},
+      "Guildenstern": {"actor": "Dechen Thurman", "imdb": "nm0862049"},
+      "Fortinbras": {"actor": "Casey Affleck", "imdb": "nm0000729"}
+    }
+  }
+]
+

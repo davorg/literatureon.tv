@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Henry V",
+    "year": 1944,
+    "format": "Film",
+    "productionIMDB": "tt0036910",
+    "cast": {
+      "King Henry V": {"actor": "Laurence Olivier", "imdb": "nm0000059"},
+      "Catherine of Valois": {"actor": "Renée Asherson", "imdb": "nm0038985"},
+      "The Chorus": {"actor": "Leslie Banks", "imdb": "nm0052186"},
+      "Duke of Exeter": {"actor": "Nicholas Hannen", "imdb": "nm0360638"},
+      "Falstaff": {"actor": "", "imdb": ""}
+    }
+  },
+  {
+    "title": "Henry V",
+    "year": 1989,
+    "format": "Film",
+    "productionIMDB": "tt0097499",
+    "cast": {
+      "King Henry V": {"actor": "Kenneth Branagh", "imdb": "nm0000110"},
+      "Catherine of Valois": {"actor": "Emma Thompson", "imdb": "nm0000668"},
+      "The Chorus": {"actor": "Derek Jacobi", "imdb": "nm0001394"},
+      "Duke of Exeter": {"actor": "Brian Blessed", "imdb": "nm0000306"},
+      "Falstaff": {"actor": "Robbie Coltrane", "imdb": "nm0001059"}
+    }
+  },
+  {
+    "title": "The Hollow Crown: Henry V",
+    "year": 2012,
+    "format": "TV Movie",
+    "productionIMDB": "tt2261139",
+    "cast": {
+      "King Henry V": {"actor": "Tom Hiddleston", "imdb": "nm1089991"},
+      "Catherine of Valois": {"actor": "Mélanie Thierry", "imdb": "nm0858776"},
+      "The Chorus": {"actor": "John Hurt", "imdb": "nm0000457"},
+      "Duke of Exeter": {"actor": "Anton Lesser", "imdb": "nm0504322"},
+      "Falstaff": {"actor": "", "imdb": ""}
+    }
+  }
+]
+

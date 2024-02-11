@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Little Dorrit",
+    "year": 1987,
+    "format": "Film",
+    "productionIMDB": "tt0093467",
+    "cast": {
+      "Amy Dorrit": {"actor": "Sarah Pickering", "imdb": ""},
+      "Arthur Clennam": {"actor": "Derek Jacobi", "imdb": "nm0001394"},
+      "William Dorrit": {"actor": "Alec Guinness", "imdb": "nm0000027"},
+      "Rigaud/Blandois": {"actor": "Max Wall", "imdb": "nm0908158"},
+      "Miss Wade": {"actor": "Patricia Hayes", "imdb": "nm0371025"}
+    }
+  },
+  {
+    "title": "Little Dorrit",
+    "year": 2008,
+    "format": "TV Miniseries",
+    "productionIMDB": "tt1178522",
+    "cast": {
+      "Amy Dorrit": {"actor": "Claire Foy", "imdb": "nm2946516"},
+      "Arthur Clennam": {"actor": "Matthew Macfadyen", "imdb": "nm0532193"},
+      "William Dorrit": {"actor": "Tom Courtenay", "imdb": "nm0183822"},
+      "Rigaud/Blandois": {"actor": "Andy Serkis", "imdb": "nm0785227"},
+      "Miss Wade": {"actor": "Maxine Peake", "imdb": "nm0668932"}
+    }
+  }
+]
+

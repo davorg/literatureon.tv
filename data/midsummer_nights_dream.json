@@ -1,0 +1,41 @@
+[
+  {
+    "title": "A Midsummer Night's Dream",
+    "year": 1935,
+    "format": "Film",
+    "productionIMDB": "tt0026714",
+    "cast": {
+      "Oberon": {"actor": "Victor Jory", "imdb": "nm0430229"},
+      "Titania": {"actor": "Anita Louise", "imdb": "nm0522455"},
+      "Puck": {"actor": "Mickey Rooney", "imdb": "nm0001682"},
+      "Hermia": {"actor": "Olivia de Havilland", "imdb": "nm0000014"},
+      "Lysander": {"actor": "Dick Powell", "imdb": "nm0694090"},
+      "Demetrius": {"actor": "Ross Alexander", "imdb": "nm0018551"},
+      "Helena": {"actor": "Jean Muir", "imdb": "nm0610967"},
+      "Theseus": {"actor": "Ian Hunter", "imdb": "nm0402995"},
+      "Hippolyta": {"actor": "Verree Teasdale", "imdb": "nm0853136"},
+      "Bottom": {"actor": "James Cagney", "imdb": "nm0000010"},
+      "Quince": {"actor": "Frank McHugh", "imdb": "nm0570373"}
+    }
+  },
+  {
+    "title": "A Midsummer Night's Dream",
+    "year": 1999,
+    "format": "Film",
+    "productionIMDB": "tt0140379",
+    "cast": {
+      "Oberon": {"actor": "Rupert Everett", "imdb": "nm0000380"},
+      "Titania": {"actor": "Michelle Pfeiffer", "imdb": "nm0000201"},
+      "Puck": {"actor": "Stanley Tucci", "imdb": "nm0001804"},
+      "Hermia": {"actor": "Anna Friel", "imdb": "nm0001241"},
+      "Lysander": {"actor": "Dominic West", "imdb": "nm0922035"},
+      "Demetrius": {"actor": "Christian Bale", "imdb": "nm0000288"},
+      "Helena": {"actor": "Calista Flockhart", "imdb": "nm0001222"},
+      "Theseus": {"actor": "David Strathairn", "imdb": "nm0000657"},
+      "Hippolyta": {"actor": "Sophie Marceau", "imdb": "nm0000521"},
+      "Bottom": {"actor": "Kevin Kline", "imdb": "nm0000177"},
+      "Quince": {"actor": "Roger Rees", "imdb": "nm0715953"}
+    }
+  }
+]
+
