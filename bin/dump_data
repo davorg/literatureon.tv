@@ -1,0 +1,16 @@
+#!/bin/bash
+# Save as dump_data
+
+set -e
+
+if [ -z "$LIT_DB_FILE" ]; then
+  echo "Error: LIT_DB_FILE is not set."
+  exit 1
+fi
+
+DATA_FILE="db/literature.sqlite.data"
+
+sqlite3 "$LIT_DB_FILE" .dump | grep '^INSERT' > "$DATA_FILE"
+
+echo "Data dumped to $DATA_FILE"
+
