@@ -1,0 +1,76 @@
+{
+  "Thomas Hardy": {
+    "Far from the Madding Crowd": [
+      {
+        "Adaptation": "2015 Film",
+        "Bathsheba Everdene": "Carey Mulligan",
+        "Gabriel Oak": "Matthias Schoenaerts",
+        "William Boldwood": "Michael Sheen",
+        "Sergeant Frank Troy": "Tom Sturridge",
+        "Fanny Robbin": "Juno Temple"
+      },
+      {
+        "Adaptation": "1967 Film",
+        "Bathsheba Everdene": "Julie Christie",
+        "Gabriel Oak": "Alan Bates",
+        "William Boldwood": "Peter Finch",
+        "Sergeant Frank Troy": "Terence Stamp",
+        "Fanny Robbin": "Prunella Ransome"
+      }
+    ],
+    "Tess of the d'Urbervilles": [
+      {
+        "Adaptation": "2008 TV Series",
+        "Tess Durbeyfield": "Gemma Arterton",
+        "Angel Clare": "Eddie Redmayne",
+        "Alec d'Urberville": "Hans Matheson",
+        "Joan Durbeyfield": "Ruth Jones",
+        "John Durbeyfield": "Ian Puleston-Davies"
+      },
+      {
+        "Adaptation": "1979 Film",
+        "Tess Durbeyfield": "Nastassja Kinski",
+        "Angel Clare": "Peter Firth",
+        "Alec d'Urberville": "Leigh Lawson",
+        "Joan Durbeyfield": "Rosemary Martin",
+        "John Durbeyfield": "John Collin"
+      }
+    ],
+    "Jude the Obscure": [
+      {
+        "Adaptation": "1996 Film",
+        "Jude Fawley": "Christopher Eccleston",
+        "Sue Bridehead": "Kate Winslet",
+        "Arabella Donn": "Rachel Griffiths",
+        "Aunt Drusilla": "June Whitfield"
+      }
+    ],
+    "The Return of the Native": [
+      {
+        "Adaptation": "1994 TV Movie",
+        "Eustacia Vye": "Catherine Zeta-Jones",
+        "Clym Yeobright": "Ray Stevenson",
+        "Damon Wildeve": "Clive Owen",
+        "Thomasin Yeobright": "Claire Skinner",
+        "Diggory Venn": "Steven Mackintosh"
+      }
+    ],
+    "The Mayor of Casterbridge": [
+      {
+        "Adaptation": "2003 TV Movie",
+        "Michael Henchard": "Ciarán Hinds",
+        "Donald Farfrae": "James Purefoy",
+        "Lucetta Templeman": "Polly Walker",
+        "Elizabeth-Jane Newson": "Jodhi May"
+      },
+      {
+        "Adaptation": "1978 TV Series",
+        "Michael Henchard": "Alan Bates",
+        "Donald Farfrae": "Jack Galloway",
+        "Lucetta Templeman": "Janet Maw",
+        "Elizabeth-Jane Newson": "Anna Massey"
+      }
+    ]
+  }
+}
+

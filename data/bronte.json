@@ -1,0 +1,92 @@
+{
+  "Brontë Sisters": {
+    "Charlotte Brontë": {
+      "Jane Eyre": [
+        {
+          "Adaptation": "2011 Film",
+          "Jane Eyre": "Mia Wasikowska",
+          "Edward Rochester": "Michael Fassbender",
+          "Mrs. Fairfax": "Judi Dench",
+          "St. John Rivers": "Jamie Bell"
+        },
+        {
+          "Adaptation": "2006 TV Series",
+          "Jane Eyre": "Ruth Wilson",
+          "Edward Rochester": "Toby Stephens",
+          "Mrs. Fairfax": "Lorraine Ashbourne",
+          "St. John Rivers": "Andrew Buchan"
+        },
+        {
+          "Adaptation": "1983 TV Series",
+          "Jane Eyre": "Zelah Clarke",
+          "Edward Rochester": "Timothy Dalton",
+          "Mrs. Fairfax": "Jean Harvey",
+          "St. John Rivers": "Geoffrey Whitehead"
+        },
+        {
+          "Adaptation": "1996 Film",
+          "Jane Eyre": "Charlotte Gainsbourg",
+          "Edward Rochester": "William Hurt",
+          "Mrs. Fairfax": "Joan Plowright",
+          "St. John Rivers": "Samuel West"
+        }
+      ],
+      "Villette": [
+        {
+          "Adaptation": "1970 TV Series",
+          "Lucy Snowe": "Judy Parfitt",
+          "Paul Emmanuel": "Peter Jeffrey",
+          "Madame Beck": "Mona Bruce",
+          "Dr. John Graham Bretton": "Bryan Marshall",
+          "Ginevra Fanshawe": "Angela Richards"
+        }
+      ],
+      "Shirley": []
+    },
+    "Emily Brontë": {
+      "Wuthering Heights": [
+        {
+          "Adaptation": "1939 Film",
+          "Heathcliff": "Laurence Olivier",
+          "Catherine Earnshaw": "Merle Oberon",
+          "Edgar Linton": "David Niven",
+          "Isabella Linton": "Geraldine Fitzgerald"
+        },
+        {
+          "Adaptation": "1992 Film",
+          "Heathcliff": "Ralph Fiennes",
+          "Catherine Earnshaw": "Juliette Binoche",
+          "Edgar Linton": "Simon Shepherd",
+          "Isabella Linton": "Sophie Ward"
+        },
+        {
+          "Adaptation": "2009 TV Series",
+          "Heathcliff": "Tom Hardy",
+          "Catherine Earnshaw": "Charlotte Riley",
+          "Edgar Linton": "Andrew Lincoln",
+          "Isabella Linton": "Rosalind Halstead"
+        },
+        {
+          "Adaptation": "1970 Film",
+          "Heathcliff": "Timothy Dalton",
+          "Catherine Earnshaw": "Anna Calder-Marshall",
+          "Edgar Linton": "Ian Ogilvy",
+          "Isabella Linton": "Hilary Dwyer"
+        }
+      ]
+    },
+    "Anne Brontë": {
+      "The Tenant of Wildfell Hall": [
+        {
+          "Adaptation": "1996 TV Series",
+          "Helen Graham": "Tara Fitzgerald",
+          "Gilbert Markham": "Toby Stephens",
+          "Arthur Huntingdon": "Rupert Graves",
+          "Rachel": "Pam Ferris"
+        }
+      ],
+      "Agnes Grey": []
+    }
+  }
+}
+

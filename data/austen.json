@@ -1,0 +1,141 @@
+{
+  "Sense and Sensibility": [
+    {
+      "Adaptation": "1995 Film",
+      "Elinor Dashwood": "Emma Thompson",
+      "Marianne Dashwood": "Kate Winslet",
+      "Edward Ferrars": "Hugh Grant",
+      "Colonel Brandon": "Alan Rickman",
+      "John Willoughby": "Greg Wise",
+      "Mrs. Dashwood": "Gemma Jones"
+    },
+    {
+      "Adaptation": "2008 TV Series",
+      "Elinor Dashwood": "Hattie Morahan",
+      "Marianne Dashwood": "Charity Wakefield",
+      "Edward Ferrars": "Dan Stevens",
+      "Colonel Brandon": "David Morrissey",
+      "John Willoughby": "Dominic Cooper",
+      "Mrs. Dashwood": "Janet McTeer"
+    },
+    {
+      "Adaptation": "1981 TV Series",
+      "Elinor Dashwood": "Irene Richards",
+      "Marianne Dashwood": "Tracey Childs",
+      "Edward Ferrars": "Bosco Hogan",
+      "Colonel Brandon": "Robert Swann",
+      "John Willoughby": "Peter Woodward",
+      "Mrs. Dashwood": "Diana Fairfax"
+    },
+    {
+      "Adaptation": "2024 TV Movie",
+      "Elinor Dashwood": "Deborah Ayorinde",
+      "Marianne Dashwood": "Bethany Antonia",
+      "Edward Ferrars": "Dan Jeannotte",
+      "Colonel Brandon": "Akil Largie",
+      "John Willoughby": "Victor Hugo",
+      "Mrs. Dashwood": "Martina Laird"
+    }
+  ],
+  "Pride and Prejudice": [
+    {
+      "Adaptation": "1995 TV Series",
+      "Elizabeth Bennet": "Jennifer Ehle",
+      "Mr. Darcy": "Colin Firth",
+      "Jane Bennet": "Susannah Harker",
+      "Mr. Bingley": "Crispin Bonham-Carter",
+      "Mr. Bennet": "Benjamin Whitrow",
+      "Mrs. Bennet": "Alison Steadman"
+    },
+    {
+      "Adaptation": "2005 Film",
+      "Elizabeth Bennet": "Keira Knightley",
+      "Mr. Darcy": "Matthew Macfadyen",
+      "Jane Bennet": "Rosamund Pike",
+      "Mr. Bingley": "Simon Woods",
+      "Mr. Bennet": "Donald Sutherland",
+      "Mrs. Bennet": "Brenda Blethyn"
+    }
+  ],
+  "Mansfield Park": [
+    {
+      "Adaptation": "1999 Film",
+      "Fanny Price": "Frances O'Connor",
+      "Edmund Bertram": "Jonny Lee Miller",
+      "Sir Thomas Bertram": "Harold Pinter",
+      "Lady Bertram": "Lindsay Duncan",
+      "Mary Crawford": "Embeth Davidtz",
+      "Henry Crawford": "Alessandro Nivola"
+    },
+    {
+      "Adaptation": "2007 TV Movie",
+      "Fanny Price": "Billie Piper",
+      "Edmund Bertram": "Blake Ritson",
+      "Sir Thomas Bertram": "Douglas Hodge",
+      "Lady Bertram": "Jemma Redgrave",
+      "Mary Crawford": "Hayley Atwell",
+      "Henry Crawford": "Joseph Beattie"
+    }
+  ],
+  "Emma": [
+    {
+      "Adaptation": "1996 Film",
+      "Emma Woodhouse": "Gwyneth Paltrow",
+      "Mr. Knightley": "Jeremy Northam",
+      "Harriet Smith": "Toni Collette",
+      "Frank Churchill": "Ewan McGregor",
+      "Jane Fairfax": "Polly Walker",
+      "Mr. Woodhouse": "Denys Hawthorne"
+    },
+    {
+      "Adaptation": "2009 TV Series",
+      "Emma Woodhouse": "Romola Garai",
+      "Mr. Knightley": "Jonny Lee Miller",
+      "Harriet Smith": "Louise Dylan",
+      "Frank Churchill": "Rupert Evans",
+      "Jane Fairfax": "Laura Pyper",
+      "Mr. Woodhouse": "Michael Gambon"
+    }
+  ],
+  "Northanger Abbey": [
+    {
+      "Adaptation": "2007 TV Movie",
+      "Catherine Morland": "Felicity Jones",
+      "Henry Tilney": "JJ Feild",
+      "Eleanor Tilney": "Carey Mulligan",
+      "General Tilney": "Liam Cunningham",
+      "Isabella Thorpe": "Carey Mulligan",
+      "John Thorpe": "William Beck"
+    },
+    {
+      "Adaptation": "1987 TV Movie",
+      "Catherine Morland": "Katharine Schlesinger",
+      "Henry Tilney": "Peter Firth",
+      "Eleanor Tilney": "Ingrid Lacey",
+      "General Tilney": "Robert Hardy",
+      "Isabella Thorpe": "Cassie Stuart",
+      "John Thorpe": "Jonathan Coy"
+    }
+  ],
+  "Persuasion": [
+    {
+      "Adaptation": "1995 Film",
+      "Anne Elliot": "Amanda Root",
+      "Captain Wentworth": "Ciarán Hinds",
+      "Sir Walter Elliot": "Corin Redgrave",
+      "Elizabeth Elliot": "Phoebe Nicholls",
+      "Lady Russell": "Susan Fleetwood",
+      "William Elliot": "Samuel West"
+    },
+    {
+      "Adaptation": "2007 TV Movie",
+      "Anne Elliot": "Sally Hawkins",
+      "Captain Wentworth": "Rupert Penry-Jones",
+      "Sir Walter Elliot": "Anthony Head",
+      "Elizabeth Elliot": "Julia Davis",
+      "Lady Russell": "Alice Krige",
+      "William Elliot": "Tobias Menzies"
+    }
+  ]
+}
+
