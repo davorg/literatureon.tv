@@ -3,6 +3,8 @@
 use strict;
 use warnings;
 
+use feature 'say';
+
 use Template;
 use File::Copy::Recursive 'dircopy';
 use Time::Piece;
@@ -34,7 +36,7 @@ my $vars = {
 };
 
 for (keys %resources) {
-  print "Processing $_\n";
+  say "Processing $_";
 
   my $rs = $sch->resultset($resources{$_});
 
@@ -51,11 +53,6 @@ for (keys %resources) {
     push @{$vars->{$_}}, $obj;
   }
 }
-
-$tt = Template->new({
-  INCLUDE_PATH => [ qw( in tt_lib ) ],
-  OUTPUT_PATH  => 'docs',
-});
 
 $tt->process('sitemap.tt', $vars, 'sitemap.xml')
   or die $tt->error;
