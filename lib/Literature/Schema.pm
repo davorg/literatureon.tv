@@ -34,7 +34,7 @@ sub get_schema {
     {
       sqlite_string_mode => DBD_SQLITE_STRING_MODE_UNICODE_STRICT,
     },
-  ) or die;
+  ) || die;
 }
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration
