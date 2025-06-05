@@ -1,5 +1,4 @@
 [% title = 'Actors' -%]
-[% INCLUDE header.tt -%]
 <h1 class="display-3">[% title or 'Literature on TV' %]</h1>
 
 <ul>
@@ -7,4 +6,3 @@
 <li><a href="/actors/[% a.slug %]/">[% a.name %]</a></li>
 [% END -%]
 </ul>
-[% INCLUDE footer.tt -%]

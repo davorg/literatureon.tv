@@ -1,5 +1,4 @@
 [% title = 'Works' -%]
-[% INCLUDE header.tt -%]
 
 <h1 class="display-3">[% title or 'Literature on TV' %]</h1>    
 
@@ -13,4 +12,3 @@
   </tr>
 [% END -%]
 </table>
-[% INCLUDE footer.tt -%]

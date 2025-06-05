@@ -1,5 +1,4 @@
 [% title = production.title -%]
-[% INCLUDE header.tt -%]
 
 <script type="application/ld+json">
 [% production.json_ld %]</script>
@@ -28,4 +27,3 @@ as <a href="/characters/[% a.character.slug %]/">[% a.character.name %]</a></li>
 [% END %]
 
 [% INCLUDE amazon.tt type='DVD', search=production.title %]
-[% INCLUDE footer.tt -%]

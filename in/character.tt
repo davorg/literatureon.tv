@@ -1,5 +1,4 @@
 [% title = character.name %]
-[% INCLUDE header.tt -%]
 
 <script type="application/ld+json">
 [% character.json_ld %]</script>
@@ -34,4 +33,3 @@ by
 [% ELSE %]
 <p>No-one</p>
 [% END %]
-[% INCLUDE footer.tt -%]

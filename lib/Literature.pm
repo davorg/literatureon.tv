@@ -23,6 +23,7 @@ field %resources = (
 field $tt = Template->new({
               INCLUDE_PATH => [ qw( in tt_lib ) ],
               OUTPUT_PATH  => 'docs',
+              WRAPPER      => 'page.tt',
             });
 
 field $urls = {
@@ -34,10 +35,23 @@ field $schema = Literature::Schema->get_schema;
 
 method run {
 
-  $tt->process('index.tt', {}, 'index.html')
-    or die $tt->error;
+  $self->make_index;
 
   for (keys %resources) {
+    $self->process_resource($_);
+  }
+
+  $self->make_sitemap;
+
+  dircopy('static', 'docs');
+}
+
+method make_index {
+  $tt->process('index.tt', {}, 'index.html')
+    or die $tt->error;
+}
+
+method process_resource {
     say "Processing $_";
 
     my $rs = $schema->resultset($resources{$_});
@@ -54,12 +68,14 @@ method run {
 
       push @{$urls->{$_}}, $obj;
     }
-  }
+}
+
+method make_sitemap {
+  # Hacky McHackface
+  $tt->{SERVICE}{WRAPPER} = [];
 
   $tt->process('sitemap.tt', $urls, 'sitemap.xml')
     or die $tt->error;
-
-  dircopy('static', 'docs');
 }
 
 1;

@@ -1,5 +1,4 @@
 [% title = work.title -%]
-[% INCLUDE header.tt -%]
 
 <script type="application/ld+json">
 [% work.json_ld %]</script>
@@ -29,4 +28,3 @@
 [% END %]
 
 [% INCLUDE amazon.tt type='Books', search=work.title %]
-[% INCLUDE footer.tt -%]

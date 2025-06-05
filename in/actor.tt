@@ -1,5 +1,4 @@
 [% title = actor.name -%]
-[% INCLUDE header.tt -%]
 
 <script type="application/ld+json">
 [% actor.json_ld %]</script>
@@ -25,4 +24,3 @@
 [% END %]
 
 [% INCLUDE amazon.tt type='DVD', search=actor.name %]
-[% INCLUDE footer.tt -%]
