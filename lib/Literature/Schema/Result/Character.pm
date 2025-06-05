@@ -24,11 +24,13 @@ extends 'DBIx::Class::Core';
 
 =item * L<DBIx::Class::InflateColumn::DateTime>
 
+=item * L<DBIx::Class::TimeStamp>
+
 =back
 
 =cut
 
-__PACKAGE__->load_components("InflateColumn::DateTime");
+__PACKAGE__->load_components("InflateColumn::DateTime", "TimeStamp");
 
 =head1 TABLE: C<character>
 
@@ -53,6 +55,7 @@ __PACKAGE__->table("character");
 =head2 slug
 
   data_type: 'varchar'
+  default_value: null
   is_nullable: 1
   size: 255
 
@@ -64,7 +67,12 @@ __PACKAGE__->add_columns(
   "name",
   { data_type => "varchar", is_nullable => 0, size => 255 },
   "slug",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
+  {
+    data_type => "varchar",
+    default_value => \"null",
+    is_nullable => 1,
+    size => 255,
+  },
 );
 
 =head1 PRIMARY KEY
@@ -122,8 +130,8 @@ Composing rels: L</character_appearances> -> work
 __PACKAGE__->many_to_many("works", "character_appearances", "work");
 
 
-# Created by DBIx::Class::Schema::Loader v0.07049 @ 2019-04-20 15:23:29
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:DEr25X61p2zl9TDdZeBawQ
+# Created by DBIx::Class::Schema::Loader v0.07053 @ 2025-06-05 14:04:13
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:uGIoPtnSjwizUmIoz1Wh2g
 
 with 'Literature::Role::HasSlug', 'MooX::Role::JSON_LD';
 

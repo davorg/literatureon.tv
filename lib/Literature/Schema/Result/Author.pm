@@ -24,11 +24,13 @@ extends 'DBIx::Class::Core';
 
 =item * L<DBIx::Class::InflateColumn::DateTime>
 
+=item * L<DBIx::Class::TimeStamp>
+
 =back
 
 =cut
 
-__PACKAGE__->load_components("InflateColumn::DateTime");
+__PACKAGE__->load_components("InflateColumn::DateTime", "TimeStamp");
 
 =head1 TABLE: C<author>
 
@@ -53,13 +55,13 @@ __PACKAGE__->table("author");
 =head2 born
 
   data_type: 'datetime'
-  datetime_undef_if_invalid: 1
+  default_value: null
   is_nullable: 1
 
 =head2 died
 
   data_type: 'datetime'
-  datetime_undef_if_invalid: 1
+  default_value: null
   is_nullable: 1
 
 =head2 imdb
@@ -71,6 +73,7 @@ __PACKAGE__->table("author");
 =head2 slug
 
   data_type: 'varchar'
+  default_value: null
   is_nullable: 1
   size: 255
 
@@ -82,21 +85,18 @@ __PACKAGE__->add_columns(
   "name",
   { data_type => "varchar", is_nullable => 0, size => 255 },
   "born",
-  {
-    data_type => "datetime",
-    datetime_undef_if_invalid => 1,
-    is_nullable => 1,
-  },
+  { data_type => "datetime", default_value => \"null", is_nullable => 1 },
   "died",
-  {
-    data_type => "datetime",
-    datetime_undef_if_invalid => 1,
-    is_nullable => 1,
-  },
+  { data_type => "datetime", default_value => \"null", is_nullable => 1 },
   "imdb",
   { data_type => "char", is_nullable => 0, size => 15 },
   "slug",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
+  {
+    data_type => "varchar",
+    default_value => \"null",
+    is_nullable => 1,
+    size => 255,
+  },
 );
 
 =head1 PRIMARY KEY
@@ -139,8 +139,8 @@ Composing rels: L</author_works> -> work
 __PACKAGE__->many_to_many("works", "author_works", "work");
 
 
-# Created by DBIx::Class::Schema::Loader v0.07049 @ 2019-04-19 15:09:14
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:niNTrnT/xawzB/3DfXxSCQ
+# Created by DBIx::Class::Schema::Loader v0.07053 @ 2025-06-05 14:04:13
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:6eVZ8ECGd/GQc2ZSZSGhEw
 
 with 'Literature::Role::HasSlug', 'MooX::Role::JSON_LD';
 

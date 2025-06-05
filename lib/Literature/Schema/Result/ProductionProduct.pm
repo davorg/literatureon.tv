@@ -24,11 +24,13 @@ extends 'DBIx::Class::Core';
 
 =item * L<DBIx::Class::InflateColumn::DateTime>
 
+=item * L<DBIx::Class::TimeStamp>
+
 =back
 
 =cut
 
-__PACKAGE__->load_components("InflateColumn::DateTime");
+__PACKAGE__->load_components("InflateColumn::DateTime", "TimeStamp");
 
 =head1 TABLE: C<production_product>
 
@@ -93,12 +95,12 @@ __PACKAGE__->belongs_to(
   "production",
   "Literature::Schema::Result::Production",
   { id => "production_id" },
-  { is_deferrable => 1, on_delete => "RESTRICT", on_update => "RESTRICT" },
+  { is_deferrable => 0, on_delete => "NO ACTION", on_update => "NO ACTION" },
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07042 @ 2015-10-01 21:43:50
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:vPLXwNMJRQWtSYhJyZgcKg
+# Created by DBIx::Class::Schema::Loader v0.07053 @ 2025-06-05 14:04:13
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:nWa0ZrpfgnNyGLgPz6lQ8A
 
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration

@@ -24,11 +24,13 @@ extends 'DBIx::Class::Core';
 
 =item * L<DBIx::Class::InflateColumn::DateTime>
 
+=item * L<DBIx::Class::TimeStamp>
+
 =back
 
 =cut
 
-__PACKAGE__->load_components("InflateColumn::DateTime");
+__PACKAGE__->load_components("InflateColumn::DateTime", "TimeStamp");
 
 =head1 TABLE: C<author_work>
 
@@ -87,7 +89,7 @@ __PACKAGE__->belongs_to(
   "author",
   "Literature::Schema::Result::Author",
   { id => "author" },
-  { is_deferrable => 1, on_delete => "CASCADE", on_update => "CASCADE" },
+  { is_deferrable => 0, on_delete => "CASCADE", on_update => "CASCADE" },
 );
 
 =head2 work
@@ -102,12 +104,12 @@ __PACKAGE__->belongs_to(
   "work",
   "Literature::Schema::Result::Work",
   { id => "work" },
-  { is_deferrable => 1, on_delete => "CASCADE", on_update => "CASCADE" },
+  { is_deferrable => 0, on_delete => "CASCADE", on_update => "CASCADE" },
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07042 @ 2015-10-01 20:37:37
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:L7uwvvEd9+PMpMMj9MoX3Q
+# Created by DBIx::Class::Schema::Loader v0.07053 @ 2025-06-05 14:04:13
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:0WBuev3TlloOK43gNyB7vQ
 
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration

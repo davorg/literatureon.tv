@@ -24,11 +24,13 @@ extends 'DBIx::Class::Core';
 
 =item * L<DBIx::Class::InflateColumn::DateTime>
 
+=item * L<DBIx::Class::TimeStamp>
+
 =back
 
 =cut
 
-__PACKAGE__->load_components("InflateColumn::DateTime");
+__PACKAGE__->load_components("InflateColumn::DateTime", "TimeStamp");
 
 =head1 TABLE: C<character_appearance>
 
@@ -87,7 +89,7 @@ __PACKAGE__->belongs_to(
   "character",
   "Literature::Schema::Result::Character",
   { id => "character" },
-  { is_deferrable => 1, on_delete => "CASCADE", on_update => "CASCADE" },
+  { is_deferrable => 0, on_delete => "CASCADE", on_update => "CASCADE" },
 );
 
 =head2 work
@@ -102,12 +104,12 @@ __PACKAGE__->belongs_to(
   "work",
   "Literature::Schema::Result::Work",
   { id => "work" },
-  { is_deferrable => 1, on_delete => "CASCADE", on_update => "CASCADE" },
+  { is_deferrable => 0, on_delete => "CASCADE", on_update => "CASCADE" },
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07049 @ 2019-04-20 15:23:29
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:k2VvpkxMLka2E11gvnBWMg
+# Created by DBIx::Class::Schema::Loader v0.07053 @ 2025-06-05 14:04:13
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:w1k9iaHRqpY/lVlTS2L9fw
 
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration

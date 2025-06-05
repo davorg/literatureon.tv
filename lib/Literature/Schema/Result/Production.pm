@@ -24,11 +24,13 @@ extends 'DBIx::Class::Core';
 
 =item * L<DBIx::Class::InflateColumn::DateTime>
 
+=item * L<DBIx::Class::TimeStamp>
+
 =back
 
 =cut
 
-__PACKAGE__->load_components("InflateColumn::DateTime");
+__PACKAGE__->load_components("InflateColumn::DateTime", "TimeStamp");
 
 =head1 TABLE: C<production>
 
@@ -47,6 +49,7 @@ __PACKAGE__->table("production");
 =head2 title
 
   data_type: 'varchar'
+  default_value: null
   is_nullable: 1
   size: 255
 
@@ -59,24 +62,28 @@ __PACKAGE__->table("production");
 =head2 year
 
   data_type: 'year'
+  default_value: null
   is_nullable: 1
+  size: 4
 
 =head2 made_by
 
   data_type: 'varchar'
+  default_value: null
   is_nullable: 1
   size: 255
 
 =head2 slug
 
   data_type: 'varchar'
+  default_value: null
   is_nullable: 1
   size: 255
 
 =head2 type
 
-  data_type: 'enum'
-  extra: {list => ["Film","TV Series"]}
+  data_type: 'text'
+  default_value: null
   is_nullable: 1
 
 =cut
@@ -85,21 +92,32 @@ __PACKAGE__->add_columns(
   "id",
   { data_type => "integer", is_auto_increment => 1, is_nullable => 0 },
   "title",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
+  {
+    data_type => "varchar",
+    default_value => \"null",
+    is_nullable => 1,
+    size => 255,
+  },
   "work",
   { data_type => "integer", is_foreign_key => 1, is_nullable => 0 },
   "year",
-  { data_type => "year", is_nullable => 1 },
+  { data_type => "year", default_value => \"null", is_nullable => 1, size => 4 },
   "made_by",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "slug",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
-  "type",
   {
-    data_type => "enum",
-    extra => { list => ["Film", "TV Series"] },
+    data_type => "varchar",
+    default_value => \"null",
     is_nullable => 1,
+    size => 255,
   },
+  "slug",
+  {
+    data_type => "varchar",
+    default_value => \"null",
+    is_nullable => 1,
+    size => 255,
+  },
+  "type",
+  { data_type => "text", default_value => \"null", is_nullable => 1 },
 );
 
 =head1 PRIMARY KEY
@@ -158,12 +176,12 @@ __PACKAGE__->belongs_to(
   "work",
   "Literature::Schema::Result::Work",
   { id => "work" },
-  { is_deferrable => 1, on_delete => "RESTRICT", on_update => "RESTRICT" },
+  { is_deferrable => 0, on_delete => "NO ACTION", on_update => "NO ACTION" },
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07048 @ 2019-04-25 14:55:29
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:Hszq6UGmkAh+2J8hRr9BzQ
+# Created by DBIx::Class::Schema::Loader v0.07053 @ 2025-06-05 14:04:13
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:q7jLT6DrAEv/4CekzZQu+A
 
 with 'Literature::Role::HasSlug', 'MooX::Role::JSON_LD';
 

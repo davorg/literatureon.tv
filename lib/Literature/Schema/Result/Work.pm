@@ -24,11 +24,13 @@ extends 'DBIx::Class::Core';
 
 =item * L<DBIx::Class::InflateColumn::DateTime>
 
+=item * L<DBIx::Class::TimeStamp>
+
 =back
 
 =cut
 
-__PACKAGE__->load_components("InflateColumn::DateTime");
+__PACKAGE__->load_components("InflateColumn::DateTime", "TimeStamp");
 
 =head1 TABLE: C<work>
 
@@ -46,26 +48,25 @@ __PACKAGE__->table("work");
 
 =head2 title
 
-  data_type: 'varchar'
+  data_type: 'text'
   is_nullable: 0
-  size: 255
 
 =head2 published
 
-  data_type: 'datetime'
-  datetime_undef_if_invalid: 1
+  data_type: 'text'
+  default_value: null
   is_nullable: 1
 
 =head2 slug
 
-  data_type: 'varchar'
+  data_type: 'text'
+  default_value: null
   is_nullable: 1
-  size: 255
 
 =head2 type
 
-  data_type: 'enum'
-  extra: {list => ["Book","Play"]}
+  data_type: 'text'
+  default_value: null
   is_nullable: 1
 
 =cut
@@ -74,21 +75,13 @@ __PACKAGE__->add_columns(
   "id",
   { data_type => "integer", is_auto_increment => 1, is_nullable => 0 },
   "title",
-  { data_type => "varchar", is_nullable => 0, size => 255 },
+  { data_type => "text", is_nullable => 0 },
   "published",
-  {
-    data_type => "datetime",
-    datetime_undef_if_invalid => 1,
-    is_nullable => 1,
-  },
+  { data_type => "text", default_value => \"null", is_nullable => 1 },
   "slug",
-  { data_type => "varchar", is_nullable => 1, size => 255 },
+  { data_type => "text", default_value => \"null", is_nullable => 1 },
   "type",
-  {
-    data_type => "enum",
-    extra => { list => ["Book", "Play"] },
-    is_nullable => 1,
-  },
+  { data_type => "text", default_value => \"null", is_nullable => 1 },
 );
 
 =head1 PRIMARY KEY
@@ -131,21 +124,6 @@ Related object: L<Literature::Schema::Result::CharacterAppearance>
 __PACKAGE__->has_many(
   "character_appearances",
   "Literature::Schema::Result::CharacterAppearance",
-  { "foreign.work" => "self.id" },
-  { cascade_copy => 0, cascade_delete => 0 },
-);
-
-=head2 fictional_character_appearances
-
-Type: has_many
-
-Related object: L<Literature::Schema::Result::FictionalCharacterAppearance>
-
-=cut
-
-__PACKAGE__->has_many(
-  "fictional_character_appearances",
-  "Literature::Schema::Result::FictionalCharacterAppearance",
   { "foreign.work" => "self.id" },
   { cascade_copy => 0, cascade_delete => 0 },
 );
@@ -200,23 +178,9 @@ Composing rels: L</character_appearances> -> character
 
 __PACKAGE__->many_to_many("characters", "character_appearances", "character");
 
-=head2 fictional_characters
 
-Type: many_to_many
-
-Composing rels: L</fictional_character_appearances> -> fictional_character
-
-=cut
-
-__PACKAGE__->many_to_many(
-  "fictional_characters",
-  "fictional_character_appearances",
-  "fictional_character",
-);
-
-
-# Created by DBIx::Class::Schema::Loader v0.07048 @ 2019-04-25 14:55:29
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:xtnwNE+fA9uoIHf4kCRPeA
+# Created by DBIx::Class::Schema::Loader v0.07053 @ 2025-06-05 14:04:13
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:zODlWKgb9hLYLS4FJVVJbQ
 
 with 'Literature::Role::HasSlug', 'MooX::Role::JSON_LD';
 

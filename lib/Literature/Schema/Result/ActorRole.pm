@@ -24,11 +24,13 @@ extends 'DBIx::Class::Core';
 
 =item * L<DBIx::Class::InflateColumn::DateTime>
 
+=item * L<DBIx::Class::TimeStamp>
+
 =back
 
 =cut
 
-__PACKAGE__->load_components("InflateColumn::DateTime");
+__PACKAGE__->load_components("InflateColumn::DateTime", "TimeStamp");
 
 =head1 TABLE: C<actor_role>
 
@@ -59,6 +61,7 @@ __PACKAGE__->table("actor_role");
 =head2 name
 
   data_type: 'varchar'
+  default_value: null
   is_nullable: 1
   size: 100
 
@@ -72,7 +75,12 @@ __PACKAGE__->add_columns(
   "character",
   { data_type => "integer", is_foreign_key => 1, is_nullable => 0 },
   "name",
-  { data_type => "varchar", is_nullable => 1, size => 100 },
+  {
+    data_type => "varchar",
+    default_value => \"null",
+    is_nullable => 1,
+    size => 100,
+  },
 );
 
 =head1 PRIMARY KEY
@@ -105,7 +113,7 @@ __PACKAGE__->belongs_to(
   "actor",
   "Literature::Schema::Result::Actor",
   { id => "actor" },
-  { is_deferrable => 1, on_delete => "CASCADE", on_update => "CASCADE" },
+  { is_deferrable => 0, on_delete => "CASCADE", on_update => "CASCADE" },
 );
 
 =head2 character
@@ -120,7 +128,7 @@ __PACKAGE__->belongs_to(
   "character",
   "Literature::Schema::Result::Character",
   { id => "character" },
-  { is_deferrable => 1, on_delete => "CASCADE", on_update => "CASCADE" },
+  { is_deferrable => 0, on_delete => "CASCADE", on_update => "CASCADE" },
 );
 
 =head2 production
@@ -135,12 +143,12 @@ __PACKAGE__->belongs_to(
   "production",
   "Literature::Schema::Result::Production",
   { id => "production" },
-  { is_deferrable => 1, on_delete => "CASCADE", on_update => "CASCADE" },
+  { is_deferrable => 0, on_delete => "CASCADE", on_update => "CASCADE" },
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07049 @ 2019-04-20 15:23:29
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:dw+mOHBU4K5B1o1wJys83A
+# Created by DBIx::Class::Schema::Loader v0.07053 @ 2025-06-05 14:04:13
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:xYTMFbUdDhm/Ffm7twWouQ
 
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration
