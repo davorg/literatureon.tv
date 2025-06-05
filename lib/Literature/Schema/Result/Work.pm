@@ -53,7 +53,7 @@ __PACKAGE__->table("work");
 
 =head2 published
 
-  data_type: 'text'
+  data_type: 'datetime'
   default_value: null
   is_nullable: 1
 
@@ -77,7 +77,7 @@ __PACKAGE__->add_columns(
   "title",
   { data_type => "text", is_nullable => 0 },
   "published",
-  { data_type => "text", default_value => \"null", is_nullable => 1 },
+  { data_type => "datetime", default_value => \"null", is_nullable => 1 },
   "slug",
   { data_type => "text", default_value => \"null", is_nullable => 1 },
   "type",
@@ -179,8 +179,8 @@ Composing rels: L</character_appearances> -> character
 __PACKAGE__->many_to_many("characters", "character_appearances", "character");
 
 
-# Created by DBIx::Class::Schema::Loader v0.07053 @ 2025-06-05 14:04:13
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:zODlWKgb9hLYLS4FJVVJbQ
+# Created by DBIx::Class::Schema::Loader v0.07053 @ 2025-06-05 15:04:02
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:pR0AtNKp5rsQWdBR1hHGSA
 
 with 'Literature::Role::HasSlug', 'MooX::Role::JSON_LD';
 
@@ -190,7 +190,7 @@ sub json_ld_type { $_[0]->type }
 sub json_ld_fields { [
   { name => 'title' },
   { datePublished => sub { $_[0]->published ?
-	                $_[0]->published->strftime('%Y-%m-%d') : undef } },
+                       $_[0]->published->strftime('%Y-%m-%d') : undef } },
 ] }
 
 sub asins {
