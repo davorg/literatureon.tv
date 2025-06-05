@@ -1,41 +1,65 @@
-package Literature;
-use Dancer2;
-use Dancer2::Plugin::DBIC;
-use Lingua::EN::Inflexion;
+use strict;
+use warnings;
 
-our $VERSION = '0.1';
+use experimental 'class';
 
-my $cfg = dancer_app->config;
-$cfg->{plugins}{DBIC}{default}{user} = $ENV{LIT_USER};
-$cfg->{plugins}{DBIC}{default}{password} = $ENV{LIT_PASS};
+class Literature;
 
-my %resources = qw[
-  actors Actor
-  authors Author
-  productions Production
-  works Work
-  characters Character
-];
+use feature 'say';
 
-my $route_re = '/(' . join('|', keys %resources) . ')/(\d+)?';
+use Template;
+use File::Copy::Recursive 'dircopy';
+use Time::Piece;
+use Literature::Schema;
 
-get '/' => sub {
-    template 'index';
+field %resources = (
+  actors      => 'Actor',
+  authors     => 'Author',
+  characters  => 'Character',
+  productions => 'Production',
+  works       => 'Work',
+);
+
+field $tt = Template->new({
+              INCLUDE_PATH => [ qw( in tt_lib ) ],
+              OUTPUT_PATH  => 'docs',
+            });
+
+field $urls = {
+  url => 'https://literatureon.tv',
+  date => localtime->strftime('%Y-%m-%d'),
 };
 
-get qr{^$route_re$} => sub {
-  my ($resource, $id) = splat;
+field $schema = Literature::Schema->get_schema;
 
-  if (defined $id) {
-    template noun($resource)->singular, {
-      lc $resources{$resource} =>
-        resultset($resources{$resource})->find($id)
-    };
-  } else {
-    template $resource, {
-      $resource => resultset($resources{$resource})
-    };
+method run {
+
+  $tt->process('index.tt', {}, 'index.html')
+    or die $tt->error;
+
+  for (keys %resources) {
+    say "Processing $_";
+
+    my $rs = $schema->resultset($resources{$_});
+
+    $tt->process("$_.tt", { $_ => $rs }, "$_/index.html")
+      or die $tt->error;
+
+    foreach my $obj ($rs->all) {
+      my $singular = s/s$//r;
+
+      $tt->process("$singular.tt", { $singular => $obj },
+                   "$_/" . $obj->slug . '/index.html')
+        or die $tt->error;
+
+      push @{$urls->{$_}}, $obj;
+    }
   }
-};
 
-true;
+  $tt->process('sitemap.tt', $urls, 'sitemap.xml')
+    or die $tt->error;
+
+  dircopy('static', 'docs');
+}
+
+1;
