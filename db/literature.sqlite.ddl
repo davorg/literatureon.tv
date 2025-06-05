@@ -7,7 +7,6 @@ CREATE TABLE IF NOT EXISTS "actor" (
 ,  "imdb" char(15) DEFAULT NULL
 ,  "slug" varchar(255) DEFAULT NULL
 );
-CREATE TABLE sqlite_sequence(name,seq);
 CREATE INDEX idx_actor_name ON actor(name);
 CREATE TABLE IF NOT EXISTS "actor_role" (
   "actor" integer NOT NULL
@@ -77,7 +76,7 @@ CREATE INDEX idx_production_product_production_id ON production_product(producti
 CREATE TABLE work (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   title TEXT NOT NULL,
-  published TEXT DEFAULT NULL,
+  published datetime DEFAULT NULL,
   slug TEXT DEFAULT NULL,
   type TEXT CHECK (type IN ('Book', 'Play')) DEFAULT NULL
 );
