@@ -1,3 +1,10 @@
+[% nav_items = [
+    { label => 'Author',     path => '/authors/',     id => 'authors' },
+    { label => 'Work',       path => '/works/',       id => 'works' },
+    { label => 'Character',  path => '/characters/',  id => 'characters' },
+    { label => 'Production', path => '/productions/', id => 'productions' },
+    { label => 'Actor',      path => '/actors/',      id => 'actors' },
+] -%]
 [% PROCESS 'amazon.tt' -%]
 <!doctype html>
 <html lang="en">
@@ -38,25 +45,18 @@
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <!-- li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
-          </li -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Browse...</a>
-            <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <a class="dropdown-item" href="/authors/">Authors</a>
-              <a class="dropdown-item" href="/works/">Works</a>
-              <a class="dropdown-item" href="/characters/">Characters</a>
-              <a class="dropdown-item" href="/productions/">Productions</a>
-              <a class="dropdown-item" href="/actors/">Actors</a>
-            </div>
+            <span class="navbar-text">Browse by:</span>
           </li>
+[% FOREACH item IN nav_items -%]
+          <li class="nav-item">
+            <a href="[% item.path %]"
+               class="nav-link[% item.id == current_section ? ' active' : '' %]"
+              [% IF item.id == current_section %]aria-current="page"[% END %]>
+              [% item.label %]
+            </a>
+          </li>
+[% END -%]
         </ul>
       </div>
     </nav>

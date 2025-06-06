@@ -59,12 +59,16 @@ method process_resource {
 
     my $rs = $schema->resultset($resources{$_});
 
-    $tt->process("$_.tt", { $_ => $rs }, "$_/index.html")
+    $tt->process("$_.tt", {
+      $_ => $rs,
+      current_section => $_,
+    }, "$_/index.html")
       or die $tt->error;
 
     foreach my $obj ($rs->all) {
       my $tt_vars = {
         $singular => $obj,
+        current_section => $_,
       };
 
       if ($obj->can('products')) {

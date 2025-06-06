@@ -141,3 +141,9 @@ aside.sidebar img {
   border-color: #3e2818;
   color: #fff;
 }
+
+.navbar .nav-link.active {
+  background-color: #472f1c;
+  border-radius: 0.25rem;
+  color: #fff !important;
+}
