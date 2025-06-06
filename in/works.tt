@@ -1,12 +1,18 @@
 [% title = 'Works' -%]
 
-<table>
-<tr><th>Title</th><th>Author(s)</th></tr>
-[% # Display each book in a table row %]
+<table class="table table-sm table-hover">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author(s)</th>
+    </tr>
+  </thead>
+  <tbody class="table-group-divider">
 [% FOREACH work IN works.all.sort('title')-%]
-  <tr>
-    <td><a href="/works/[% work.slug %]/">[% work.title %]</a></td>
-    <td>[% FOREACH a IN work.authors; a.name; ' '; END %]</td>
-  </tr>
+    <tr>
+      <td><a href="/works/[% work.slug %]/">[% work.title %]</a></td>
+      <td>[% FOREACH a IN work.authors; a.name; ' '; END %]</td>
+    </tr>
 [% END -%]
+  </tbody>
 </table>
