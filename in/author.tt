@@ -4,11 +4,6 @@
 [% author.json_ld %]</script>
 <p class="text-muted">Author</p>
 
-<div class="book-banner">
-  <div class="book-banner-overlay">
-    <h1 class="display-3">[% author.name %]</h1>
-  </div>
-</div>
 [% IF author.born OR author.died %]
 <p>[% IF author.born %]Born: [% author.born.strftime('%m %B %Y'); END -%]
 [% IF author.born AND author.died %], [% END %]

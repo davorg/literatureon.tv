@@ -133,7 +133,11 @@ __PACKAGE__->has_many(
 # Created by DBIx::Class::Schema::Loader v0.07053 @ 2025-06-05 14:04:13
 # DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:ti0jW66NzYDUby275UA8/A
 
+__PACKAGE__->many_to_many( roles => 'actor_roles', 'production' );
+
 with 'Literature::Role::HasSlug', 'MooX::Role::JSON_LD';
+
+use List::Util qw(shuffle);
 
 sub slug_cols { return qw[name]; }
 
@@ -147,6 +151,29 @@ sub json_ld_fields {
   ]
 }
 
+sub products {
+  my $self = shift;
+  my ($count) = @_;
+  $count //= 3;
+
+  my @products;
+  for ($self->roles) {
+    push @products, $_->production_products;
+  }
+
+  if (@products < $count) {
+    for ($self->roles) {
+      push @products, $_->work->work_products;
+    }
+  }
+
+  @products = shuffle(@products);
+
+  $#products = $count -1 if $#products >= $count;
+
+  return [ map { $_->asin } @products ];
+}
+    
 # You can replace this text with custom code or comments, and it will be preserved on regeneration
 __PACKAGE__->meta->make_immutable;
 1;

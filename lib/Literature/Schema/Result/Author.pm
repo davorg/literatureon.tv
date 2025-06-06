@@ -144,6 +144,8 @@ __PACKAGE__->many_to_many("works", "author_works", "work");
 
 with 'Literature::Role::HasSlug', 'MooX::Role::JSON_LD';
 
+use List::Util qw(shuffle);
+
 sub slug_cols { return qw[name]; }
 
 sub json_ld_type { 'Person' }
@@ -155,6 +157,26 @@ sub json_ld_fields {
     { deathDate => sub { $_[0]->died ?
 		     $_[0]->died->strftime('%Y-%m-%d') : undef } },
   ]
+}
+
+sub products {
+  my $self = shift;
+  my ($count) = @_;
+  $count //= 3;
+
+  my @products = map { $_->work_products->all } $self->works->all;
+
+  if (@products < $count) {
+    for my $work ($self->works) {
+      push @products, $_->production_products for $work->productions->all;
+    }
+  }
+
+  @products = shuffle(@products);
+
+  $#products = $count -1 if $#products >= $count;
+
+  return [ map { $_->asin } @products ];
 }
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration

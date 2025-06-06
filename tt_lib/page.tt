@@ -1,3 +1,4 @@
+[% PROCESS 'amazon.tt' -%]
 <!doctype html>
 <html lang="en">
   <head>
@@ -60,16 +61,31 @@
       </div>
     </nav>
 
-    <main role="main" class="mt-5 pt-4">
+<main role="main" class="mt-5 pt-4">
 
-      <!-- Main jumbotron for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        <div class="container">
-[% content %]
-        </div>
+  <!-- Full-width banner with bookshelf background and h1 -->
+  <div class="book-banner mb-4">
+    <div class="book-banner-overlay">
+      <h1 class="display-3">[% title OR 'Literature on TV' %]</h1>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <aside class="col-md-2 d-none d-md-block">
+        [% sidebar_left %]
+      </aside>
+
+      <div class="col-md-8">
+        [% content %]
       </div>
 
-    </main>
+      <aside class="col-md-2 d-none d-md-block">
+        [% amazon %]
+      </aside>
+    </div>
+  </div>
+</main>
 
     <footer class="container">
       <p>Made by <a href="https://links.davecross.co.uk/">Dave Cross</a></p>

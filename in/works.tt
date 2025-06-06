@@ -1,11 +1,5 @@
 [% title = 'Works' -%]
 
-<div class="book-banner">
-  <div class="book-banner-overlay">
-    <h1 class="display-3">[% title or 'Literature on TV' %]</h1>    
-  </div>
-</div>
-
 <table>
 <tr><th>Title</th><th>Author(s)</th></tr>
 [% # Display each book in a table row %]

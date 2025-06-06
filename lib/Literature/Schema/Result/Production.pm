@@ -183,7 +183,11 @@ __PACKAGE__->belongs_to(
 # Created by DBIx::Class::Schema::Loader v0.07053 @ 2025-06-05 14:04:13
 # DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:q7jLT6DrAEv/4CekzZQu+A
 
+__PACKAGE__->many_to_many( actors => 'actor_roles', 'actor' );
+
 with 'Literature::Role::HasSlug', 'MooX::Role::JSON_LD';
+
+use List::Util qw(shuffle);
 
 sub slug_cols { return qw[title year]; }
 
@@ -224,6 +228,24 @@ sub description{
   $description .= $self->year;
 
   return $description;
+}
+
+sub products {
+  my $self = shift;
+  my ($count) = @_;
+  $count //= 3;
+
+  my @products = $self->production_products->all;
+
+  if (@products < $count) {
+    push @products, $self->work->work_products->all;
+  }
+
+  @products = shuffle(@products);
+
+  $#products = $count -1 if $#products >= $count;
+
+  return [ map { $_->asin } @products ];
 }
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration

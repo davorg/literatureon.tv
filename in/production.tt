@@ -4,11 +4,6 @@
 [% production.json_ld %]</script>
 <p class="text-muted">Production</p>
 
-<div class="book-banner">
-  <div class="book-banner-overlay">
-    <h1 class="display-3">[% production.title %]</h1>
-  </div>
-</div>
 <p>[% production.description %]<p>
 <p>Based on
 <a href="/works/[% production.work.slug %]/">[% production.work.title %]</a> by

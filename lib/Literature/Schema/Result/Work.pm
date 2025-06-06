@@ -184,6 +184,8 @@ __PACKAGE__->many_to_many("characters", "character_appearances", "character");
 
 with 'Literature::Role::HasSlug', 'MooX::Role::JSON_LD';
 
+use List::Util qw(shuffle);
+
 sub slug_cols { return qw[title]; }
 
 sub json_ld_type { $_[0]->type }
@@ -199,6 +201,25 @@ sub asins {
   return () unless $self->work_products->count;
 
   return map { $_->asin } $self->work_products->all;
+}
+
+sub products {
+  my $self = shift;
+  my ($count) = @_;
+  $count //= 3;
+
+  my @products = $self->work_products->all;
+
+  if (@products < $count) {
+    push @products, $_->production_products->all
+      for $self->productions->all;
+  }
+
+  @products = shuffle(@products);
+
+  $#products = $count -1 if $#products >= $count;
+
+  return [ map { $_->asin } @products ];
 }
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration

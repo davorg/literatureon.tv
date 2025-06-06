@@ -1,11 +1,5 @@
 [% title = 'Productions' -%]
 
-<div class="book-banner">
-  <div class="book-banner-overlay">
-    <h1 class="display-3">[% title or 'Literature on TV' %]</h1>
-  </div>
-</div>
-
 <ul>
 [% FOREACH p IN productions.all.sort('year', 'title')-%]
 <li><a href="/productions/[% p.slug %]/">[% p.title %]</a>

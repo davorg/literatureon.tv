@@ -2,12 +2,6 @@
 
 [% INCLUDE modal.tt %]
 
-<div class="book-banner">
-  <div class="book-banner-overlay">
-    <h1 class="display-3">Literature on TV</h1>
-  </div>
-</div>
-
 <p class="lead">
   <strong>Literature on TV</strong> is your guide to screen adaptations of
   classic English literature — from BBC period dramas to big-screen

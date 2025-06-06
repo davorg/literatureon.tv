@@ -55,6 +55,7 @@ method make_index {
 
 method process_resource {
     say "Processing $_";
+    my $singular = s/s$//r;
 
     my $rs = $schema->resultset($resources{$_});
 
@@ -62,9 +63,15 @@ method process_resource {
       or die $tt->error;
 
     foreach my $obj ($rs->all) {
-      my $singular = s/s$//r;
+      my $tt_vars = {
+        $singular => $obj,
+      };
 
-      $tt->process("$singular.tt", { $singular => $obj },
+      if ($obj->can('products')) {
+        $tt_vars->{products} = $obj->products(3);
+      }
+
+      $tt->process("$singular.tt", $tt_vars,
                    "$_/" . $obj->slug . '/index.html')
         or die $tt->error;
 

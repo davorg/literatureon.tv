@@ -1,15 +1,15 @@
-<script type="text/javascript">
-amzn_assoc_ad_type ="responsive_search_widget";
-amzn_assoc_tracking_id ="davblog-21";
-amzn_assoc_marketplace ="amazon";
-amzn_assoc_region ="GB";
-amzn_assoc_placement ="";
-amzn_assoc_search_type = "search_widget";
-amzn_assoc_width ="auto";
-amzn_assoc_height ="auto";
-amzn_assoc_default_search_category ="[% type %]";
-amzn_assoc_default_search_key ="[% search.lower %]";
-amzn_assoc_theme ="light";
-amzn_assoc_bg_color ="FFFFFF";
-</script>
-<script src="//z-eu.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1&Marketplace=GB"></script>
+[% MACRO amazon BLOCK %]
+[%   IF products.size %]
+  <div class="amazon-sidebar">
+    <h5 class="mt-0 mb-3">Buy</h5>
+[%     FOREACH asin IN products %]
+      <div class="amazon-ad mb-3 text-center">
+        <a href="https://www.amazon.co.uk/dp/[% asin %]/?tag=davblog-20" target="_blank" rel="noopener noreferrer">
+          <img src="https://images-na.ssl-images-amazon.com/images/P/[% asin %].01.MZZZZZZZ.jpg"
+               alt="Amazon product [% asin %]" class="img-fluid">
+        </a>
+      </div>
+[%     END %]
+  </div>
+[%   END %]
+[% END %]

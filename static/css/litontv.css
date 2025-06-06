@@ -91,3 +91,18 @@ footer {
   text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
   margin: 0;
 }
+
+.amazon-sidebar h5 {
+  font-family: 'Playfair Display', serif;
+  color: #6e4c1e;
+  border-bottom: 1px solid #c3b091;
+  padding-bottom: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.amazon-ad img {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+  border: 1px solid #ddd;
+}

@@ -133,6 +133,8 @@ __PACKAGE__->many_to_many("works", "character_appearances", "work");
 # Created by DBIx::Class::Schema::Loader v0.07053 @ 2025-06-05 14:04:13
 # DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:uGIoPtnSjwizUmIoz1Wh2g
 
+use List::Util qw(shuffle);
+
 with 'Literature::Role::HasSlug', 'MooX::Role::JSON_LD';
 
 sub slug_cols { return qw[name]; }
@@ -141,6 +143,30 @@ sub json_ld_type { 'Person' }
 
 sub json_ld_fields {
   [ qw[ name ] ]
+}
+
+sub products {
+  my $self = shift;
+  my ($count) = @_;
+  $count //= 3;
+
+  my @products;
+
+  for ($self->works) {
+    push @products, $_->work_products->all;
+  }
+
+  if (@products < $count) {
+    for my $work ($self->works) {
+      push @products, $_->production_products for $work->productions->all;
+    }
+  }
+
+  @products = shuffle(@products);
+
+  $#products = $count -1 if $#products >= $count;
+
+  return [ map { $_->asin } @products ];
 }
 
 # You can replace this text with custom code or comments, and it will be preserved on regeneration
