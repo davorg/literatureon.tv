@@ -20,14 +20,16 @@ field %resources = (
   works       => 'Work',
 );
 
+field $url = 'https://literatureon.tv';
+
 field $tt = Template->new({
               INCLUDE_PATH => [ qw( in tt_lib ) ],
               OUTPUT_PATH  => 'docs',
               WRAPPER      => 'page.tt',
             });
 
-field $urls = {
-  url => 'https://literatureon.tv',
+field $vars = {
+  url => $url,
   date => localtime->strftime('%Y-%m-%d'),
 };
 
@@ -66,7 +68,7 @@ method process_resource {
                    "$_/" . $obj->slug . '/index.html')
         or die $tt->error;
 
-      push @{$urls->{$_}}, $obj;
+      push @{$vars->{$_}}, $obj;
     }
 }
 
@@ -74,7 +76,7 @@ method make_sitemap {
   # Hacky McHackface
   $tt->{SERVICE}{WRAPPER} = [];
 
-  $tt->process('sitemap.tt', $urls, 'sitemap.xml')
+  $tt->process('sitemap.tt', $vars, 'sitemap.xml')
     or die $tt->error;
 }
 
