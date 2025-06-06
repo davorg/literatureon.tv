@@ -4,7 +4,11 @@
 [% character.json_ld %]</script>
 <p class="text-muted">Character</p>
 
-<h1 class="display-3">[% character.name %]</h1>
+<div class="book-banner">
+  <div class="book-banner-overlay">
+    <h1 class="display-3">[% character.name %]</h1>
+  </div>
+</div>
 [% IF character.imdb %]<p><a href="http://imdb.com/character/[% character.imdb %]">[% character.name %] on IMDB</a></p>[% END %]
 <h3>Appearances</h3>
 [% IF character.works.size %]

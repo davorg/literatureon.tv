@@ -4,7 +4,11 @@
 [% work.json_ld %]</script>
 <p class="text-muted">Work</p>
 
-<h1 class="display-3">[% work.title %]</h1>
+<div class="book-banner">
+  <div class="book-banner-overlay">
+    <h1 class="display-3">[% work.title %]</h1>
+  </div>
+</div>
 <p>By [% FOR a IN work.authors; '<a href="/authors/'; a.slug; '/">'; a.name; '</a> '; END %]</p>
 <h3>Characters</h3>
 [% IF work.characters.size %]

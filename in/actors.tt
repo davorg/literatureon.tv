@@ -1,5 +1,9 @@
 [% title = 'Actors' -%]
-<h1 class="display-3">[% title or 'Literature on TV' %]</h1>
+<div class="book-banner">
+  <div class="book-banner-overlay">
+    <h1 class="display-3">[% title or 'Literature on TV' %]</h1>
+  </div>
+</div>
 
 <ul>
 [% FOREACH a IN actors.all.sort('name')-%]

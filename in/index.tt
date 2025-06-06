@@ -2,13 +2,40 @@
 
 [% INCLUDE modal.tt %]
 
-<h1 class="display-3">Literature on TV</h1>
+<div class="book-banner">
+  <div class="book-banner-overlay">
+    <h1 class="display-3">Literature on TV</h1>
+  </div>
+</div>
+
+<p>
+  <strong>Literature on TV</strong> is your guide to screen adaptations of
+  classic English literature — from BBC period dramas to big-screen
+  Hollywood retellings. Whether you're tracking down a favourite version of
+  <em>Pride and Prejudice</em>, comparing casts across adaptations of
+  <em>Great Expectations</em>, or discovering a hidden gem you’d forgotten
+  about, this site helps you explore the many ways great books have come to
+  life on screen.
+</p>
+
+<p>
+  For each novel and play, you’ll find a list of TV and film productions —
+  complete with cast details, production info, and handy links to buy the
+  book or DVD if you'd like to add it to your collection.
+</p>
+
+<p>
+  Browsing the site helps you rediscover old favourites — and if you click
+  through to Amazon using our links, you’ll be supporting the site at no
+  extra cost. Thanks for visiting!
+</p>
+
 
 <p>Browse the database:</p>
 <ul>
 <li>By <a href="/authors/">author</a></li>
-<li>By <a href="/works/">works</a></li>
-<li>By <a href="/characters/">characters</a></li>
-<li>By <a href="/productions/">productions</a></li>
-<li>By <a href="/actors/">actors</a></li>
+<li>By <a href="/works/">work</a></li>
+<li>By <a href="/characters/">character</a></li>
+<li>By <a href="/productions/">production</a></li>
+<li>By <a href="/actors/">actor</a></li>
 </ul>

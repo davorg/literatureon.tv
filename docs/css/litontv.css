@@ -1,0 +1,93 @@
+body {
+  font-family: 'Libre Baskerville', serif;
+  background-color: #fdfaf3;
+  color: #3e3e3e;
+}
+
+h1, h2, h3, .navbar-brand {
+  font-family: 'Playfair Display', serif;
+  color: #5a3e26;
+}
+
+a {
+  color: #6e4c1e;
+}
+a:hover {
+  color: #3e2e1e;
+  text-decoration: underline;
+  transition: all 0.2s ease-in-out;
+}
+
+.jumbotron {
+  background: url('/images/parchment-texture.png') no-repeat center center;
+  background-size: cover;
+  background-color: #fdfaf3;
+  border: 1px solid #d4c4a8;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  padding: 3rem 2rem;
+}
+
+.dropcap {
+  float: left;
+  font-size: 3rem;
+  line-height: 1;
+  padding-right: 0.4rem;
+  color: #6e4c1e;
+  font-family: 'Playfair Display', serif;
+}
+
+footer {
+  font-size: 0.9rem;
+  text-align: center;
+  margin: 2rem 0;
+  color: #888;
+}
+
+.bg-literary {
+  background-color: #5a3e26 !important; /* rich brown */
+  border-bottom: 1px solid #c3b091;
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand {
+  color: #fdfaf3 !important;
+}
+
+.navbar .nav-link:hover,
+.navbar .navbar-brand:hover {
+  color: #d8c3a5 !important;
+}
+
+.book-banner {
+  position: relative;
+  background-image: url('/images/bookshelf-banner.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.book-banner::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* dark overlay */
+  z-index: 1;
+}
+
+.book-banner-overlay {
+  position: relative;
+  z-index: 2;
+}
+
+.book-banner h1 {
+  color: #fdfaf3;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+  margin: 0;
+}
