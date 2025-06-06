@@ -18,7 +18,7 @@ a:hover {
   transition: all 0.2s ease-in-out;
 }
 
-.jumbotron {
+.parchment-bg {
   background: url('/images/parchment-texture.png') no-repeat center center;
   background-size: cover;
   background-color: #fdfaf3;
@@ -105,4 +105,39 @@ footer {
   height: auto;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
   border: 1px solid #ddd;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #c3b091;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
+
+aside.sidebar {
+  text-align: left;
+}
+
+aside.sidebar img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-primary {
+  background-color: #5a3e26;
+  border-color: #5a3e26;
+  color: #fff;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: #472f1c;
+  border-color: #3e2818;
+  color: #fff;
 }

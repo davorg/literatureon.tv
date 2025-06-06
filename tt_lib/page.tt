@@ -72,15 +72,19 @@
 
   <div class="container">
     <div class="row">
-      <aside class="col-md-2 d-none d-md-block">
-        [% sidebar_left %]
+      <aside class="col-md-2 d-none d-md-block sidebar">
+[% IF image %]
+        <div class="image mb-4 text-center">
+          <img src="/images/[% image.path %]" alt="[% image.alt %]">
+        </div>
+[% END %]
       </aside>
 
-      <div class="col-md-8">
+      <div class="col-md-8 parchment-bg">
         [% content %]
       </div>
 
-      <aside class="col-md-2 d-none d-md-block">
+      <aside class="col-md-2 d-none d-md-block sidebar">
         [% amazon %]
       </aside>
     </div>

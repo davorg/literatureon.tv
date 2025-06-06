@@ -159,6 +159,15 @@ sub json_ld_fields {
   ]
 }
 
+sub image {
+  my $self = shift;
+  
+  return {
+    path => "/authors/" . $self->slug . ".png",
+    alt  => 'Portrait of ' . $self->name,
+  };
+}
+
 sub products {
   my $self = shift;
   my ($count) = @_;

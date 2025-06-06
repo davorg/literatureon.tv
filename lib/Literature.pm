@@ -71,6 +71,10 @@ method process_resource {
         $tt_vars->{products} = $obj->products(3);
       }
 
+      if ($singular eq  'author') {
+        $tt_vars->{image} = $obj->image;
+      }
+
       $tt->process("$singular.tt", $tt_vars,
                    "$_/" . $obj->slug . '/index.html')
         or die $tt->error;
