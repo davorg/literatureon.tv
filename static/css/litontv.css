@@ -1,3 +1,18 @@
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #5a3e26;
+  --bs-btn-border-color: #5a3e26;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #472f1c;
+  --bs-btn-hover-border-color: #3e2818;
+  --bs-btn-focus-shadow-rgb: 74, 50, 30;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #3e2818;
+  --bs-btn-active-border-color: #2a1e13;
+  --bs-btn-disabled-bg: #9b8267;
+  --bs-btn-disabled-border-color: #9b8267;
+}
+
 body {
   font-family: 'Libre Baskerville', serif;
   background-color: #fdfaf3;
