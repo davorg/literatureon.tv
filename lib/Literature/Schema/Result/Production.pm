@@ -86,6 +86,12 @@ __PACKAGE__->table("production");
   default_value: null
   is_nullable: 1
 
+=head2 imdb
+
+  data_type: 'char'
+  is_nullable: 1
+  size: 15
+
 =cut
 
 __PACKAGE__->add_columns(
@@ -118,6 +124,8 @@ __PACKAGE__->add_columns(
   },
   "type",
   { data_type => "text", default_value => \"null", is_nullable => 1 },
+  "imdb",
+  { data_type => "char", is_nullable => 1, size => 15 },
 );
 
 =head1 PRIMARY KEY
@@ -180,8 +188,8 @@ __PACKAGE__->belongs_to(
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07053 @ 2025-06-05 14:04:13
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:q7jLT6DrAEv/4CekzZQu+A
+# Created by DBIx::Class::Schema::Loader v0.07053 @ 2025-06-07 12:12:51
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:UbzdQNogjQ+Zdy0MJrzqYQ
 
 __PACKAGE__->many_to_many( actors => 'actor_roles', 'actor' );
 
