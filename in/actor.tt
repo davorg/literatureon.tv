@@ -10,7 +10,12 @@
 [% IF actor.died %]Died: [% actor.died.strftime('%m %B %Y'); END %]</p>
 [% END %]
 <p><a href="http://imdb.com/name/[% actor.imdb %]">[% actor.name %] on IMDB</a></p>
+[% IF actor.biography -%]
+<h3>Biography</h3>
+[% actor.biography | html_para %]
+[% END -%]
 [% IF actor.actor_roles.size %]
+<h3>Roles</h3>
 <ul>
 [% FOREACH r IN actor.actor_roles %]
 <li>Played <a href="/characters/[% r.character.slug %]/">[% r.character.name %]</a> in

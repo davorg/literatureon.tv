@@ -78,6 +78,11 @@ __PACKAGE__->table("actor");
   is_nullable: 1
   size: 255
 
+=head2 biography
+
+  data_type: 'text'
+  is_nullable: 1
+
 =cut
 
 __PACKAGE__->add_columns(
@@ -98,6 +103,8 @@ __PACKAGE__->add_columns(
     is_nullable => 1,
     size => 255,
   },
+  "biography",
+  { data_type => "text", is_nullable => 1 },
 );
 
 =head1 PRIMARY KEY
@@ -130,8 +137,8 @@ __PACKAGE__->has_many(
 );
 
 
-# Created by DBIx::Class::Schema::Loader v0.07053 @ 2025-06-05 14:04:13
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:ti0jW66NzYDUby275UA8/A
+# Created by DBIx::Class::Schema::Loader v0.07053 @ 2025-06-08 10:36:31
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:HzVmPtvhpIzadQakFVsiTQ
 
 __PACKAGE__->many_to_many( roles => 'actor_roles', 'production' );
 

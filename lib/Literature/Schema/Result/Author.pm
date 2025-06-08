@@ -77,6 +77,11 @@ __PACKAGE__->table("author");
   is_nullable: 1
   size: 255
 
+=head2 biography
+
+  data_type: 'text'
+  is_nullable: 1
+
 =cut
 
 __PACKAGE__->add_columns(
@@ -97,6 +102,8 @@ __PACKAGE__->add_columns(
     is_nullable => 1,
     size => 255,
   },
+  "biography",
+  { data_type => "text", is_nullable => 1 },
 );
 
 =head1 PRIMARY KEY
@@ -139,8 +146,8 @@ Composing rels: L</author_works> -> work
 __PACKAGE__->many_to_many("works", "author_works", "work");
 
 
-# Created by DBIx::Class::Schema::Loader v0.07053 @ 2025-06-05 14:04:13
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:6eVZ8ECGd/GQc2ZSZSGhEw
+# Created by DBIx::Class::Schema::Loader v0.07053 @ 2025-06-08 10:36:31
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:TMyjbCXz1Kei1lLILZT0Xw
 
 with 'Literature::Role::HasSlug', 'MooX::Role::JSON_LD';
 

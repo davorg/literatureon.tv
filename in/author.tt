@@ -9,6 +9,10 @@
 [% IF author.born AND author.died %], [% END %]
 [% IF author.died %]Died: [% author.died.strftime('%m %B %Y'); END %]</p>
 [% END %]
+[% IF author.biography -%]
+<h3>Biography</h3>
+[% author.biography | html_para %]
+[% END -%]
 <h3>Works</h3>
 [% IF author.works.size %]
 <ul>

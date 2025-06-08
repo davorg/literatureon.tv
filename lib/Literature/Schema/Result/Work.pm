@@ -69,6 +69,11 @@ __PACKAGE__->table("work");
   default_value: null
   is_nullable: 1
 
+=head2 synopsis
+
+  data_type: 'text'
+  is_nullable: 1
+
 =cut
 
 __PACKAGE__->add_columns(
@@ -82,6 +87,8 @@ __PACKAGE__->add_columns(
   { data_type => "text", default_value => \"null", is_nullable => 1 },
   "type",
   { data_type => "text", default_value => \"null", is_nullable => 1 },
+  "synopsis",
+  { data_type => "text", is_nullable => 1 },
 );
 
 =head1 PRIMARY KEY
@@ -179,8 +186,8 @@ Composing rels: L</character_appearances> -> character
 __PACKAGE__->many_to_many("characters", "character_appearances", "character");
 
 
-# Created by DBIx::Class::Schema::Loader v0.07053 @ 2025-06-05 15:04:02
-# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:pR0AtNKp5rsQWdBR1hHGSA
+# Created by DBIx::Class::Schema::Loader v0.07053 @ 2025-06-08 10:36:31
+# DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:qsjZ/Cm8qVxswgKC6TR3Jg
 
 with 'Literature::Role::HasSlug', 'MooX::Role::JSON_LD';
 
