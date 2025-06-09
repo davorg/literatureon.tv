@@ -6,8 +6,10 @@
 
 <p>By [% FOR a IN work.authors; '<a href="/authors/'; a.slug; '/">'; a.name; '</a> '; END %]</p>
 [% IF work.synopsis -%]
+<div class="synopsis">
 <h3>Synopsis</h3>
 [% work.synopsis | html_para %]
+</div>
 [% END -%]
 <h3>Characters</h3>
 [% IF work.characters.size %]

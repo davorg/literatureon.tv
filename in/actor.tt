@@ -11,8 +11,10 @@
 [% END %]
 <p><a href="http://imdb.com/name/[% actor.imdb %]">[% actor.name %] on IMDB</a></p>
 [% IF actor.biography -%]
+<div class="biography">
 <h3>Biography</h3>
 [% actor.biography | html_para %]
+</div>
 [% END -%]
 [% IF actor.actor_roles.size %]
 <h3>Roles</h3>

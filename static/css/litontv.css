@@ -162,3 +162,16 @@ aside.sidebar img {
   border-radius: 0.25rem;
   color: #fff !important;
 }
+
+.synopsis p:first-of-type::first-letter,
+.biography p:first-of-type::first-letter {
+  font-family: 'EB Garamond', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  float: left;
+  line-height: 1;
+  padding-right: 0.4rem;
+  padding-left: 0.1rem;
+  margin-top: 0.1rem;
+  color: #5a422c;
+}
