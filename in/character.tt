@@ -29,6 +29,7 @@ by
 <a href="/productions/[% r.production.slug %]/">[% r.production.title %]
   ([% r.production.description %])</a></li>
 [% END %]
+</ul>
 [% ELSE %]
 <p>No-one</p>
 [% END %]

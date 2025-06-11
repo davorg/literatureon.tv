@@ -2,7 +2,7 @@
 
 <script type="application/ld+json">
 [% actor.json_ld %]</script>
-<p class="text-muted">Actor</hp>
+<p class="text-muted">Actor</p>
 
 [% IF actor.born OR actor.died %]
 <p>[% IF actor.born %]Born: [% actor.born.strftime('%m %B %Y'); END -%]
