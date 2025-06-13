@@ -209,7 +209,10 @@ sub json_ld_type {
 sub json_ld_fields {
   return [
     { name => 'title' },
-    { productionCompany => 'made_by' },
+    { productionCompany => sub { {
+        '@type' => 'Organization',
+        name    => $_[0]->made_by,
+      } } },
   ];
 }
 
